@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Substance Compliance &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BoM Compliance" href="bom.html" />
+    <link rel="prev" title="Material Compliance" href="materials.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../examples/index.html">
+  Example Scripts
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/granta-bomanalytics" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../common.html">
+   Granta MI Connection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../batching.html">
+   Batching Requests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../impacted_substances/index.html">
+   Impacted Substances API
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Compliance API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="parts.html">
+     Part Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="specifications.html">
+     Specification Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="materials.html">
+     Material Compliance
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Substance Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bom.html">
+     BoM Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="indicators.html">
+     Indicators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#query-definition">
+   Query Definition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#query-result">
+   Query Result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substance-result">
+   Substance Result
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="substance-compliance">
+<span id="ref-grantami-bomanalytics-api-compliance-substances"></span><h1>Substance Compliance<a class="headerlink" href="#substance-compliance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="query-definition">
+<h2>Query Definition<a class="headerlink" href="#query-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SubstanceComplianceQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate compliance for Granta MI substance records against a number of indicators.</p>
+<p>All methods used to add substances and indicators to this query return the query itself, so they can be chained
+together as required. Records can be added using a combination of any of the available methods.</p>
+<p>Once the query is fully constructed, use the cxn.
+<a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method to return a result of type
+<a class="reference internal" href="#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubstanceComplianceQueryResult</span></code></a>.</p>
+<p class="rubric">Notes</p>
+<p>The amount of a substance is a critical factor when determining if it is compliant or non-compliant with a
+legislation. For the other compliance queries in this API, the amount of substance is determined by the value set
+in the declaration stored in Granta MI. However, when performing a SubstanceComplianceQuery there is no declaration,
+since the substances are being examined directly.</p>
+<p>As a result, a set of extra methods are defined that allow the amount of each substance to be defined along with the
+reference to the record in Granta MI. These methods have the name ‘_with_xxxxxx_and_amounts()’, and take a list of
+tuples as the argument.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;http://localhost/mi_servicelayer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">with_autologon</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span> <span class="o">=</span> <span class="n">WatchListIndicator</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Prop 65&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">legislation_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;California Proposition 65 List&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+<span class="gp">... </span>    <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="o">.</span><span class="n">with_cas_numbers_and_amounts</span><span class="p">([(</span><span class="s1">&#39;50-00-0&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;57-24-9&#39;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)])</span>
+<span class="gp">... </span>    <span class="o">.</span><span class="n">with_indicators</span><span class="p">([</span><span class="n">indicator</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="go">&lt;SubstanceComplianceQueryResult: 2 SubstanceWithCompliance results&gt;</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_indicators">
+<span class="sig-name descname"><span class="pre">with_indicators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicators</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_indicators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> or
+<a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a> objects to evaluate compliance against.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>indicators</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> | <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span> <span class="o">=</span> <span class="n">WatchListIndicator</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Prop 65&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">legislation_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;California Proposition 65 List&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MaterialComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_indicators</span><span class="p">([</span><span class="n">indicator</span><span class="p">])</span>
+<span class="go">&lt;MaterialCompliance: 0 materials, batch size = 100, 1 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers_and_amounts">
+<span class="sig-name descname"><span class="pre">with_cas_numbers_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cas_numbers_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of CAS Numbers and amounts to a substance query. The CAS Numbers and quantity
+pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>cas_numbers_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_cas_numbers_and_amounts</span><span class="p">([(</span><span class="s1">&#39;50-00-0&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;57-24-9&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers_and_amounts">
+<span class="sig-name descname"><span class="pre">with_ec_numbers_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec_numbers_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of EC Numbers and amounts to a substance query. The EC Numbers and quantity
+pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>ec_numbers_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_ec_numbers_and_amounts</span><span class="p">([(</span><span class="s1">&#39;200-001-8&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+<span class="gp">... </span>                                           <span class="p">(</span><span class="s1">&#39;200-319-7&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_chemical_names_and_amounts">
+<span class="sig-name descname"><span class="pre">with_chemical_names_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chemical_names_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_chemical_names_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of chemical names and amounts to a substance query. The chemical names and
+quantity pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>chemical_names_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_chemical_names_and_amounts</span><span class="p">([(</span><span class="s1">&#39;Formaldehyde&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+<span class="gp">... </span>                                               <span class="p">(</span><span class="s1">&#39;Strychnine&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers">
+<span class="sig-name descname"><span class="pre">with_cas_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cas_numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of CAS numbers to a substance query. The amount of substance in the material
+will be set to 100%.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>cas_numbers</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_cas_numbers</span><span class="p">([</span><span class="s1">&#39;50-00-0&#39;</span><span class="p">,</span> <span class="s1">&#39;57-24-9&#39;</span><span class="p">])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers">
+<span class="sig-name descname"><span class="pre">with_ec_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec_numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of EC numbers to a substance query. The amount of substance in the material will
+be set to 100%.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>ec_numbers</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_ec_numbers</span><span class="p">([</span><span class="s1">&#39;200-001-8&#39;</span><span class="p">,</span> <span class="s1">&#39;200-319-7&#39;</span><span class="p">])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_chemical_names">
+<span class="sig-name descname"><span class="pre">with_chemical_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chemical_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_chemical_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of chemical names to a substance query. The amount of substance in the material
+will be set to 100%.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>chemical_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_chemical_names</span><span class="p">([</span><span class="s1">&#39;Formaldehyde&#39;</span><span class="p">,</span> <span class="s1">&#39;Strychnine&#39;</span><span class="p">])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids_and_amounts">
+<span class="sig-name descname"><span class="pre">with_record_guids_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_guids_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record GUID and amounts to a substance query. The GUID and quantity pairs are
+expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_guids_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_record_guids_and_amounts</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[(</span><span class="s1">&#39;bdb0b880-e6ee-4f1a-bebd-af76959ae3c8&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+<span class="gp">... </span>     <span class="p">(</span><span class="s1">&#39;a98cf4b3-f96a-4714-9f79-afe443982c69&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_guids_and_amounts">
+<span class="sig-name descname"><span class="pre">with_record_history_guids_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_history_guids_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_guids_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record history GUID and amounts to a substance query. The GUID and quantity
+pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_history_guids_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_record_history_guids_and_amounts</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[(</span><span class="s1">&#39;bdb0b880-e6ee-4f1a-bebd-af76959ae3c8&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+<span class="gp">... </span>     <span class="p">(</span><span class="s1">&#39;a98cf4b3-f96a-4714-9f79-afe443982c69&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids_and_amounts">
+<span class="sig-name descname"><span class="pre">with_record_history_ids_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_history_identities_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids_and_amounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record history identities and amounts to a substance query. The identity and
+quantity pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_history_identities_and_amounts</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">SubstanceComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_record_history_ids_and_amounts</span><span class="p">([(</span><span class="mi">15321</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="mi">17542</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)])</span>
+<span class="go">&lt;SubstanceComplianceQuery: 2 substances, batch size = 500, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids">
+<span class="sig-name descname"><span class="pre">with_record_guids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_guids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record GUIDs to a query.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_guids</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">MaterialComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">with_record_guids</span><span class="p">([</span><span class="s1">&#39;bdb0b880-e6ee-4f1a-bebd-af76959ae3c8&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                                 <span class="s1">&#39;a98cf4b3-f96a-4714-9f79-afe443982c69&#39;</span><span class="p">])</span>
+<span class="go">&lt;MaterialCompliance: 2 materials, batch size = 100, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_guids">
+<span class="sig-name descname"><span class="pre">with_record_history_guids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_history_guids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_guids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record history GUIDs to a query.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_history_guids</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">MaterialComplianceQuery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span><span class="o">.</span><span class="n">with_record_history_guids</span><span class="p">([</span><span class="s1">&#39;41e20a88-d496-4735-a177-6266fac9b4e2&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                                 <span class="s1">&#39;d117d9ad-e6a9-4ba9-8ad8-9a20b6d0b5e2&#39;</span><span class="p">])</span>
+<span class="go">&lt;MaterialCompliance: 2 materials, batch size = 100, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids">
+<span class="sig-name descname"><span class="pre">with_record_history_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_history_identities</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list or set of record history identities to a query.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_history_identities</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>] | <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MaterialComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_record_history_ids</span><span class="p">([</span><span class="mi">15321</span><span class="p">,</span> <span class="mi">17542</span><span class="p">,</span> <span class="mi">942</span><span class="p">])</span>
+<span class="go">&lt;MaterialCompliance: 3 materials, batch size = 50, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_stk_records">
+<span class="sig-name descname"><span class="pre">with_stk_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stk_records</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_stk_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of records generated by the Granta MI Scripting Toolkit for Python.</p>
+<p>This should only be used with the corresponding method in the MI Scripting Toolkit which generates a
+<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> of the appropriate shape. This method will be introduced in the next version of the MI Scripting
+Toolkit.</p>
+<p>If the MI Scripting Toolkit method is not available, we recommend using the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids" title="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_history_ids"><code class="xref py py-meth docutils literal notranslate"><span class="pre">with_record_history_ids()</span></code></a>
+method instead.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>stk_records</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the method is called with values that do not match the types described above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Common scenarios in performing compliance would be to get the compliance status of all records with a certain
+attribute value, or all records created in a certain period of time. These types of complex browsing and
+searching operations are provided by the MI Scripting Toolkit: a Python script would first use the MI Scripting
+Toolkit to find the records of interest, and would then pass those record references into the BoM Analytics
+package.</p>
+<p>This method is intended to streamline the communication between the Granta MI Scripting Toolkit and BoM
+Analytics packages.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MaterialComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_stk_records</span><span class="p">(</span><span class="n">stk_records</span><span class="p">)</span>
+<span class="go">&lt;MaterialCompliance: 2 materials, batch size = 100, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_batch_size">
+<span class="sig-name descname"><span class="pre">with_batch_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_batch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of records included in a single request for this query.</p>
+<p>Default values are set based on typical usage of the Restricted Substances database. This value can be changed
+to optimize performance on a query-by-query basis if required, for example, if certain records contain
+particularly large or small numbers of associated records.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>batch_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>The number of records included in a single request to Granta MI.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If the batch size is set to a number less than 1.</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If a value of any type other than <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> is specified.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The Restricted Substances database makes extensive use of tabular data and associated records to store the
+complex hierarchical relationships that define compliance of products, assemblies, parts, specifications,
+and materials. As a result, it is impossible to determine the complexity of a particular query without knowing
+precisely how many records are related to the record included in the query.</p>
+<p>The default batch sizes are set for each record type and represent appropriate numbers of those records to be
+included in the same request assuming typical numbers of associated records.</p>
+<p>Even if the records are queried in multiple batches, the results will be assembled into a single result object.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MaterialComplianceQuery</span><span class="p">()</span><span class="o">.</span><span class="n">with_batch_size</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="go">&lt;MaterialCompliance: 0 materials, batch size = 50, 0 indicators&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="query-result">
+<h2>Query Result<a class="headerlink" href="#query-result" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SubstanceComplianceQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>The result of running a <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery" title="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubstanceComplianceQuery</span></code></a>.
+Describes the compliance status of substances against one or more indicators.</p>
+<p class="rubric">Notes</p>
+<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+directly.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.compliance_by_indicator">
+<span class="sig-name descname"><span class="pre">compliance_by_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.compliance_by_indicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compliance status for each indicator in the original query. The indicator name
+is used as the dictionary key.</p>
+<p>The result for each indicator is determined by taking the worst result for that indicator across all items
+included in the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> | <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a>]</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">compliance_result</span><span class="p">:</span> <span class="n">MaterialComplianceQueryResult</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compliance_result</span><span class="o">.</span><span class="n">compliance_by_indicator</span>
+<span class="go">{&#39;Prop 65&#39;: &lt;WatchListIndicator,</span>
+<span class="go">        name: Prop 65,</span>
+<span class="go">        flag: WatchListFlag.WatchListAboveThreshold&gt;</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.compliance_by_substance_and_indicator">
+<span class="sig-name descname"><span class="pre">compliance_by_substance_and_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.compliance_by_substance_and_indicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compliance status for each substance specified in the original query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubstanceWithComplianceResult</span></code></a>]</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">SubstanceComplianceQueryResult</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="o">.</span><span class="n">compliance_by_substance_and_indicator</span>
+<span class="go">[&lt;SubstanceWithComplianceResult({&quot;cas_number&quot;: 50-00-0}), 1 indicators&gt;, ...]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.messages">
+<span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult.messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>[TECHDOCS] Messages generated by Granta MI when running the query. The presence of one or more messages means
+something unexpected happened when running the query, but the query could still be completed.</p>
+<p>Messages are sorted in order of decreasing severity. Messages are also available in the Service Layer log file.</p>
+<p>Messages are also logged using the Python <cite>logging</cite> module to the “ansys.grantami.bomanalytics” logger. By
+default, messages with a severity of “warning” or higher are printed on stderr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._query_results.LogMessage" title="ansys.grantami.bomanalytics._query_results.LogMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogMessage</span></code></a>]</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">MaterialImpactedSubstancesQueryResult</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="o">.</span><span class="n">messages</span>
+<span class="go">[LogMessage(severity=&#39;warning&#39;, message=&#39;Material &quot;ABS+PVC (flame retarded)&quot; has</span>
+<span class="go">    2 substance row(s) with missing substance links.&#39;)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="substance-result">
+<h2>Substance Result<a class="headerlink" href="#substance-result" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SubstanceWithComplianceResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicator_results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>An individual substance included as part of a compliance query result. This object includes two
+categories of attribute:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The reference to the substance in Granta MI</p></li>
+<li><p>The compliance status of this substance, stored in a dictionary of one or more indicator objects</p></li>
+</ul>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<p>The record reference attributes below are only populated if they were specified in the original query.</p>
+<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+directly.</p>
+<dl class="field-list">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl>
+<dt><strong>record_history_identity</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>]</span></dt><dd></dd>
+<dt><strong>cas_number</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+<dt><strong>ec_number</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+<dt><strong>chemical_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+<dt><strong>record_history_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+<dt><strong>record_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
+<dt><strong>indicators</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> | <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a>]</span></dt><dd><p>The compliance status of this item for each indicator included in the original query.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

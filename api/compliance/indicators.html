@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicators &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Example Scripts" href="../../examples/index.html" />
+    <link rel="prev" title="BoM Compliance" href="bom.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../examples/index.html">
+  Example Scripts
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/granta-bomanalytics" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../common.html">
+   Granta MI Connection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../batching.html">
+   Batching Requests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../impacted_substances/index.html">
+   Impacted Substances API
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Compliance API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="parts.html">
+     Part Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="specifications.html">
+     Specification Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="materials.html">
+     Material Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="substances.html">
+     Substance Compliance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bom.html">
+     BoM Compliance
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Indicators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rohs-indicator">
+   RoHS Indicator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#watch-list-indicator">
+   Watch List Indicator
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="indicators">
+<span id="ref-grantami-bomanalytics-api-compliance-indicators"></span><h1>Indicators<a class="headerlink" href="#indicators" title="Permalink to this headline">¶</a></h1>
+<p>The BoM Analytics API determines compliance against an Indicator, which essentially represents a legislation
+with a threshold. If a substance appears in a certain item, either directly or indirectly, in a quantity that exceeds that
+threshold, the item is non-compliant with that Indicator. In cases where the
+legislation defines a per-substance threshold (e.g. RoHS), then this per-substance threshold will be used instead.</p>
+<p>Indicators can include a list of legislations, in which case a substance will be impacted by the indicator if it is
+impacted by one or more legislations included in that indicator.</p>
+<p>There are two different types of indicator, and they compute compliance in slightly different ways. It is therefore
+important to understand the differences between them. For more details, please see the ‘Granta MI Restricted Substances
+Reports User Guide’ supplied with Granta MI Restricted Substances Reports.</p>
+<div class="section" id="rohs-indicator">
+<h2>RoHS Indicator<a class="headerlink" href="#rohs-indicator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSIndicator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">RoHSIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_exemptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicator object that represents RoHS-type compliance of a BoM object against one or more
+legislations.</p>
+<p>Other <cite>RoHSIndicator</cite> objects with results can be compared, with ‘less compliant’ indicators being greater than
+‘more compliant’ indicators.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the indicator. Used to identify the indicator in the query result.</p>
+</dd>
+<dt><strong>legislation_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The legislations against which compliance will be determined.</p>
+</dd>
+<dt><strong>default_threshold_percentage</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>The concentration of substance that will be determined to be non-compliant. Is only used if the legislation
+doesn’t define a specific threshold for the substance.</p>
+</dd>
+<dt><strong>ignore_exemptions</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>]</span></dt><dd><p>Whether exemptions added to parts will be considered when determining compliance against this indicator.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two differently-typed indicators are compared</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared which both don’t have a result flag</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The RoHS indicator is designed to be used with RoHS-type legislations (e.g. RoHS, RoHS China) however this is not
+enforced. Substances marked as ‘Process Chemicals’<a class="footnote-reference brackets" href="#id3" id="id1">1</a> are always ignored, and exceptions are supported (unless
+explicitly ignored by specifying <cite>ignore_exemptions=True</cite> when creating the Indicator). The possible result flags
+for the indicator distinguish between an item being compliant, compliant with exemptions, or non-compliant.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span> <span class="o">=</span> <span class="n">RoHSIndicator</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;RoHS substances&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">legislation_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;EU Directive 2011/65/EU (RoHS 2)&quot;</span><span class="p">],</span>
+<span class="gp">... </span>                          <span class="n">default_threshold_percentage</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">ignore_exemptions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span>
+<span class="go">&lt;RoHSIndicator, name: Tracked substances&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">MaterialComplianceQuery</span><span class="o">.</span><span class="n">with_indicators</span><span class="p">([</span><span class="n">indicator</span><span class="p">])</span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">MaterialComplianceQueryResult</span>  <span class="c1"># Perform a compliance query</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator_result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">compliance_by_material_and_indicator</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;RoHS substances&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator_result</span><span class="o">.</span><span class="n">flag</span> <span class="o">&gt;=</span> <span class="n">indicator</span><span class="o">.</span><span class="n">available_flags</span><span class="p">[</span><span class="s1">&#39;RohsCompliantWithExemptions&#39;</span><span class="p">]</span>
+<span class="go">True  # The material is not compliant with the legislations in the indicator</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_flags</span></code><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Type</span></code>[<a class="reference internal" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag" title="ansys.grantami.bomanalytics.indicators.RoHSFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSFlag</span></code></a>]</span></dt><dd><p>Permitted RoHS flag states.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py enum">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag">
+<em class="property"><span class="pre">enum</span> </em><span class="sig-name descname"><span class="pre">RoHSFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permitted RoHS flag states. A larger value means the item is less compliant, i.e. the compliance result is
+worse the further down the list the result appears.</p>
+<p>See the Restricted Substances Reports User Guide for more details.</p>
+<p>Valid values are as follows:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNotImpacted">
+<span class="sig-name descname"><span class="pre">RohsNotImpacted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsNotImpacted</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNotImpacted" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is not impacted by the specified legislations.
+    <em>Substance is not impacted.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsBelowThreshold">
+<span class="sig-name descname"><span class="pre">RohsBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is impacted by the specified legislations, but appears in the parent item
+    in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliant">
+<span class="sig-name descname"><span class="pre">RohsCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item either does not contain any substances impacted by the specified legislations, or
+    contains no substances above the specified threshold. <em>Item is compliant.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliantWithExemptions">
+<span class="sig-name descname"><span class="pre">RohsCompliantWithExemptions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsCompliantWithExemptions</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliantWithExemptions" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item contains substances impacted by the specified legislations, but an
+    exemption has been declared either on itself or a child item. <em>Item is compliant with exemptions.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsAboveThreshold">
+<span class="sig-name descname"><span class="pre">RohsAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is impacted by the specified legislations and is present in a quantity
+    above that specified by the indicator. <em>Exemption for use required.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNonCompliant">
+<span class="sig-name descname"><span class="pre">RohsNonCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsNonCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNonCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item contains one or more substances impacted by the specified legislations.
+    <em>Item is non-compliant.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown">
+<span class="sig-name descname"><span class="pre">RohsUnknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsUnknown</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>One or more declarations are missing, and so there is not enough information to determine
+    compliance. <em>Compliance is unknown.</em></p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="watch-list-indicator">
+<h2>Watch List Indicator<a class="headerlink" href="#watch-list-indicator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListIndicator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">WatchListIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_process_chemicals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicator object that represents Watch List-type compliance of a BoM object against one or more
+legislations.</p>
+<p>Other <cite>WatchListIndicator</cite> objects with results can be compared, with ‘less compliant’ indicator flags being
+greater than ‘more compliant’ indicator flags.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the indicator. Used to identify the indicator in the query result.</p>
+</dd>
+<dt><strong>legislation_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The legislations against which compliance will be determined.</p>
+</dd>
+<dt><strong>default_threshold_percentage</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>The concentration of substance that will be determined to be non-compliant. Only used if the legislation
+doesn’t define a specific threshold for the substance.</p>
+</dd>
+<dt><strong>ignore_process_chemicals</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>]</span></dt><dd><p>Whether to ignore substances flagged as process chemicals when determining compliance against this indicator.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two differently-typed indicators are compared</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared which both don’t have a result flag</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The Watch List indicator is designed to be used with REACH legislations or internal watch lists, however this is not
+enforced. Substances marked as ‘Process Chemicals’<a class="footnote-reference brackets" href="#id3" id="id2">1</a> are usually included, but can be ignored by specifying
+<cite>ignore_process_chemicals=True</cite> when creating the Indicator. Exemptions are always ignored. The possible result
+flags for the indicator distinguish between an item being compliant, compliant but with substances below the
+threshold, or non-compliant.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span> <span class="o">=</span> <span class="n">RoHSIndicator</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Tracked substances&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">legislation_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;The SIN List 2.1 (Substitute It Now!)&quot;</span><span class="p">],</span>
+<span class="gp">... </span>                          <span class="n">default_threshold_percentage</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">ignore_process_chemicals</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator</span>
+<span class="go">&lt;WatchListIndicator, name: Tracked substances&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="n">MaterialComplianceQuery</span><span class="o">.</span><span class="n">with_indicators</span><span class="p">([</span><span class="n">indicator</span><span class="p">])</span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">MaterialComplianceQueryResult</span>  <span class="c1"># Perform a compliance query</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator_result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">compliance_by_material_and_indicator</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Tracked substances&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indicator_result</span><span class="o">.</span><span class="n">flag</span> <span class="o">&gt;=</span> <span class="n">indicator</span><span class="o">.</span><span class="n">available_flags</span><span class="p">[</span><span class="s1">&#39;WatchListAllSubstancesBelowThreshold&#39;</span><span class="p">]</span>
+<span class="go">True  # The material is not compliant with the legislations in the Indicator</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_flags</span></code><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Type</span></code>[<a class="reference internal" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag" title="ansys.grantami.bomanalytics.indicators.WatchListFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListFlag</span></code></a>]</span></dt><dd><p>Permitted Watch List flag states.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py enum">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag">
+<em class="property"><span class="pre">enum</span> </em><span class="sig-name descname"><span class="pre">WatchListFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permitted Watch List flag states. Increasing value means less compliance, i.e. the compliance
+result is worse the further down the list the result appears.</p>
+<p>See the Restricted Substances Reports User Guide for more details.</p>
+<p>Valid values are as follows:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListNotImpacted">
+<span class="sig-name descname"><span class="pre">WatchListNotImpacted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListNotImpacted</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListNotImpacted" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is not impacted by the specified legislations.
+    <em>Substance is not impacted.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListCompliant">
+<span class="sig-name descname"><span class="pre">WatchListCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item does not contain any substances impacted by the specified legislations.
+    <em>Item is compliant.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListBelowThreshold">
+<span class="sig-name descname"><span class="pre">WatchListBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is impacted by the specified legislations, but appears in the parent
+    item in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAllSubstancesBelowThreshold">
+<span class="sig-name descname"><span class="pre">WatchListAllSubstancesBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListAllSubstancesBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAllSubstancesBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item contains no substances above the specified threshold.
+    <em>Item is compliant.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAboveThreshold">
+<span class="sig-name descname"><span class="pre">WatchListAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This substance is impacted by the specified legislations and appears in the parent
+    item in a quantity above that specified by the indicator. <em>Substance is impacted.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListHasSubstanceAboveThreshold">
+<span class="sig-name descname"><span class="pre">WatchListHasSubstanceAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListHasSubstanceAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListHasSubstanceAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This item contains one or more substances impacted by the specified
+    legislations. <em>Item is non-compliant.</em></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListUnknown">
+<span class="sig-name descname"><span class="pre">WatchListUnknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListUnknown</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListUnknown" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>There is not enough information to determine compliance. <em>Compliance is unknown.</em></p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>A substance is determined to be a Process Chemical if either the substance category is set as ‘Used in
+production’ or ‘May be used in production’ in the tabular row where it is referenced, or if the substance is included
+in a material and the material type is set as ‘Process’ in the tabular row that links the material to a
+specification.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

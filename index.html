@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ansys Granta MI BoM Analytics API Documentation &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/example-block.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/index.html">
+  Example Scripts
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/granta-bomanalytics" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-and-purpose">
+   Introduction and Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dependencies">
+   Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-code">
+   Quick Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-reference">
+   API Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-index">
+   Project Index
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="ansys-granta-mi-bom-analytics-api-documentation">
+<h1>Ansys Granta MI BoM Analytics API Documentation<a class="headerlink" href="#ansys-granta-mi-bom-analytics-api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="introduction-and-purpose">
+<h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this headline">¶</a></h2>
+<p>This project is part of the larger PyAnsys effort to facilitate the use
+of Ansys technologies directly from within Python.</p>
+<p>Granta MI provides a mature and feature-rich method for managing
+compliance data as part of the Restricted Substances solution.
+When combined with the Granta MI BoM Analyzer and Restricted Substances
+Reports, the data managed in Granta MI can be leveraged to
+determine compliance for complex specification hierarchies, assemblies,
+and even entire products.</p>
+<p>This package takes the functionality available interactively through
+the web browser, and exposes it as an API. The expected use cases
+for this package are as follows:</p>
+<ul class="simple">
+<li><p>Periodically rolling up compliance results and storing the results
+in Granta MI</p></li>
+<li><p>Scripting compliance calculations as part of a release process</p></li>
+<li><p>Allowing compliance to be determined for BoMs stored in third-party
+systems, for example PLM or ERP systems</p></li>
+</ul>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>To use this package you will require access to a Granta MI server
+that includes MI Restricted Substances Reports 2022 R1
+or later. This package also has the following Python package
+dependencies (installed automatically by pip):</p>
+<ul class="simple">
+<li><p>ansys-grantami-bomanalytics-openapi</p></li>
+<li><p>ansys-openapi-common</p></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The Granta MI Restricted Substances solution includes a REST API for
+evaluating compliance of products, assemblies, specifications and
+materials against legislations. This package abstracts automatically-
+generated code into an easy-to-use client library.</p>
+</div>
+<div class="section" id="quick-code">
+<h2>Quick Code<a class="headerlink" href="#quick-code" title="Permalink to this headline">¶</a></h2>
+<p>Here’s a brief example of how the package works. This example finds the
+percentage content of all SVHCs in an ABS/PVC blend:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">queries</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">servicelayer_url</span><span class="o">=</span><span class="s2">&quot;http://localhost/mi_servicelayer&quot;</span><span class="p">)</span> \
+<span class="gp">... </span>    <span class="o">.</span><span class="n">with_autologon</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+<span class="gp">... </span>    <span class="n">queries</span><span class="o">.</span><span class="n">MaterialImpactedSubstancesQuery</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="o">.</span><span class="n">with_material_ids</span><span class="p">([</span><span class="s1">&#39;plastic-abs-pvc-flame&#39;</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="o">.</span><span class="n">with_legislations</span><span class="p">([</span><span class="s1">&#39;REACH - The Candidate List&#39;</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">impacted_substances</span><span class="p">)</span>
+<span class="go">[&lt;ImpactedSubstance: {&quot;cas_number&quot;: 10108-64-2, &quot;percent_amount&quot;: 1.9}&gt;,</span>
+<span class="go"> &lt;ImpactedSubstance: {&quot;cas_number&quot;: 107-06-2, &quot;percent_amount&quot;: None}&gt;,</span>
+<span class="go"> &lt;ImpactedSubstance: {&quot;cas_number&quot;: 115-96-8, &quot;percent_amount&quot;: 15.0}&gt;,</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>The sequence of events is as follows:</p>
+<ol class="arabic simple">
+<li><p>Connect to Granta MI.</p></li>
+<li><p>Create the appropriate query, choosing between:</p>
+<ul class="simple">
+<li><p><em>Query type</em>: Compliance or Impacted Substances.</p></li>
+<li><p><em>Reference type</em>: Materials, parts, specifications, substances, or an XML BoM.</p></li>
+</ul>
+</li>
+<li><p>Specify the legislations and records of interest.</p></li>
+<li><p>Run the query.</p></li>
+<li><p>Process the results.</p></li>
+</ol>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<p>For full details of the API available see the API reference: <a class="reference internal" href="api/index.html#ref-grantami-bomanalytics-api-index"><span class="std std-ref">API Reference</span></a>.</p>
+</div>
+<div class="section" id="project-index">
+<h2>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

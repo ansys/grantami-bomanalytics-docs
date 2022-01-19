@@ -1,0 +1,162 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "4ac91b2b",
+   "metadata": {},
+   "source": [
+    "# [TECHDOCS]Database-Specific Configuration Options"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "300e72a8",
+   "metadata": {},
+   "source": [
+    "The BoM Analytics package will work with an off-the-shelf Granta MI Restricted Substances database. However, there are\n",
+    "some situations in which additional run-time configuration changes are required:\n",
+    "\n",
+    "- If the database key or table names have been modified from their default values, these must be set on the\n",
+    "  `Connection` object\n",
+    "- If the number of linked records is very large, the batch sizes should be changed for each query (see xxxx for more\n",
+    "  details)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e0f3524a",
+   "metadata": {},
+   "source": [
+    "## Specifying a Custom Database Key or Table Name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "84ea38dc",
+   "metadata": {},
+   "source": [
+    "The default database key of MI_Restricted_Substances is used by default if not specified. To specify an alternative,\n",
+    "use the `Connection.set_database_details()` method. This database key will be used for all queries made with this\n",
+    "`Connection` object."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5987a5bf",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "from ansys.grantami.bomanalytics import Connection\n",
+    "\n",
+    "server_url = \"http://my_grantami_service/mi_servicelayer\"\n",
+    "cxn = Connection(server_url).with_credentials(\"user_name\", \"password\").connect()\n",
+    "cxn.set_database_details(database_key=\"ACME_SUBSTANCES_DATABASE\")\n",
+    "cxn"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9e97ad18",
+   "metadata": {},
+   "source": [
+    "It is also possible to specify alternative names for the relevant Restricted Substances tables, in the case that they\n",
+    "have been modified from the defaults. These are also provided to the .set_database_details() method in the same way."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0fe52613",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cxn.set_database_details(in_house_materials_table_name=\"ACME Materials\")\n",
+    "cxn"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b8923264",
+   "metadata": {},
+   "source": [
+    "## Batch Size"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6d4e01c",
+   "metadata": {},
+   "source": [
+    "The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by\n",
+    "splitting the list of parts, materials, etc. into smaller lists below a certain size to reduce the overall time taken\n",
+    "to perform the query. Default batch sizes have been chosen based on typical tabular attribute sizes, but under some\n",
+    "situations (see the relevant page in the API documentation) these may need to be changed."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9d0090a",
+   "metadata": {},
+   "source": [
+    "To see the default batch size, use the batch_size property on the query."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "044bdb01",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from ansys.grantami.bomanalytics import queries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c03bfd6b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "spec_query = queries.SpecificationComplianceQuery()\n",
+    "spec_query"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4d0121a6",
+   "metadata": {},
+   "source": [
+    "You can manually set the batch size by doing the following:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "092fe505",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "spec_query = spec_query.with_batch_size(5)\n",
+    "spec_query"
+   ]
+  }
+ ],
+ "metadata": {
+  "jupytext": {
+   "formats": "ipynb,py:light"
+  },
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
