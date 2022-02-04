@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "a26539ee",
+   "id": "e8b1afcb",
    "metadata": {},
    "source": [
     "# Database-Specific Configuration Options"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "18c8a035",
+   "id": "37e90fae",
    "metadata": {},
    "source": [
     "The BoM Analytics package will work with an off-the-shelf Granta MI Restricted Substances database. However, there are\n",
@@ -24,7 +24,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "71660867",
+   "id": "408a8528",
    "metadata": {},
    "source": [
     "## Specifying a Custom Database Key or Table Name"
@@ -32,7 +32,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2412ce20",
+   "id": "73ebc532",
    "metadata": {},
    "source": [
     "The default database key, ``MI_Restricted_Substances``, is used if no database key is specified. To specify an\n",
@@ -43,7 +43,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4add6237",
+   "id": "e3b8d4b2",
    "metadata": {
     "tags": []
    },
@@ -59,7 +59,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f7812007",
+   "id": "39a588be",
    "metadata": {},
    "source": [
     "It is also possible to specify alternative names for the relevant Restricted Substances tables, if they\n",
@@ -69,7 +69,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "22192554",
+   "id": "7140a61a",
    "metadata": {
     "tags": []
    },
@@ -81,7 +81,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ddc1501c",
+   "id": "d64cdb24",
    "metadata": {},
    "source": [
     "## Batch Size"
@@ -89,7 +89,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9834b563",
+   "id": "c5d8b5d2",
    "metadata": {},
    "source": [
     "The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by\n",
@@ -100,7 +100,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5e228770",
+   "id": "2309ac99",
    "metadata": {},
    "source": [
     "The batch size is included in the query ``__repr__``. The cell below shows a ``SpecificationComplianceQuery`` object\n",
@@ -110,7 +110,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "73c119d0",
+   "id": "e170306f",
    "metadata": {
     "tags": []
    },
@@ -124,7 +124,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a1a57a7a",
+   "id": "75f3a105",
    "metadata": {},
    "source": [
     "You can manually set the batch size by doing the following:"
@@ -133,7 +133,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0b6e9aaa",
+   "id": "9099cb15",
    "metadata": {
     "tags": []
    },

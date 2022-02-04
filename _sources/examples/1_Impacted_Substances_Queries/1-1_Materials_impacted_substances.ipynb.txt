@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "1988b138",
+   "id": "e914ad07",
    "metadata": {},
    "source": [
     "# Performing a Material Impacted Substances Query"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "079da91d",
+   "id": "b621b661",
    "metadata": {},
    "source": [
     "A Material Impacted Substances Query is used to identify the substances associated with a material that are impacted\n",
@@ -19,7 +19,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c929c1df",
+   "id": "4242de79",
    "metadata": {},
    "source": [
     "This example shows how to perform an Impacted Substance query on material records, and how to process the results."
@@ -27,7 +27,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3ae9ce23",
+   "id": "5f02d5fd",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -35,7 +35,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f5590679",
+   "id": "f71c8b65",
    "metadata": {},
    "source": [
     "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
@@ -45,7 +45,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "a6fee0d6",
+   "id": "9f8c9140",
    "metadata": {
     "tags": []
    },
@@ -59,7 +59,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6730495b",
+   "id": "61c2c53a",
    "metadata": {},
    "source": [
     "## Building and Running the Query"
@@ -67,7 +67,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1f61d937",
+   "id": "41c30eb2",
    "metadata": {},
    "source": [
     "The query is assembled by providing lists of material references and legislations of interest. The query will return\n",
@@ -76,7 +76,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9405a456",
+   "id": "2cd90e39",
    "metadata": {},
    "source": [
     "First specify some constants that contain the material and legislation references we will use."
@@ -85,7 +85,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f1c152e9",
+   "id": "5b61102c",
    "metadata": {
     "tags": []
    },
@@ -99,7 +99,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6eff6409",
+   "id": "88dc866c",
    "metadata": {},
    "source": [
     "Next import the ``queries`` module and build the query with the references in the previous cell."
@@ -108,7 +108,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3521ee3b",
+   "id": "8961ada9",
    "metadata": {
     "tags": []
    },
@@ -125,7 +125,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cde1b3e2",
+   "id": "e079dc4a",
    "metadata": {},
    "source": [
     "Finally, run the query. Passing a ``MaterialImpactedSubstancesQuery`` object to the ``Connection.run()`` method\n",
@@ -135,7 +135,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "cc374968",
+   "id": "e5f5fc96",
    "metadata": {
     "tags": []
    },
@@ -147,7 +147,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1f3d51de",
+   "id": "ed5d325b",
    "metadata": {},
    "source": [
     "A ``MaterialImpactedSubstancesQueryResult`` object contains three properties:\n",
@@ -157,7 +157,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b5dd1da9",
+   "id": "29a87c1a",
    "metadata": {},
    "source": [
     "## Results Grouped by Material"
@@ -165,7 +165,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b04da4b9",
+   "id": "fcc23b2a",
    "metadata": {},
    "source": [
     "This property is structured first as a list of ``materialWithImpactedSubstancesResult`` objects, each of which\n",
@@ -175,7 +175,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0678c99a",
+   "id": "8897b587",
    "metadata": {},
    "source": [
     "First, we can simplify the structure somewhat because we are only using Material IDs. The cell below creates a\n",
@@ -185,7 +185,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "337913b4",
+   "id": "c5541058",
    "metadata": {
     "tags": []
    },
@@ -199,7 +199,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "796d53fa",
+   "id": "68f96b12",
    "metadata": {},
    "source": [
     "Then use the ``tabulate`` package to print a table of the substances and their quantities for the polycarbonate\n",
@@ -209,7 +209,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "43ceb9c1",
+   "id": "b370011d",
    "metadata": {
     "tags": []
    },
@@ -226,7 +226,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e8765356",
+   "id": "7142e97d",
    "metadata": {},
    "source": [
     "## Results Grouped by Legislation"
@@ -234,7 +234,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f2cba2ab",
+   "id": "cbe01204",
    "metadata": {},
    "source": [
     "This property merges the results across all materials, resulting in a single dictionary of legislations that contain\n",
@@ -243,7 +243,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e5b2a587",
+   "id": "a9e94b77",
    "metadata": {},
    "source": [
     "Again we use the ``tabulate`` package to print a table of substances, but this time we are including the substances in\n",
@@ -253,7 +253,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "c315a992",
+   "id": "330d026e",
    "metadata": {
     "tags": []
    },
@@ -268,7 +268,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9aaa5aa6",
+   "id": "6b839464",
    "metadata": {},
    "source": [
     "## Results as a Flat List"
@@ -276,7 +276,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8ad405e8",
+   "id": "4e7059ad",
    "metadata": {},
    "source": [
     "This property reduces the granularity further to produce a single flattened list of substances across all legislations\n",
@@ -285,7 +285,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f2d8922f",
+   "id": "d4516541",
    "metadata": {},
    "source": [
     "The cell below uses the ``tabulate`` package to print a table of substances. Because we are using the\n",
@@ -296,7 +296,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "d1ce3c42",
+   "id": "88b15cbc",
    "metadata": {
     "tags": []
    },
