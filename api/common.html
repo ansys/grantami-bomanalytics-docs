@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Granta MI Connection &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Granta MI Connection &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Batching Requests" href="batching.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,31 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API Reference</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Granta MI Connection</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -235,17 +266,17 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Connect to an instance of Granta MI.</p>
+<dd><p>Connects to an instance of Granta MI.</p>
 <p class="rubric">Notes</p>
 <p>For advanced usage, including configuring session-specific properties and timeouts, see the
-<cite>ansys-openapi-common</cite> package documentation.</p>
-<p>The connection to Granta MI is created in 3 stages:</p>
+<code class="docutils literal notranslate"><span class="pre">ansys-openapi-common</span></code> package documentation.</p>
+<p>To create the connection to Granta MI, you perform three steps:</p>
 <ol class="arabic simple">
-<li><p>Create the connection builder object and specify the server to be connected to.</p></li>
-<li><p>Specify the authentication method to be used for the connection and provide credentials if required.</p></li>
-<li><p>Connect to the server (the connection object is returned).</p></li>
+<li><p>Create the connection builder object and specify the server to connect to.</p></li>
+<li><p>Specify the authentication method to use for the connection and provide credentials if required.</p></li>
+<li><p>Connect to the server, which returns the connection object.</p></li>
 </ol>
-<p>The examples below show this process for different authentication methods.</p>
+<p>The examples show this process for different authentication methods.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;http://my_mi_server/mi_servicelayer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">with_autologon</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span>
@@ -264,48 +295,50 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a factory that configures an API client for use with autogenerated Swagger clients.</p>
-<p>Handles setting up retry strategy, session-level timeout and any additional requests configuration,
-authentication must be subsequently configured using one of the other class methods.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>api_url</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Base URL of the API server.</p>
-</dd>
-<dt><strong>session_configuration</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionConfiguration</span></code>]</span></dt><dd><p>Additional configuration settings for the requests Session.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.with_autologon">
 <span class="sig-name descname"><span class="pre">with_autologon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.with_autologon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set up the client authentication for use with Kerberos (also known as integrated windows authentication).</p>
+<dd><p>Set up client authentication for use with Kerberos (also known as integrated Windows authentication).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Current client factory object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Requires the user to have a valid Kerberos Ticket-Granting-Ticket (TGT).</p>
-<p>On Windows this is provided by default.</p>
-<p>On Linux this requires the <cite>[linux-kerberos]</cite> extension to be installed, and your Kerberos installation
-must be configured manually. See <a class="reference external" href="https://github.com/requests/requests-kerberos">here</a> for more
-information on how to configure your Kerberos installation.</p>
+<ul class="simple">
+<li><p>On Windows, this is provided by default.</p></li>
+<li><p>On Linux, this requires the <code class="docutils literal notranslate"><span class="pre">[linux-kerberos]</span></code> extension to be installed and your Kerberos installation
+to be configured correctly.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.with_credentials">
 <span class="sig-name descname"><span class="pre">with_credentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.with_credentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set up the client authentication for use with provided credentials.</p>
-<p>This method will attempt to connect to the API and use the provided <code class="docutils literal notranslate"><span class="pre">WWW-Authenticate</span></code> header to determine
+<dd><p>Set up client authentication for use with provided credentials.</p>
+<p>This method will attempt to connect to the API and uses the provided <code class="docutils literal notranslate"><span class="pre">WWW-Authenticate</span></code> header to determine
 whether Negotiate, NTLM, or Basic Authentication should be used. The selected authentication method will then be
 configured for use.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>username</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Username for connection.</p>
+<dt><strong>username</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Username for the connection.</p>
 </dd>
-<dt><strong>password</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Password for connection.</p>
+<dt><strong>password</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Password for the connection.</p>
 </dd>
-<dt><strong>domain</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>Domain to use for connection if required.</p>
+<dt><strong>domain</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Domain to use for connection if required. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Original client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -317,36 +350,56 @@ configured for use.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.with_oidc">
 <span class="sig-name descname"><span class="pre">with_oidc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idp_session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.with_oidc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set up the client authentication for use with OpenID Connect.</p>
+<dd><p>Set up client authentication for use with OpenID Connect.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>idp_session_configuration</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionConfiguration</span></code>]</span></dt><dd><p>Additional configuration settings for the requests Session when connected to the OpenID Identity Provider.</p>
+<dt><strong>idp_session_configuration</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionConfiguration</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session when connected to the OpenID identity provider.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">OIDCSessionBuilder</span></code></dt><dd><p>Builder object to authenticate via OIDC.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>OIDC Authentication requires the <cite>[oidc]</cite> extra to be installed.</p>
+<p>OIDC Authentication requires the <code class="docutils literal notranslate"><span class="pre">[oidc]</span></code> extra to be installed.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.with_anonymous">
 <span class="sig-name descname"><span class="pre">with_anonymous</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.with_anonymous" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set up the client authentication for anonymous use. This does not configure any authentication or
-authorization headers, users must provide any authentication information required themselves.</p>
-<p>Clients relying on custom authentication such as client certificates, or non-standard tokens should use this
+<dd><p>Set up client authentication for anonymous use. This does not configure any authentication or
+authorization headers. Users must provide any authentication information required themselves.</p>
+<p>Clients relying on custom authentication such as client certificates or non-standard tokens should use this
 method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Original client factory object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.connect">
 <span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finalizes the API client and returns it for use.</p>
+<dd><p>Finalize the API client and return it for use.</p>
 <p>Authentication must be configured for this method to succeed.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClient</span></code></dt><dd><p>Client object that can be used to connect to the server and perform API operations.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
 <dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>When the client is not fully configured.</p>
 </dd>
 </dl>
@@ -362,8 +415,8 @@ method.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._connection.BomAnalyticsClient">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomAnalyticsClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicelayer_url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>The class used to communicate with Granta MI. It is instantiated by the
-<a class="reference internal" href="#ansys.grantami.bomanalytics.Connection" title="ansys.grantami.bomanalytics.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a> class defined above, and should not be instantiated directly.</p>
+<dd><p>Communicates with Granta MI. This class is instantiated by the
+<a class="reference internal" href="#ansys.grantami.bomanalytics.Connection" title="ansys.grantami.bomanalytics.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a> class defined above and should not be instantiated directly.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">MaterialImpactedSubstancesQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MaterialImpactedSubstancesQueryResult</span></span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="Permalink to this definition">¶</a></dt>
@@ -398,18 +451,18 @@ method.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Result</span></code></dt><dd><p>The specific result object based on the provided query, which contains either the compliance or
-impacted substances results. In the case of a yaml query, returns a string.</p>
+impacted substances results. In the case of a yaml query, a string is returned.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="#ansys.grantami.bomanalytics.GrantaMIException" title="ansys.grantami.bomanalytics.GrantaMIException"><code class="xref py py-class docutils literal notranslate"><span class="pre">GrantaMIException</span></code></a></dt><dd><p>[TECHDOCS] If a message is returned with a severity of “critical”. Granta MI is running and the BoM
-Analytics Service is available, but it was not able to run the query. Possible causes include a missing
-database or table.</p>
+<dt><a class="reference internal" href="#ansys.grantami.bomanalytics.GrantaMIException" title="ansys.grantami.bomanalytics.GrantaMIException"><code class="xref py py-class docutils literal notranslate"><span class="pre">GrantaMIException</span></code></a></dt><dd><p>If the server encounters an error while processing the query with a severity of “critical”. This indicates
+that Granta MI is running and the BoM Analytics Service is available, but the query could not be run;
+probably because of a missing database or table.</p>
 </dd>
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></dt><dd><p>[TECHDOCS] If the Granta MI server was not able to return a response. Possible causes include an internal
-configuration error, or that the BoM Analytics Service is not installed.</p>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></dt><dd><p>If this exception is raised, the Granta MI server was not able to return a response, probably
+because of an internal configuration error or the BoM Analytics Service not being installed.</p>
 </dd>
 </dl>
 </dd>
@@ -419,32 +472,39 @@ configuration error, or that the BoM Analytics Service is not installed.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.set_database_details">
 <span class="sig-name descname"><span class="pre">set_database_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MI_Restricted_Substances'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_universe_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_house_materials_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specifications_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">products_and_parts_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substances_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coatings_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.set_database_details" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure the database key and table names, if different from the defaults.</p>
-<p>Database key is required if Granta MI is configured to use a value other than ‘MI_Restricted_Substances’. A
-table name is required if it has been modified from the defaults.</p>
+<dd><p>Configure the database key and table names if different from the defaults.</p>
+<p>A database key is required if Granta MI is configured to use a value other than <code class="docutils literal notranslate"><span class="pre">MI_Restricted_Substances</span></code>.
+A table name is required for each table in the Restricted Substances Database that has been renamed.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>database_key</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The database key for the Restricted Substances database.</p>
+<dt><strong>database_key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Database key for the Restricted Substances database. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+in which case <code class="docutils literal notranslate"><span class="pre">MI_Restricted_Substances</span></code> is used.</p>
 </dd>
-<dt><strong>material_universe_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘MaterialUniverse’ schema.</p>
+<dt><strong>material_universe_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">MaterialUniverse</span></code> schema. The
+default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">MaterialUniverse</span></code> is used.</p>
 </dd>
-<dt><strong>in_house_materials_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘Materials - in house’ schema.</p>
+<dt><strong>in_house_materials_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">Materials</span> <span class="pre">-</span> <span class="pre">in</span> <span class="pre">house</span></code> schema.
+The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">Materials</span> <span class="pre">-</span> <span class="pre">in</span> <span class="pre">house</span></code> is used.</p>
 </dd>
-<dt><strong>specifications_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘Specifications’ schema.</p>
+<dt><strong>specifications_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> schema. The
+default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> is used.</p>
 </dd>
-<dt><strong>products_and_parts_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘Products and parts’ schema.</p>
+<dt><strong>products_and_parts_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">Products</span> <span class="pre">and</span> <span class="pre">parts</span></code> schema. The
+default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">Products</span> <span class="pre">and</span> <span class="pre">parts</span></code> is used.</p>
 </dd>
-<dt><strong>substances_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘Restricted Substances’ schema.</p>
+<dt><strong>substances_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">Restricted</span> <span class="pre">Substances</span></code> schema.
+The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">Restricted</span> <span class="pre">Substances</span></code> is used.</p>
 </dd>
-<dt><strong>coatings_table_name</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The name of the table that implements the ‘Coatings’ schema.</p>
+<dt><strong>coatings_table_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the table that implements the <code class="docutils literal notranslate"><span class="pre">Coatings</span></code> schema. The default
+is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case  <code class="docutils literal notranslate"><span class="pre">Coatings</span></code> is used.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The database key and table names are configurable, but only need to be specified if they have been modified
-from the defaults. These are summarized below:</p>
+<p>The database key and table names are configurable, but they only need to be specified if they have been modified
+from the defaults. Here is a summary of the default names:</p>
 <ul class="simple">
 <li><p>Database key: MI_Restricted_Substances</p></li>
 <li><p>Table names:</p>
@@ -475,15 +535,15 @@ from the defaults. These are summarized below:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.LogMessage">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">LogMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">severity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.LogMessage" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] A message returned by Granta MI when running the query.</p>
-<p>Messages marked with the “error” severity are more likely to produce incorrect results and should be treated with
+<dd><p>Message returned by Granta MI when running the query.</p>
+<p>Messages marked with the <code class="docutils literal notranslate"><span class="pre">error</span></code> severity are more likely to produce incorrect results and should be treated with
 increased caution.</p>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
-<dt><strong>severity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Either “error”, “warning”, or “information”.</p>
+<dt><strong>severity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Either <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, or <code class="docutils literal notranslate"><span class="pre">information</span></code>.</p>
 </dd>
-<dt><strong>message</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>A description of the issue.</p>
+<dt><strong>message</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Description of the issue.</p>
 </dd>
 </dl>
 </dd>
@@ -496,7 +556,7 @@ increased caution.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.GrantaMIException">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">GrantaMIException</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.GrantaMIException" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] A critical error occurred when processing a BoM Analytics query.</p>
+<dd><p>A critical error occurred when processing a BoM Analytics query.</p>
 </dd></dl>
 
 </div>

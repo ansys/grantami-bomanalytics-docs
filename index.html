@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ansys Granta MI BoM Analytics API Documentation &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Granta MI BoM Analytics 1.0.0c0 &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Reference" href="api/index.html" />
@@ -50,6 +55,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -125,6 +131,28 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+
+        <li class="nav-item nav-item-this"><a href="">Granta MI BoM Analytics 1.0.0c0</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -183,6 +211,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing">
+   Contributing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-index">
    Project Index
   </a>
@@ -208,8 +241,8 @@
               
               <div>
                 
-  <div class="section" id="ansys-granta-mi-bom-analytics-api-documentation">
-<h1>Ansys Granta MI BoM Analytics API Documentation<a class="headerlink" href="#ansys-granta-mi-bom-analytics-api-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="granta-mi-bom-analytics-version">
+<h1>Granta MI BoM Analytics 1.0.0c0<a class="headerlink" href="#granta-mi-bom-analytics-version" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="section" id="introduction-and-purpose">
@@ -223,14 +256,14 @@ Reports, the data managed in Granta MI can be leveraged to
 determine compliance for complex specification hierarchies, assemblies,
 and even entire products.</p>
 <p>This package takes the functionality available interactively through
-the web browser, and exposes it as an API. The expected use cases
+the web browser and exposes it as an API. The expected use cases
 for this package are as follows:</p>
 <ul class="simple">
 <li><p>Periodically rolling up compliance results and storing the results
 in Granta MI</p></li>
 <li><p>Scripting compliance calculations as part of a release process</p></li>
 <li><p>Allowing compliance to be determined for BoMs stored in third-party
-systems, for example PLM or ERP systems</p></li>
+systems, such as PLM or ERP systems</p></li>
 </ul>
 </div>
 <div class="section" id="dependencies">
@@ -238,7 +271,7 @@ systems, for example PLM or ERP systems</p></li>
 <p>To use this package you will require access to a Granta MI server
 that includes MI Restricted Substances Reports 2022 R1
 or later. This package also has the following Python package
-dependencies (installed automatically by pip):</p>
+dependencies, which are installed automatically by <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <ul class="simple">
 <li><p>ansys-grantami-bomanalytics-openapi</p></li>
 <li><p>ansys-openapi-common</p></li>
@@ -247,7 +280,7 @@ dependencies (installed automatically by pip):</p>
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>The Granta MI Restricted Substances solution includes a REST API for
-evaluating compliance of products, assemblies, specifications and
+evaluating compliance of products, assemblies, specifications, and
 materials against legislations. This package abstracts automatically-
 generated code into an easy-to-use client library.</p>
 </div>
@@ -277,8 +310,8 @@ percentage content of all SVHCs in an ABS/PVC blend:</p>
 <li><p>Connect to Granta MI.</p></li>
 <li><p>Create the appropriate query, choosing between:</p>
 <ul class="simple">
-<li><p><em>Query type</em>: Compliance or Impacted Substances.</p></li>
-<li><p><em>Reference type</em>: Materials, parts, specifications, substances, or an XML BoM.</p></li>
+<li><p><em>Query type</em>: Compliance or impacted substances</p></li>
+<li><p><em>Reference type</em>: Materials, parts, specifications, substances, or an XML BoM</p></li>
 </ul>
 </li>
 <li><p>Specify the legislations and records of interest.</p></li>
@@ -288,7 +321,12 @@ percentage content of all SVHCs in an ABS/PVC blend:</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<p>For full details of the API available see the API reference: <a class="reference internal" href="api/index.html#ref-grantami-bomanalytics-api-index"><span class="std std-ref">API Reference</span></a>.</p>
+<p>For comprehensive API documentation, see <a class="reference internal" href="api/index.html#ref-grantami-bomanalytics-api-index"><span class="std std-ref">API Reference</span></a>.</p>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>Contributions to this library are welcomed. For more information, see the
+<a class="reference internal" href="contributing.html"><span class="doc">Contributor Guide</span></a>.</p>
 </div>
 <div class="section" id="project-index">
 <h2>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">¶</a></h2>

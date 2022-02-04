@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BoM Compliance &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>BoM Compliance &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Indicators" href="indicators.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Compliance API</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">BoM Compliance</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -255,11 +287,11 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.BomComplianceQuery">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomComplianceQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.BomComplianceQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluate compliance for a Bill of Materials in the Ansys Granta 1711 XML BoM format against a number of
+<dd><p>Evaluates compliance for a BoM in the Ansys Granta 1711 XML BoM format against a number of
 indicators.</p>
-<p>All BoM-based queries only operate on a single BoM. As a result, the <cite>.with_batch_size()</cite> method is not
+<p>All BoM-based queries only operate on a single BoM. As a result, the <code class="docutils literal notranslate"><span class="pre">.with_batch_size()</span></code> method is not
 implemented for BoM-based queries.</p>
-<p>The methods used to add the BoM and Indicators to this query return the query itself, so they can be
+<p>The methods used to add the BoM and Indicators to this query return the query itself so that they can be
 chained together as required.</p>
 <p>Once the query is fully constructed, use the <cite>cxn.</cite>
 <a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method to return a result of type
@@ -293,7 +325,7 @@ chained together as required.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -318,17 +350,18 @@ chained together as required.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.BomComplianceQuery.with_bom">
 <span class="sig-name descname"><span class="pre">with_bom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bom</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.BomComplianceQuery.with_bom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the BoM to be used for the query.</p>
+<dd><p>Set the BoM to use for the query.</p>
 <p>The BoM must be in the Ansys Granta 1711 XML BoM format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>bom</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd></dd>
+<dt><strong>bom</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>BoM to use for the query.</p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -359,15 +392,15 @@ used to validate that the BoM is both valid XML and adheres to the Ansys Granta 
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomComplianceQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>The result of running a <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.BomComplianceQuery" title="ansys.grantami.bomanalytics.queries.BomComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomComplianceQuery</span></code></a>. Summarizes
-the compliance status of a BoM against one or more indicators.</p>
+<dd><p>Retrieves the result of running the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.BomComplianceQuery" title="ansys.grantami.bomanalytics.queries.BomComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomComplianceQuery</span></code></a>
+class. This class summarizes the compliance status of a BoM against one or more indicators.</p>
 <p class="rubric">Notes</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.compliance_by_indicator">
 <span class="sig-name descname"><span class="pre">compliance_by_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.compliance_by_indicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The compliance status for each indicator in the original query. The indicator name
+<dd><p>Compliance status for each indicator in the original query. The indicator name
 is used as the dictionary key.</p>
 <p>The result for each indicator is determined by taking the worst result for that indicator across all items
 included in the query.</p>
@@ -392,7 +425,7 @@ included in the query.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.compliance_by_part_and_indicator">
 <span class="sig-name descname"><span class="pre">compliance_by_part_and_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.compliance_by_part_and_indicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The compliance status for each root part included in the BoM specified in the original
+<dd><p>Compliance status for each root part included in the BoM specified in the original
 query.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -412,11 +445,11 @@ query.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.messages">
 <span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult.messages" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] Messages generated by Granta MI when running the query. The presence of one or more messages means
-something unexpected happened when running the query, but the query could still be completed.</p>
-<p>Messages are sorted in order of decreasing severity. Messages are also available in the Service Layer log file.</p>
-<p>Messages are also logged using the Python <cite>logging</cite> module to the “ansys.grantami.bomanalytics” logger. By
-default, messages with a severity of “warning” or higher are printed on stderr.</p>
+<dd><p>Messages generated by Granta MI when running the query. The presence of one or more messages means
+that something unexpected happened when running the query but that the query could still be completed.</p>
+<p>Messages are sorted in order of decreasing severity and are available in the Service Layer log file.</p>
+<p>Messages are also logged using the Python <code class="docutils literal notranslate"><span class="pre">logging</span></code> module to the <code class="docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics</span></code> logger. By
+default, messages with a severity of <code class="docutils literal notranslate"><span class="pre">warning</span></code> or higher are printed on stderr.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">

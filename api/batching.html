@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batching Requests &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Batching Requests &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Impacted Substances API" href="impacted_substances/index.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,31 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API Reference</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Batching Requests</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -187,17 +218,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#very-complex-part-and-specification-hierarchies">
-   Very complex Part and Specification hierarchies
+   Very Complex Part and Specification Hierarchies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#very-simple-part-and-specification-hierarchies">
-   Very simple Part and Specification hierarchies
+   Very Simple Part and Specification Hierarchies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#large-numbers-of-indicators-or-legislations">
-   Large numbers of Indicators or Legislations
+   Large Numbers of Indicators or Legislations
   </a>
  </li>
 </ul>
@@ -225,30 +256,32 @@
 <span id="ref-grantami-bomanalytics-batching"></span><h1>Batching Requests<a class="headerlink" href="#batching-requests" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Queries performed with this package are batched if they exceed a certain size. This is achieved by
-splitting the list of parts, materials, etc. into smaller lists to reduce the overall time taken
-to perform the query.</p>
-<p>The exact optimal size cannot be determined generally, since it depends on the data used to determine Impacted
-Substances and Compliance. Situations where the batch size may need to be changed are
-discussed below.</p>
+<p>Queries performed with this package are batched if they exceed a certain size. When
+you perform a query, batching is achieved by splitting the list of parts and materials
+into smaller lists to reduce the overall time it takes to obtain results.</p>
+<p>The exact optimal size for batching cannot be determined generally because it depends
+on the data that is used to determine impacted substances and compliance. Given the
+following conditions, you might need to change the batch size.</p>
 </div>
 <div class="section" id="very-complex-part-and-specification-hierarchies">
-<h2>Very complex Part and Specification hierarchies<a class="headerlink" href="#very-complex-part-and-specification-hierarchies" title="Permalink to this headline">¶</a></h2>
-<p>Parts and Specifications in Granta MI can be defined recursively, i.e. it’s possible to define Parts and
-Specifications in terms of other Parts and Specifications, and so on. Default batch sizes for Parts and
-Specifications are very small to take this into consideration, but for very complex
-hierarchies you may need to reduce this number further.</p>
+<h2>Very Complex Part and Specification Hierarchies<a class="headerlink" href="#very-complex-part-and-specification-hierarchies" title="Permalink to this headline">¶</a></h2>
+<p>Parts and specifications in Granta MI can be defined recursively. For example, it’s possible
+to define parts and specifications in terms of other parts and specifications. To take this
+into consideration, the default batch size for parts and specifications is very small. However,
+for a very complex hierarchy, you might need to further decrease the batch size.</p>
 </div>
 <div class="section" id="very-simple-part-and-specification-hierarchies">
-<h2>Very simple Part and Specification hierarchies<a class="headerlink" href="#very-simple-part-and-specification-hierarchies" title="Permalink to this headline">¶</a></h2>
-<p>If Part and Specification structures are very simple, for example if they have a similar complexity to materials (i.e. they directly
-reference substances, or reference a small number of materials), then the batch size can be increased.</p>
+<h2>Very Simple Part and Specification Hierarchies<a class="headerlink" href="#very-simple-part-and-specification-hierarchies" title="Permalink to this headline">¶</a></h2>
+<p>Part and specification structures are very simple if they have a similar complexity to materials.
+For example, a very simple hierarchy might directly reference substances or reference a small number
+of materials. For a very simple hierarchy, you might need to increase the batch size.</p>
 </div>
 <div class="section" id="large-numbers-of-indicators-or-legislations">
-<h2>Large numbers of Indicators or Legislations<a class="headerlink" href="#large-numbers-of-indicators-or-legislations" title="Permalink to this headline">¶</a></h2>
-<p>Queries can only be batched in the ‘item’ dimension; there is no facility to split the query by the number of
-legislations or indicators. As a result, if Impacted Substances or Compliance queries are evaluated against a large
-number (typically &gt; 10) of legislations or lists, you may need to reduce the batch size.</p>
+<h2>Large Numbers of Indicators or Legislations<a class="headerlink" href="#large-numbers-of-indicators-or-legislations" title="Permalink to this headline">¶</a></h2>
+<p>Queries can only be batched in the <cite>‘item`</cite> dimension. There is no facility to split the query
+by the number of legislations or indicators. As a result, if queries for impacted substances or
+compliance are evaluated against a large number (typically &gt; 10) of legislations or lists, you
+might need to decrease the batch size.</p>
 </div>
 </div>
 

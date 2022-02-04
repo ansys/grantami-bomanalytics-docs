@@ -2,15 +2,15 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "0983d863",
+   "id": "61bf3043",
    "metadata": {},
    "source": [
-    "# [TECHDOCS]Determining Compliance for BoMs in External Data Sources"
+    "# Determining Compliance for BoMs in External Data Sources"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "51559061",
+   "id": "b7f12245",
    "metadata": {},
    "source": [
     "## Introduction"
@@ -18,26 +18,29 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ee5c12af",
+   "id": "6fc5dbda",
    "metadata": {},
    "source": [
-    "It is common to deal with Bills of Materials or other data structures stored in a third party system. This\n",
+    "You may have to deal with Bills of Materials or other data structures stored in third-party systems. This\n",
     "example shows a scenario where compliance needs to be determined for a BoM-type structure in a JSON file,\n",
     "with the result added to the input file."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "c8ad96d9",
+   "id": "f54483c9",
    "metadata": {},
    "source": [
-    "Whilst it is possible that data would be available in a JSON file, the intention is that the approach presented\n",
-    "here would be applicable for data in other formats, or data loaded from other software platform APIs."
+    "Although it is unlikely that the data structures and processing presented here will be an exact match for your\n",
+    "requirements, this example is intended to demonstrate the principles behind using the BoM Analytics API within\n",
+    "your existing processes. It shows how a BoM-like data structure can be loaded from a neutral format and used as\n",
+    "a starting point for compliance analysis. The approach is applicable to data in other formats, or data loaded from\n",
+    "other software platform APIs."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "5581e26f",
+   "id": "15ab9a54",
    "metadata": {},
    "source": [
     "The external data source used in this example can be downloaded\n",
@@ -46,7 +49,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "bd00d0ef",
+   "id": "219f8a35",
    "metadata": {},
    "source": [
     "## Load the External Data"
@@ -54,17 +57,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "818ba81d",
+   "id": "c1f3ae09",
    "metadata": {},
    "source": [
-    "First load the JSON file and use the `json` module\n",
-    "to convert the text into a hierarchical structure of `dict` and `list` objects."
+    "First load the JSON file and use the ``json`` module to convert the text into a hierarchical structure of ``dict`` and\n",
+    "``list`` objects."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "cd0d8ea4",
+   "id": "1d7ae484",
    "metadata": {
     "tags": []
    },
@@ -80,16 +83,16 @@
   },
   {
    "cell_type": "markdown",
-   "id": "96c7d573",
+   "id": "74e95a39",
    "metadata": {},
    "source": [
-    "The list of components will be used frequently, so we can store this in a variable for convenience."
+    "The list of components will be used frequently, so we store this in a variable for convenience."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4e07797f",
+   "id": "9026d3b0",
    "metadata": {
     "tags": []
    },
@@ -100,7 +103,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2d244d13",
+   "id": "715fd277",
    "metadata": {},
    "source": [
     "It is clear from viewing this data that some parts include multiple materials, and some materials appear in the JSON\n",
@@ -112,16 +115,27 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ae33ab8a",
+   "id": "a784efef",
    "metadata": {},
    "source": [
-    "We can use a set comprehension to get the unique materials, which we can then cast into a list."
+    "Since the compliance status of a material does not depend on which component it is used in, and part compliance\n",
+    "depends only on the worst compliance status of its constituent materials, we can simplify the query by running it\n",
+    "against the set of unique materials in the JSON file. We can then rebuild the data structure from these results to\n",
+    "view the compliance by component."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72832745",
+   "metadata": {},
+   "source": [
+    "First, use a set comprehension to get the unique materials, which we can then cast into a list."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "48791a28",
+   "id": "11e5ab9d",
    "metadata": {
     "tags": []
    },
@@ -133,7 +147,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "45482c48",
+   "id": "664202fa",
    "metadata": {},
    "source": [
     "## Getting the Compliance Status"
@@ -141,16 +155,16 @@
   },
   {
    "cell_type": "markdown",
-   "id": "998d1183",
+   "id": "810f4486",
    "metadata": {},
    "source": [
-    "Now we can feed the list of material IDs into a compliance query as shown in previous exercises."
+    "Next, create and run a compliance query using the list of material IDs, as shown in previous exercises."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "e530c29d",
+   "id": "2008412c",
    "metadata": {
     "tags": []
    },
@@ -158,7 +172,7 @@
    "source": [
     "from ansys.grantami.bomanalytics import Connection, indicators, queries\n",
     "\n",
-    "server_url = \"http://my_grantami_service/mi_servicelayer\"\n",
+    "server_url = \"http://my_grantami_server/mi_servicelayer\"\n",
     "cxn = Connection(server_url).with_credentials(\"user_name\", \"password\").connect()\n",
     "svhc = indicators.WatchListIndicator(\n",
     "    name=\"SVHC\",\n",
@@ -176,7 +190,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d07ca8f2",
+   "id": "4b9a1e4b",
    "metadata": {},
    "source": [
     "## Post-Processing the Results"
@@ -184,35 +198,35 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c0ba8a54",
+   "id": "2b1e0bf2",
    "metadata": {},
    "source": [
-    "The results above describe the compliance status for each material, but some further work needs to be performed to\n",
+    "The results above describe the compliance status for each material, but more work is needed to\n",
     "provide the compliance status for all the components in the original JSON."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "8a51427d",
+   "id": "713ca27a",
    "metadata": {},
    "source": [
-    "In the case where a component contains only one material, the result can simply be copied over.\n",
-    "In the general case, moving from material compliance to component compliance just means taking\n",
-    "the worst compliance across all the constituent materials."
+    "When a component contains only one material, the result can simply be copied over.  In the general case, moving from\n",
+    "material compliance to component compliance means taking the worst compliance result across all the constituent\n",
+    "materials."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "a78e9f21",
+   "id": "7b8054a6",
    "metadata": {},
    "source": [
-    "To do this, we first create a dictionary that maps a material ID to the indicator result returned by the query."
+    "To do this, first create a dictionary that maps a material ID to the indicator result returned by the query."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "bb300ae1",
+   "id": "ffa8a104",
    "metadata": {
     "tags": []
    },
@@ -224,20 +238,22 @@
   },
   {
    "cell_type": "markdown",
-   "id": "72944e19",
+   "id": "13414f94",
    "metadata": {
     "lines_to_next_cell": 2
    },
    "source": [
-    "Next define a function that takes a list of material IDs and returns the worst compliance status for all of them.\n",
-    "We can use the built-in `max()` function to do this, since `WatchListIndicator` objects can be compared with > and <\n",
-    "operators. The convention is that a worse result is 'greater than' a better result."
+    "Next, define a function that takes a list of material IDs and returns the worst compliance status associated with the\n",
+    "materials in the list.\n",
+    "\n",
+    "We can use the built-in ``max()`` function to do this, because ``WatchListIndicator`` objects can be compared with >\n",
+    "and < operators. The convention is that a worse result is 'greater than' a better result."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "74e0e262",
+   "id": "4a89e118",
    "metadata": {
     "tags": []
    },
@@ -251,17 +267,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c64023e6",
+   "id": "59de00a0",
    "metadata": {},
    "source": [
-    "Now call this function for each component in a `dict` comprehension, giving us a mapping between part number\n",
+    "Now call this function for each component in a ``dict`` comprehension to obtain a mapping between part number\n",
     "and compliance status."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "48321750",
+   "id": "bd07fffa",
    "metadata": {
     "tags": []
    },
@@ -274,18 +290,18 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fd7c72f7",
+   "id": "546c35b4",
    "metadata": {},
    "source": [
-    "These results include the text as defined by the API. However, let's say in this example we are using the compliance\n",
-    "status to determine the approvals required to release the part in a design review process. As a result, we can define\n",
-    "a mapping between compliance statuses and approval requirements."
+    "These results include text defined by the API for compliance status. However, we may want the compliance\n",
+    "status to determine the approvals required to release the part in a design review process. In that case, we can define\n",
+    "a mapping between compliance status and approval requirements."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "90574f61",
+   "id": "537f5dd7",
    "metadata": {
     "tags": []
    },
@@ -301,7 +317,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b57e8605",
+   "id": "56110193",
    "metadata": {},
    "source": [
     "We can now use this dictionary to map from the Granta MI result to the approval requirements."
@@ -310,7 +326,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0e571295",
+   "id": "dca206de",
    "metadata": {
     "tags": []
    },
@@ -323,7 +339,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c443f31d",
+   "id": "0eb83451",
    "metadata": {},
    "source": [
     "## Write the Output"
@@ -331,17 +347,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ee9dd0a4",
+   "id": "4d973431",
    "metadata": {},
    "source": [
-    "For the final result, we can take our result `dict` and use it to extend the original JSON data structure with\n",
-    "the approval requirements added in."
+    "Once we have our final result, we can take our result ``dict`` and use it to extend the original JSON data structure,\n",
+    "with approval requirements added in."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "a7a2a7ea",
+   "id": "b6408430",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -358,41 +374,22 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c2a4dd33",
+   "id": "76a4532d",
    "metadata": {},
    "source": [
-    "Finally, printing the results shows the new data structure with the results included."
+    "Printing the results shows the new data structure with the results included."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "9ce23241",
+   "id": "397404a8",
    "metadata": {
     "tags": []
    },
    "outputs": [],
    "source": [
     "pprint(data_results)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "5147ed09",
-   "metadata": {},
-   "source": [
-    "## Summary"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "de0595dc",
-   "metadata": {},
-   "source": [
-    "This example has aimed to show how a BoM-like data structure can be loaded from a neutral format and used as a\n",
-    "starting point for compliance analysis. Whilst it is unlikely that the data structures and processing presented here\n",
-    "will be an exact match for your requirements, it should at least demonstrate the principle for how to plug the BoM\n",
-    "Analytics API into your processes."
    ]
   }
  ],

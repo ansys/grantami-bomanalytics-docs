@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compliance API &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Compliance API &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Part Compliance" href="parts.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,31 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API Reference</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Compliance API</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -235,7 +266,7 @@
                 
   <div class="section" id="compliance-api">
 <span id="ref-grantami-bomanalytics-api-compliance-index"></span><h1>Compliance API<a class="headerlink" href="#compliance-api" title="Permalink to this headline">¶</a></h1>
-<p>This section gives an overview of the Compliance API. The
+<p>This section provides an overview of the Compliance API. The
 <a class="reference internal" href="substances.html#ref-grantami-bomanalytics-api-compliance-substances"><span class="std std-ref">Substance Compliance</span></a>,
 <a class="reference internal" href="materials.html#ref-grantami-bomanalytics-api-compliance-materials"><span class="std std-ref">Material Compliance</span></a>,
 <a class="reference internal" href="specifications.html#ref-grantami-bomanalytics-api-compliance-specifications"><span class="std std-ref">Specification Compliance</span></a>, and
@@ -243,13 +274,13 @@
 can be used to determine the compliance of records in a Granta MI database based on a number of
 <a class="reference internal" href="indicators.html#ref-grantami-bomanalytics-api-compliance-indicators"><span class="std std-ref">Indicators</span></a>. An indicator is a collection of one or more legislations and
 a threshold. If a certain record directly or indirectly contains substances impacted by one of the specified
-legislations in an amount that exceeds the threshold, the record is not compliant with that indicator. See the
-definitions of the indicators for more details about possible results.</p>
-<p>The <a class="reference internal" href="bom.html#ref-grantami-bomanalytics-api-compliance-bom"><span class="std std-ref">BoM Compliance</span></a> query accepts a Bill of Materials in Ansys Granta MI 1711 XML BoM format, and
+legislations in an amount that exceeds the threshold, the record is not compliant with that indicator. For more
+information about possible results, see the definitions of the indicators.</p>
+<p>The <a class="reference internal" href="bom.html#ref-grantami-bomanalytics-api-compliance-bom"><span class="std std-ref">BoM Compliance</span></a> query accepts a Bill of Materials in Ansys Granta MI 1711 XML BoM format and
 returns the compliance status of the BoM based on the Granta MI records referenced by it.</p>
 <p>In general, the result of each query is a recursive BoM (or multi-level BoM) that shows the compliance status and impacted
 substances at each level. If you are looking for a simple determination of the substances indirectly or directly
-contained within a item represented by a Granta MI record, consider the
+contained within a item represented by a Granta MI record, consider using the
 <a class="reference internal" href="../impacted_substances/index.html#ref-grantami-bomanalytics-api-impactedsubstances-index"><span class="std std-ref">Impacted Substances API</span></a>.</p>
 <div class="toctree-wrapper compound">
 <ul>

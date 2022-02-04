@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[TECHDOCS]Determining Compliance for BoMs in External Data Sources &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Determining Compliance for BoMs in External Data Sources &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -38,10 +42,11 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="[TECHDOCS]Database-Specific Configuration Options" href="3-3_Database-specific_configuration.html" />
-    <link rel="prev" title="[TECHDOCS]Performing a BoM Query" href="3-1_Working_with_XML_BoMs.html" />
+    <link rel="next" title="Database-Specific Configuration Options" href="3-3_Database-specific_configuration.html" />
+    <link rel="prev" title="Performing a BoM Query" href="3-1_Working_with_XML_BoMs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -53,6 +58,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -128,6 +134,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Example Scripts</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced Examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Determining Compliance for BoMs in External Data Sources</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -143,7 +175,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../0_Getting_started.html">
-   [TECHDOCS]Getting Started
+   Getting Started
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -158,12 +190,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">
-     [TECHDOCS]Performing a Material Impacted Substances Query
+     Performing a Material Impacted Substances Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-2_Parts_impacted_substances.html">
-     [TECHDOCS]Performing a Part Impacted Substances Query
+     Performing a Part Impacted Substances Query
     </a>
    </li>
   </ul>
@@ -180,17 +212,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-1_Substance_compliance.html">
-     [TECHDOCS]Performing a Substance Compliance Query
+     Performing a Substance Compliance Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-2_Material_compliance.html">
-     [TECHDOCS]Performing a Material Compliance Query
+     Performing a Material Compliance Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-3_Part_compliance.html">
-     [TECHDOCS]Performing a Part Compliance Query
+     Performing a Part Compliance Query
     </a>
    </li>
   </ul>
@@ -207,22 +239,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3-1_Working_with_XML_BoMs.html">
-     [TECHDOCS]Performing a BoM Query
+     Performing a BoM Query
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     [TECHDOCS]Determining Compliance for BoMs in External Data Sources
+     Determining Compliance for BoMs in External Data Sources
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-3_Database-specific_configuration.html">
-     [TECHDOCS]Database-Specific Configuration Options
+     Database-Specific Configuration Options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-4_Writing_compliance_results_to_a_dataframe.html">
-     [TECHDOCS]Writing Compliance Results to a DataFrame
+     Writing Compliance Results to a DataFrame
     </a>
    </li>
   </ul>
@@ -271,11 +303,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Write-the-Output">
    Write the Output
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Summary">
-   Summary
   </a>
  </li>
 </ul>
@@ -547,15 +574,15 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<p>Right-click and save as to download this example as a <a class="reference download internal" download="" href="../../_downloads/669f78fde501a4b4df47758117544531/3-2_Dealing_with_external_data_sources.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
-<a class="reference download internal" download="" href="../../_downloads/ae0e1843501594569a9248a11aa42ce4/3-2_Dealing_with_external_data_sources.py"><code class="xref download docutils literal notranslate"><span class="pre">python</span> <span class="pre">script</span></code></a>.</p>
+<p>Download this example as a <a class="reference download internal" download="" href="../../_downloads/669f78fde501a4b4df47758117544531/3-2_Dealing_with_external_data_sources.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
+<a class="reference download internal" download="" href="../../_downloads/ae0e1843501594569a9248a11aa42ce4/3-2_Dealing_with_external_data_sources.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">script</span></code></a>.</p>
 <hr class="docutils" />
-<div class="section" id="[TECHDOCS]Determining-Compliance-for-BoMs-in-External-Data-Sources">
-<h1>[TECHDOCS]Determining Compliance for BoMs in External Data Sources<a class="headerlink" href="#[TECHDOCS]Determining-Compliance-for-BoMs-in-External-Data-Sources" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Determining-Compliance-for-BoMs-in-External-Data-Sources">
+<h1>Determining Compliance for BoMs in External Data Sources<a class="headerlink" href="#Determining-Compliance-for-BoMs-in-External-Data-Sources" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Introduction">
 <h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
-<p>It is common to deal with Bills of Materials or other data structures stored in a third party system. This example shows a scenario where compliance needs to be determined for a BoM-type structure in a JSON file, with the result added to the input file.</p>
-<p>Whilst it is possible that data would be available in a JSON file, the intention is that the approach presented here would be applicable for data in other formats, or data loaded from other software platform APIs.</p>
+<p>You may have to deal with Bills of Materials or other data structures stored in third-party systems. This example shows a scenario where compliance needs to be determined for a BoM-type structure in a JSON file, with the result added to the input file.</p>
+<p>Although it is unlikely that the data structures and processing presented here will be an exact match for your requirements, this example is intended to demonstrate the principles behind using the BoM Analytics API within your existing processes. It shows how a BoM-like data structure can be loaded from a neutral format and used as a starting point for compliance analysis. The approach is applicable to data in other formats, or data loaded from other software platform APIs.</p>
 <p>The external data source used in this example can be downloaded <a class="reference external" href="supporting-files/source_data.json">here</a>.</p>
 </div>
 <div class="section" id="Load-the-External-Data">
@@ -597,7 +624,7 @@ div.rendered_html tbody tr:hover {
                  &#39;part_number&#39;: &#39;TUSMQ1ZDFM&#39;}]}
 </pre></div></div>
 </div>
-<p>The list of components will be used frequently, so we can store this in a variable for convenience.</p>
+<p>The list of components will be used frequently, so we store this in a variable for convenience.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -608,7 +635,8 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>It is clear from viewing this data that some parts include multiple materials, and some materials appear in the JSON file more than once. However, the material compliance is not dependent on the component it is used in, and the compliance of a part only depends on the worst compliance status of the constituent materials. Therefore we can simplify the compliance query by get the compliance for the unique set of materials in the JSON file, and perform some data manipulation of the results.</p>
-<p>We can use a set comprehension to get the unique materials, which we can then cast into a list.</p>
+<p>Since the compliance status of a material does not depend on which component it is used in, and part compliance depends only on the worst compliance status of its constituent materials, we can simplify the query by running it against the set of unique materials in the JSON file. We can then rebuild the data structure from these results to view the compliance by component.</p>
+<p>First, use a set comprehension to get the unique materials, which we can then cast into a list.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -636,7 +664,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Getting-the-Compliance-Status">
 <h2>Getting the Compliance Status<a class="headerlink" href="#Getting-the-Compliance-Status" title="Permalink to this headline">¶</a></h2>
-<p>Now we can feed the list of material IDs into a compliance query as shown in previous exercises.</p>
+<p>Next, create and run a compliance query using the list of material IDs, as shown in previous exercises.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -644,7 +672,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">indicators</span><span class="p">,</span> <span class="n">queries</span>
 
-<span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_service/mi_servicelayer&quot;</span>
+<span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_server/mi_servicelayer&quot;</span>
 <span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server_url</span><span class="p">)</span><span class="o">.</span><span class="n">with_credentials</span><span class="p">(</span><span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="n">svhc</span> <span class="o">=</span> <span class="n">indicators</span><span class="o">.</span><span class="n">WatchListIndicator</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;SVHC&quot;</span><span class="p">,</span>
@@ -673,9 +701,9 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Post-Processing-the-Results">
 <h2>Post-Processing the Results<a class="headerlink" href="#Post-Processing-the-Results" title="Permalink to this headline">¶</a></h2>
-<p>The results above describe the compliance status for each material, but some further work needs to be performed to provide the compliance status for all the components in the original JSON.</p>
-<p>In the case where a component contains only one material, the result can simply be copied over. In the general case, moving from material compliance to component compliance just means taking the worst compliance across all the constituent materials.</p>
-<p>To do this, we first create a dictionary that maps a material ID to the indicator result returned by the query.</p>
+<p>The results above describe the compliance status for each material, but more work is needed to provide the compliance status for all the components in the original JSON.</p>
+<p>When a component contains only one material, the result can simply be copied over. In the general case, moving from material compliance to component compliance means taking the worst compliance result across all the constituent materials.</p>
+<p>To do this, first create a dictionary that maps a material ID to the indicator result returned by the query.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -686,7 +714,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<p>Next define a function that takes a list of material IDs and returns the worst compliance status for all of them. We can use the built-in <code class="docutils literal notranslate"><span class="pre">max()</span></code> function to do this, since <code class="docutils literal notranslate"><span class="pre">WatchListIndicator</span></code> objects can be compared with &gt; and &lt; operators. The convention is that a worse result is ‘greater than’ a better result.</p>
+<p>Next, define a function that takes a list of material IDs and returns the worst compliance status associated with the materials in the list.</p>
+<p>We can use the built-in <code class="docutils literal notranslate"><span class="pre">max()</span></code> function to do this, because <code class="docutils literal notranslate"><span class="pre">WatchListIndicator</span></code> objects can be compared with &gt; and &lt; operators. The convention is that a worse result is ‘greater than’ a better result.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
@@ -699,7 +728,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<p>Now call this function for each component in a <code class="docutils literal notranslate"><span class="pre">dict</span></code> comprehension, giving us a mapping between part number and compliance status.</p>
+<p>Now call this function for each component in a <code class="docutils literal notranslate"><span class="pre">dict</span></code> comprehension to obtain a mapping between part number and compliance status.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -726,7 +755,7 @@ div.rendered_html tbody tr:hover {
  &#39;TUSMQ1ZDFM&#39;: &#39;WatchListHasSubstanceAboveThreshold&#39;}
 </pre></div></div>
 </div>
-<p>These results include the text as defined by the API. However, let’s say in this example we are using the compliance status to determine the approvals required to release the part in a design review process. As a result, we can define a mapping between compliance statuses and approval requirements.</p>
+<p>These results include text defined by the API for compliance status. However, we may want the compliance status to determine the approvals required to release the part in a design review process. In that case, we can define a mapping between compliance status and approval requirements.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -771,7 +800,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Write-the-Output">
 <h2>Write the Output<a class="headerlink" href="#Write-the-Output" title="Permalink to this headline">¶</a></h2>
-<p>For the final result, we can take our result <code class="docutils literal notranslate"><span class="pre">dict</span></code> and use it to extend the original JSON data structure with the approval requirements added in.</p>
+<p>Once we have our final result, we can take our result <code class="docutils literal notranslate"><span class="pre">dict</span></code> and use it to extend the original JSON data structure, with approval requirements added in.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -789,7 +818,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<p>Finally, printing the results shows the new data structure with the results included.</p>
+<p>Printing the results shows the new data structure with the results included.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
@@ -828,10 +857,6 @@ div.rendered_html tbody tr:hover {
                  &#39;part_number&#39;: &#39;TUSMQ1ZDFM&#39;}]}
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Summary">
-<h2>Summary<a class="headerlink" href="#Summary" title="Permalink to this headline">¶</a></h2>
-<p>This example has aimed to show how a BoM-like data structure can be loaded from a neutral format and used as a starting point for compliance analysis. Whilst it is unlikely that the data structures and processing presented here will be an exact match for your requirements, it should at least demonstrate the principle for how to plug the BoM Analytics API into your processes.</p>
 </div>
 </div>
 

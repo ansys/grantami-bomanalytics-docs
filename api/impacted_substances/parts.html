@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part Impacted Substances &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Part Impacted Substances &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Specification Impacted Substances" href="specifications.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Impacted Substances API</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Part Impacted Substances</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -255,8 +287,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartImpactedSubstancesQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the substances impacted by a list of legislations for Granta MI part records.</p>
-<p>All methods used to add parts and legislations to this query return the query itself, so they can be chained
+<dd><p>Gets the substances impacted by a list of legislations for Granta MI part records.</p>
+<p>All methods used to add parts and legislations to this query return the query itself so that they can be chained
 together as required. Records can be added using a combination of any of the available methods.</p>
 <p>Once the query is fully constructed, use the cxn.
 <a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method to return a result of type
@@ -285,7 +317,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -308,7 +340,7 @@ referenced by legislation name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery.with_part_numbers">
 <span class="sig-name descname"><span class="pre">with_part_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part_numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery.with_part_numbers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a list or set of parts to a part query, referenced by part number .</p>
+<dd><p>Add a list or set of parts to a part query, referenced by part number.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -317,7 +349,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -347,7 +379,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -379,7 +411,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -411,7 +443,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -432,20 +464,20 @@ referenced by legislation name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery.with_batch_size">
 <span class="sig-name descname"><span class="pre">with_batch_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery.with_batch_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the number of records included in a single request for this query.</p>
+<dd><p>Set the number of records to include in a single request for this query.</p>
 <p>Default values are set based on typical usage of the Restricted Substances database. This value can be changed
-to optimize performance on a query-by-query basis if required, for example, if certain records contain
-particularly large or small numbers of associated records.</p>
+to optimize performance on a query-by-query basis if required. For example, you can change it if certain
+records contain particularly large or small numbers of associated records.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>batch_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>The number of records included in a single request to Granta MI.</p>
+<dt><strong>batch_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of records to include in a single request to Granta MI.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -481,16 +513,16 @@ included in the same request assuming typical numbers of associated records.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartImpactedSubstancesQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>The result of running a <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartImpactedSubstancesQuery</span></code></a>.
-Describes the substances in the specified parts impacted by one or more legislations.</p>
+<dd><p>Retrieves the result of running the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartImpactedSubstancesQuery</span></code></a>
+class. This class describes the substances in the specified parts impacted by one or more legislations.</p>
 <p class="rubric">Notes</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances_by_part">
 <span class="sig-name descname"><span class="pre">impacted_substances_by_part</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances_by_part" title="Permalink to this definition">¶</a></dt>
-<dd><p>The impacted substances for each part specified in the original query.</p>
-<p>Since parts do not have a single well-defined reference, the results are provided as a flat list.</p>
+<dd><p>Impacted substances for each part specified in the original query.</p>
+<p>Because parts do not have a single well-defined reference, the results are provided as a flat list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
@@ -509,7 +541,7 @@ directly.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances_by_legislation">
 <span class="sig-name descname"><span class="pre">impacted_substances_by_legislation</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances_by_legislation" title="Permalink to this definition">¶</a></dt>
-<dd><p>A view of the results for an Impacted Substances query, grouped by legislation only.</p>
+<dd><p>View of the results for a query for impacted substances, grouped by legislation only.</p>
 <p>The substances from all items specified in the query are merged for each legislation, providing a single
 list of impacted substances grouped by legislation only. Substances are duplicated where they appear in
 multiple items for the same legislation.</p>
@@ -533,7 +565,7 @@ multiple items for the same legislation.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances">
 <span class="sig-name descname"><span class="pre">impacted_substances</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.impacted_substances" title="Permalink to this definition">¶</a></dt>
-<dd><p>A view of the results for an Impacted Substances query, flattened into a single list.</p>
+<dd><p>View of the results for a query for impacted substances, flattened into a single list.</p>
 <p>The substances from all items specified in the query are merged across item and legislation, providing a
 single flat list. Substances are duplicated where they appear in multiple items or legislations.</p>
 <dl class="field-list">
@@ -554,11 +586,11 @@ single flat list. Substances are duplicated where they appear in multiple items 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.messages">
 <span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult.messages" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] Messages generated by Granta MI when running the query. The presence of one or more messages means
-something unexpected happened when running the query, but the query could still be completed.</p>
-<p>Messages are sorted in order of decreasing severity. Messages are also available in the Service Layer log file.</p>
-<p>Messages are also logged using the Python <cite>logging</cite> module to the “ansys.grantami.bomanalytics” logger. By
-default, messages with a severity of “warning” or higher are printed on stderr.</p>
+<dd><p>Messages generated by Granta MI when running the query. The presence of one or more messages means
+that something unexpected happened when running the query but that the query could still be completed.</p>
+<p>Messages are sorted in order of decreasing severity and are available in the Service Layer log file.</p>
+<p>Messages are also logged using the Python <code class="docutils literal notranslate"><span class="pre">logging</span></code> module to the <code class="docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics</span></code> logger. By
+default, messages with a severity of <code class="docutils literal notranslate"><span class="pre">warning</span></code> or higher are printed on stderr.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
@@ -583,8 +615,8 @@ default, messages with a severity of “warning” or higher are printed on stde
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._item_results.PartWithImpactedSubstancesResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartWithImpactedSubstancesResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">legislations</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._item_results.PartWithImpactedSubstancesResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>An individual part included as part of an impacted substances query result. This object includes two
-categories of attribute:</p>
+<dd><p>Retrieves an individual part included as part of an impacted substances query result. This object includes
+two categories of attributes:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>The reference to the part in Granta MI</p></li>
@@ -594,18 +626,31 @@ categories of attribute:</p>
 <p class="rubric">Notes</p>
 <p>With the exception of the <em>record_history_identity</em>, the record reference attributes below are only populated if
 they were specified in the original query.</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">PartImpactedSubstancesQueryResult</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">part_result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">impacted_substances_by_part</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">part_result</span><span class="o">.</span><span class="n">substances_by_legislation</span>
+<span class="go">{&#39;California Proposition 65 List&#39;: [&lt;ImpactedSubstance: {&quot;cas_number&quot;: 90481-04-2}&gt;]}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">PartImpactedSubstancesQueryResult</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">part_result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">impacted_substances_by_part</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">part_result</span><span class="o">.</span><span class="n">substances</span>
+<span class="go">[&lt;ImpactedSubstance: {&quot;cas_number&quot;: 90481-04-2}&gt;]</span>
+</pre></div>
+</div>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
-<dt><strong>record_history_identity</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>]</span></dt><dd></dd>
-<dt><strong>part_number</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><strong>record_history_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><strong>record_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">substances_by_legislation</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="impacted_substances.html#ansys.grantami.bomanalytics._item_results.ImpactedSubstance" title="ansys.grantami.bomanalytics._item_results.ImpactedSubstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code></a>]]</span></dt><dd><p>Returns ——- substances_by_legislation : dict[str, list[ImpactedSubstance]] The substances impacted for a particular item, grouped by legislation name.</p>
+<dt><strong>record_history_identity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>part_number</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>record_history_guid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>record_guid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>substances_by_legislation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="impacted_substances.html#ansys.grantami.bomanalytics._item_results.ImpactedSubstance" title="ansys.grantami.bomanalytics._item_results.ImpactedSubstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code></a>]]</span></dt><dd><p>Substances impacted for a particular part, grouped by legislation name.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">substances</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="impacted_substances.html#ansys.grantami.bomanalytics._item_results.ImpactedSubstance" title="ansys.grantami.bomanalytics._item_results.ImpactedSubstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code></a>]</span></dt><dd><p>Returns ——- substances : list[ImpactedSubstance] The substances impacted for a particular item as a flattened list.</p>
+<dt><strong>substances</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="impacted_substances.html#ansys.grantami.bomanalytics._item_results.ImpactedSubstance" title="ansys.grantami.bomanalytics._item_results.ImpactedSubstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code></a>]</span></dt><dd><p>Substances impacted for a particular part as a flattened list.</p>
 </dd>
 </dl>
 </dd>

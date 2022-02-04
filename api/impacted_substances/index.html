@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impacted Substances API &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Impacted Substances API &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Part Impacted Substances" href="parts.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,31 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API Reference</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Impacted Substances API</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -234,14 +265,14 @@
 <a class="reference internal" href="materials.html#ref-grantami-bomanalytics-api-impactedsubstances-materials"><span class="std std-ref">Material Impacted Substances</span></a>,
 <a class="reference internal" href="specifications.html#ref-grantami-bomanalytics-api-impactedsubstances-specifications"><span class="std std-ref">Specification Impacted Substances</span></a>, and
 <a class="reference internal" href="parts.html#ref-grantami-bomanalytics-api-impactedsubstances-parts"><span class="std std-ref">Part Impacted Substances</span></a> queries accept a list of references to records in a
-Granta MI database, and determine the impacted substances that are directly or indirectly associated with those records via
+Granta MI database and determine the impacted substances that are directly or indirectly associated with these records via
 associated records in the Granta MI database. The <a class="reference internal" href="bom.html#ref-grantami-bomanalytics-api-impactedsubstances-bom"><span class="std std-ref">BoM Impacted Substances Query</span></a> query is
-similar, but instead of records accepts a Bill of Materials in Ansys Granta MI 1711 XML BoM format, which in turn includes references to
+similar, but instead of records it accepts a Bill of Materials in Ansys Granta MI 1711 XML BoM format, which in turn includes references to
 Granta MI records.</p>
 <p>In all cases, impacted substances are determined by a list of legislations, identified by legislation name.</p>
-<p>The quantity of the substance in the parent item is not taken into consideration by these queries. If the quantity is
-important, for example to determine compliance against a legislation that imposes a certain threshold, the
-<a class="reference internal" href="../compliance/index.html#ref-grantami-bomanalytics-api-compliance-index"><span class="std std-ref">Compliance API</span></a> should be used instead.</p>
+<p>These queries do not take the quantity of the substance in the parent item into consideration. If the quantity is
+important, for example to determine compliance against a legislation that imposes a certain threshold, you should
+use the <a class="reference internal" href="../compliance/index.html#ref-grantami-bomanalytics-api-compliance-index"><span class="std std-ref">Compliance API</span></a> instead.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="parts.html">Part Impacted Substances</a><ul>
@@ -265,6 +296,7 @@ important, for example to determine compliance against a legislation that impose
 <li class="toctree-l1"><a class="reference internal" href="bom.html">BoM Impacted Substances Query</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bom.html#query-definition">Query Definition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bom.html#query-result">Query Result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bom.html#bom-result">BoM Result</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="impacted_substances.html">Impacted Substances</a></li>

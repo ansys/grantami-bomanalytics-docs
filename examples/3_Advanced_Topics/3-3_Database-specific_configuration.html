@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[TECHDOCS]Database-Specific Configuration Options &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Database-Specific Configuration Options &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -38,10 +42,11 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="[TECHDOCS]Writing Compliance Results to a DataFrame" href="3-4_Writing_compliance_results_to_a_dataframe.html" />
-    <link rel="prev" title="[TECHDOCS]Determining Compliance for BoMs in External Data Sources" href="3-2_Dealing_with_external_data_sources.html" />
+    <link rel="next" title="Writing Compliance Results to a DataFrame" href="3-4_Writing_compliance_results_to_a_dataframe.html" />
+    <link rel="prev" title="Determining Compliance for BoMs in External Data Sources" href="3-2_Dealing_with_external_data_sources.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -53,6 +58,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -128,6 +134,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Example Scripts</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced Examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Database-Specific Configuration Options</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -143,7 +175,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../0_Getting_started.html">
-   [TECHDOCS]Getting Started
+   Getting Started
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -158,12 +190,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">
-     [TECHDOCS]Performing a Material Impacted Substances Query
+     Performing a Material Impacted Substances Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-2_Parts_impacted_substances.html">
-     [TECHDOCS]Performing a Part Impacted Substances Query
+     Performing a Part Impacted Substances Query
     </a>
    </li>
   </ul>
@@ -180,17 +212,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-1_Substance_compliance.html">
-     [TECHDOCS]Performing a Substance Compliance Query
+     Performing a Substance Compliance Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-2_Material_compliance.html">
-     [TECHDOCS]Performing a Material Compliance Query
+     Performing a Material Compliance Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../2_Compliance_Queries/2-3_Part_compliance.html">
-     [TECHDOCS]Performing a Part Compliance Query
+     Performing a Part Compliance Query
     </a>
    </li>
   </ul>
@@ -207,22 +239,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3-1_Working_with_XML_BoMs.html">
-     [TECHDOCS]Performing a BoM Query
+     Performing a BoM Query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-2_Dealing_with_external_data_sources.html">
-     [TECHDOCS]Determining Compliance for BoMs in External Data Sources
+     Determining Compliance for BoMs in External Data Sources
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     [TECHDOCS]Database-Specific Configuration Options
+     Database-Specific Configuration Options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-4_Writing_compliance_results_to_a_dataframe.html">
-     [TECHDOCS]Writing Compliance Results to a DataFrame
+     Writing Compliance Results to a DataFrame
     </a>
    </li>
   </ul>
@@ -527,19 +559,19 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<p>Right-click and save as to download this example as a <a class="reference download internal" download="" href="../../_downloads/74954805059e255b375873e86564423b/3-3_Database-specific_configuration.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
-<a class="reference download internal" download="" href="../../_downloads/2d8db9deace331e1fa8d4aee74ac5c9e/3-3_Database-specific_configuration.py"><code class="xref download docutils literal notranslate"><span class="pre">python</span> <span class="pre">script</span></code></a>.</p>
+<p>Download this example as a <a class="reference download internal" download="" href="../../_downloads/74954805059e255b375873e86564423b/3-3_Database-specific_configuration.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
+<a class="reference download internal" download="" href="../../_downloads/2d8db9deace331e1fa8d4aee74ac5c9e/3-3_Database-specific_configuration.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">script</span></code></a>.</p>
 <hr class="docutils" />
-<div class="section" id="[TECHDOCS]Database-Specific-Configuration-Options">
-<h1>[TECHDOCS]Database-Specific Configuration Options<a class="headerlink" href="#[TECHDOCS]Database-Specific-Configuration-Options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Database-Specific-Configuration-Options">
+<h1>Database-Specific Configuration Options<a class="headerlink" href="#Database-Specific-Configuration-Options" title="Permalink to this headline">¶</a></h1>
 <p>The BoM Analytics package will work with an off-the-shelf Granta MI Restricted Substances database. However, there are some situations in which additional run-time configuration changes are required:</p>
 <ul class="simple">
 <li><p>If the database key or table names have been modified from their default values, these must be set on the <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object</p></li>
-<li><p>If the number of linked records is very large, the batch sizes should be changed for each query (see xxxx for more details)</p></li>
+<li><p>If the number of linked records is very large, the batch sizes should be changed for each query (see <a class="reference internal" href="../../api/batching.html"><span class="doc">Batching Requests</span></a> for more details)</p></li>
 </ul>
 <div class="section" id="Specifying-a-Custom-Database-Key-or-Table-Name">
 <h2>Specifying a Custom Database Key or Table Name<a class="headerlink" href="#Specifying-a-Custom-Database-Key-or-Table-Name" title="Permalink to this headline">¶</a></h2>
-<p>The default database key of MI_Restricted_Substances is used by default if not specified. To specify an alternative, use the <code class="docutils literal notranslate"><span class="pre">Connection.set_database_details()</span></code> method. This database key will be used for all queries made with this <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object.</p>
+<p>The default database key, <code class="docutils literal notranslate"><span class="pre">MI_Restricted_Substances</span></code>, is used if no database key is specified. To specify an alternative, use the <code class="docutils literal notranslate"><span class="pre">Connection.set_database_details()</span></code> method. This database key will be used for all queries made with this <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -547,7 +579,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
 
-<span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_service/mi_servicelayer&quot;</span>
+<span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_server/mi_servicelayer&quot;</span>
 <span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server_url</span><span class="p">)</span><span class="o">.</span><span class="n">with_credentials</span><span class="p">(</span><span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="n">cxn</span><span class="o">.</span><span class="n">set_database_details</span><span class="p">(</span><span class="n">database_key</span><span class="o">=</span><span class="s2">&quot;ACME_SUBSTANCES_DATABASE&quot;</span><span class="p">)</span>
 <span class="n">cxn</span>
@@ -560,10 +592,10 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;BomServicesClient: url=&#34;http://my_grantami_service/mi_servicelayer&#34;, dbkey=&#34;ACME_SUBSTANCES_DATABASE&#34;&gt;
+&lt;BomServicesClient: url=&#34;http://my_grantami_server/mi_servicelayer&#34;, dbkey=&#34;ACME_SUBSTANCES_DATABASE&#34;&gt;
 </pre></div></div>
 </div>
-<p>It is also possible to specify alternative names for the relevant Restricted Substances tables, in the case that they have been modified from the defaults. These are also provided to the .set_database_details() method in the same way.</p>
+<p>It is also possible to specify alternative names for the relevant Restricted Substances tables, if they have been modified from the defaults. These are provided to the <code class="docutils literal notranslate"><span class="pre">.set_database_details()</span></code> method in the same way.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -580,35 +612,28 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;BomServicesClient: url=&#34;http://my_grantami_service/mi_servicelayer&#34;, dbkey=&#34;MI_Restricted_Substances&#34;&gt;
+&lt;BomServicesClient: url=&#34;http://my_grantami_server/mi_servicelayer&#34;, dbkey=&#34;MI_Restricted_Substances&#34;&gt;
 </pre></div></div>
 </div>
 </div>
 <div class="section" id="Batch-Size">
 <h2>Batch Size<a class="headerlink" href="#Batch-Size" title="Permalink to this headline">¶</a></h2>
-<p>The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by splitting the list of parts, materials, etc. into smaller lists below a certain size to reduce the overall time taken to perform the query. Default batch sizes have been chosen based on typical tabular attribute sizes, but under some situations (see the relevant page in the API documentation) these may need to be changed.</p>
-<p>To see the default batch size, use the batch_size property on the query.</p>
-<div class="nbinput nblast docutils container">
+<p>The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by splitting the list of parts, materials, etc. into smaller lists to reduce the overall time taken to perform the query. Default batch sizes have been chosen based on typical tabular attribute sizes, but these may need to be changed in some situations (see the relevant page in the API documentation for examples).</p>
+<p>The batch size is included in the query <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>. The cell below shows a <code class="docutils literal notranslate"><span class="pre">SpecificationComplianceQuery</span></code> object with the default batch size.</p>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spec_query</span> <span class="o">=</span> <span class="n">queries</span><span class="o">.</span><span class="n">SpecificationComplianceQuery</span><span class="p">()</span>
+
+<span class="n">spec_query</span> <span class="o">=</span> <span class="n">queries</span><span class="o">.</span><span class="n">SpecificationComplianceQuery</span><span class="p">()</span>
 <span class="n">spec_query</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -618,7 +643,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>You can manually set the batch size by doing the following:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -628,7 +653,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">

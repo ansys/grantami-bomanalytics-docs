@@ -2,24 +2,24 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "1cb9f9b3",
+   "id": "1988b138",
    "metadata": {},
    "source": [
-    "# [TECHDOCS]Performing a Material Impacted Substances Query"
+    "# Performing a Material Impacted Substances Query"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "c633234d",
+   "id": "079da91d",
    "metadata": {},
    "source": [
-    "A Material Impacted Substances Query is used to extract the substances associated with a material that are impacted by\n",
-    "one or more defined legislations."
+    "A Material Impacted Substances Query is used to identify the substances associated with a material that are impacted\n",
+    "by one or more defined legislations."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "f7ffaeb3",
+   "id": "c929c1df",
    "metadata": {},
    "source": [
     "This example shows how to perform an Impacted Substance query on material records, and how to process the results."
@@ -27,7 +27,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2cac516c",
+   "id": "3ae9ce23",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -35,16 +35,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cc56eea8",
+   "id": "f5590679",
    "metadata": {},
    "source": [
-    "Import the `Connection` class and create the connection. See the Getting Started example for more detail."
+    "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
+    "example for more detail."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4d76ba18",
+   "id": "a6fee0d6",
    "metadata": {
     "tags": []
    },
@@ -52,13 +53,13 @@
    "source": [
     "from ansys.grantami.bomanalytics import Connection\n",
     "\n",
-    "server_url = \"http://my_grantami_service/mi_servicelayer\"\n",
+    "server_url = \"http://my_grantami_server/mi_servicelayer\"\n",
     "cxn = Connection(server_url).with_credentials(\"user_name\", \"password\").connect()"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "b97a1639",
+   "id": "6730495b",
    "metadata": {},
    "source": [
     "## Building and Running the Query"
@@ -66,16 +67,16 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5bbf220e",
+   "id": "1f61d937",
    "metadata": {},
    "source": [
-    "The query is assembled by providing a list of material references and legislations of interest. The query will return\n",
+    "The query is assembled by providing lists of material references and legislations of interest. The query will return\n",
     "the substances that are present in the specified materials and are impacted by the specified legislations."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "f1787a2d",
+   "id": "9405a456",
    "metadata": {},
    "source": [
     "First specify some constants that contain the material and legislation references we will use."
@@ -84,7 +85,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6b12454d",
+   "id": "f1c152e9",
    "metadata": {
     "tags": []
    },
@@ -98,16 +99,16 @@
   },
   {
    "cell_type": "markdown",
-   "id": "36cfe7e8",
+   "id": "6eff6409",
    "metadata": {},
    "source": [
-    "Next import the queries module and build the query with the references in the previous cell."
+    "Next import the ``queries`` module and build the query with the references in the previous cell."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "ef6cf5f7",
+   "id": "3521ee3b",
    "metadata": {
     "tags": []
    },
@@ -124,17 +125,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0785ede5",
+   "id": "cde1b3e2",
    "metadata": {},
    "source": [
-    "Finally, run the query. Passing a `MaterialImpactedSubstancesQuery` object to the `Connection.run()` method returns a\n",
-    "`MaterialImpactedSubstancesQueryResult` object."
+    "Finally, run the query. Passing a ``MaterialImpactedSubstancesQuery`` object to the ``Connection.run()`` method\n",
+    "returns a ``MaterialImpactedSubstancesQueryResult`` object."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "fb12a60b",
+   "id": "cc374968",
    "metadata": {
     "tags": []
    },
@@ -146,35 +147,35 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fcb24785",
+   "id": "1f3d51de",
    "metadata": {},
    "source": [
-    "A `MaterialImpactedSubstancesQueryResult` object contains three properties:\n",
-    "`impacted_substances_by_material`, `impacted_substances_by_legislation`, and `impacted_substances`. They provide\n",
+    "A ``MaterialImpactedSubstancesQueryResult`` object contains three properties:\n",
+    "``impacted_substances_by_material``, ``impacted_substances_by_legislation``, and ``impacted_substances``. They provide\n",
     "different views of the impacted substances at different levels of granularity."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "1c3f52bd",
+   "id": "b5dd1da9",
    "metadata": {},
    "source": [
-    "## impacted_substances_by_material"
+    "## Results Grouped by Material"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "e06bb791",
+   "id": "b04da4b9",
    "metadata": {},
    "source": [
-    "This property is structured first as a list of `materialWithImpactedSubstancesResult` objects, each of which contains\n",
-    "a dictionary of lists of `ImpactedSubstance` objects keyed by legislation, or a single flat list of all\n",
+    "This property is structured first as a list of ``materialWithImpactedSubstancesResult`` objects, each of which\n",
+    "contains a dictionary of lists of ``ImpactedSubstance`` objects keyed by legislation or a single flat list of all\n",
     "substances."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "f6a79d6f",
+   "id": "0678c99a",
    "metadata": {},
    "source": [
     "First, we can simplify the structure somewhat because we are only using Material IDs. The cell below creates a\n",
@@ -184,7 +185,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "145db3cb",
+   "id": "337913b4",
    "metadata": {
     "tags": []
    },
@@ -198,17 +199,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2f1b9029",
+   "id": "796d53fa",
    "metadata": {},
    "source": [
-    "Then use the `tabulate` package to print a table of the substances and their quantities for the polycarbonate\n",
+    "Then use the ``tabulate`` package to print a table of the substances and their quantities for the polycarbonate\n",
     "material only."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "92a3c434",
+   "id": "43ceb9c1",
    "metadata": {
     "tags": []
    },
@@ -225,15 +226,15 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b2f81c58",
+   "id": "e8765356",
    "metadata": {},
    "source": [
-    "## impacted_substances_by_legislation"
+    "## Results Grouped by Legislation"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "f600edd7",
+   "id": "f2cba2ab",
    "metadata": {},
    "source": [
     "This property merges the results across all materials, resulting in a single dictionary of legislations that contain\n",
@@ -242,17 +243,17 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f11efc25",
+   "id": "e5b2a587",
    "metadata": {},
    "source": [
-    "Again we use the `tabulate` package to print a table of substances, but this time we are including the substances in\n",
+    "Again we use the ``tabulate`` package to print a table of substances, but this time we are including the substances in\n",
     "all materials, but again limited to the SIN List only."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "bda431fc",
+   "id": "c315a992",
    "metadata": {
     "tags": []
    },
@@ -267,15 +268,15 @@
   },
   {
    "cell_type": "markdown",
-   "id": "11b52327",
+   "id": "9aaa5aa6",
    "metadata": {},
    "source": [
-    "## impacted_substances"
+    "## Results as a Flat List"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "623275b6",
+   "id": "8ad405e8",
    "metadata": {},
    "source": [
     "This property reduces the granularity further to produce a single flattened list of substances across all legislations\n",
@@ -284,18 +285,18 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b64663a1",
+   "id": "f2d8922f",
    "metadata": {},
    "source": [
-    "The cell below uses the `tabulate` package to print a table of substances. Because we are using the\n",
-    "`impacted_substances` property, we only have one list of `ImpactedSubstance` objects which covers both legislations\n",
-    "and both materials."
+    "The cell below uses the ``tabulate`` package to print a table of substances. Because we are using the\n",
+    "``impacted_substances`` property, we only have one list of ``ImpactedSubstance`` objects which covers both\n",
+    "legislations and both materials."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "462af0ec",
+   "id": "d1ce3c42",
    "metadata": {
     "tags": []
    },

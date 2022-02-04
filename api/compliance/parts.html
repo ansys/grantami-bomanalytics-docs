@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part Compliance &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>Part Compliance &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Specification Compliance" href="specifications.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Compliance API</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Part Compliance</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -260,9 +292,9 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartComplianceQuery">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartComplianceQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluate compliance for Granta MI part records against a number of indicators. If the parts are
+<dd><p>Evaluates compliance for Granta MI part records against a number of indicators. If the parts are
 associated with materials, parts, specifications, or substances, these are also evaluated and returned.</p>
-<p>All methods used to add parts and indicators to this query return the query itself, so they can be chained
+<p>All methods used to add parts and indicators to this query return the query itself so that they can be chained
 together as required. Records can be added using a combination of any of the available methods.</p>
 <p>Once the query is fully constructed, use the cxn.
 <a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method to return a result of type
@@ -295,7 +327,7 @@ together as required. Records can be added using a combination of any of the ava
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -320,7 +352,7 @@ together as required. Records can be added using a combination of any of the ava
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_part_numbers">
 <span class="sig-name descname"><span class="pre">with_part_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part_numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_part_numbers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a list or set of parts to a part query, referenced by part number .</p>
+<dd><p>Add a list or set of parts to a part query, referenced by part number.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -329,7 +361,7 @@ together as required. Records can be added using a combination of any of the ava
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -359,7 +391,7 @@ together as required. Records can be added using a combination of any of the ava
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -391,7 +423,7 @@ together as required. Records can be added using a combination of any of the ava
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -423,7 +455,7 @@ together as required. Records can be added using a combination of any of the ava
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -445,7 +477,7 @@ together as required. Records can be added using a combination of any of the ava
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_stk_records">
 <span class="sig-name descname"><span class="pre">with_stk_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stk_records</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_stk_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a list of records generated by the Granta MI Scripting Toolkit for Python.</p>
-<p>This should only be used with the corresponding method in the MI Scripting Toolkit which generates a
+<p>This should only be used with the corresponding method in the MI Scripting Toolkit that generates a
 <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> of the appropriate shape. This method will be introduced in the next version of the MI Scripting
 Toolkit.</p>
 <p>If the MI Scripting Toolkit method is not available, we recommend using the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_record_history_ids" title="ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_record_history_ids"><code class="xref py py-meth docutils literal notranslate"><span class="pre">with_record_history_ids()</span></code></a>
@@ -458,7 +490,7 @@ method instead.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -471,9 +503,9 @@ method instead.</p>
 </dl>
 <p class="rubric">Notes</p>
 <p>Common scenarios in performing compliance would be to get the compliance status of all records with a certain
-attribute value, or all records created in a certain period of time. These types of complex browsing and
-searching operations are provided by the MI Scripting Toolkit: a Python script would first use the MI Scripting
-Toolkit to find the records of interest, and would then pass those record references into the BoM Analytics
+attribute value or all records created in a certain period of time. These types of complex browsing and
+searching operations are provided by the MI Scripting Toolkit. A Python script would first use the MI Scripting
+Toolkit to find the records of interest and would then pass those record references into the BoM Analytics
 package.</p>
 <p>This method is intended to streamline the communication between the Granta MI Scripting Toolkit and BoM
 Analytics packages.</p>
@@ -487,20 +519,20 @@ Analytics packages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_batch_size">
 <span class="sig-name descname"><span class="pre">with_batch_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery.with_batch_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the number of records included in a single request for this query.</p>
+<dd><p>Set the number of records to include in a single request for this query.</p>
 <p>Default values are set based on typical usage of the Restricted Substances database. This value can be changed
-to optimize performance on a query-by-query basis if required, for example, if certain records contain
-particularly large or small numbers of associated records.</p>
+to optimize performance on a query-by-query basis if required. For example, you can change it if certain
+records contain particularly large or small numbers of associated records.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>batch_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>The number of records included in a single request to Granta MI.</p>
+<dt><strong>batch_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of records to include in a single request to Granta MI.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -536,15 +568,15 @@ included in the same request assuming typical numbers of associated records.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartComplianceQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>The result of running a <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery" title="ansys.grantami.bomanalytics.queries.PartComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartComplianceQuery</span></code></a>. Describes
-the compliance status of parts against one or more indicators.</p>
+<dd><p>Retrieves the result of running the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.PartComplianceQuery" title="ansys.grantami.bomanalytics.queries.PartComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartComplianceQuery</span></code></a>
+class. This class describes the compliance status of parts against one or more indicators.</p>
 <p class="rubric">Notes</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.compliance_by_indicator">
 <span class="sig-name descname"><span class="pre">compliance_by_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.compliance_by_indicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The compliance status for each indicator in the original query. The indicator name
+<dd><p>Compliance status for each indicator in the original query. The indicator name
 is used as the dictionary key.</p>
 <p>The result for each indicator is determined by taking the worst result for that indicator across all items
 included in the query.</p>
@@ -569,7 +601,7 @@ included in the query.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.compliance_by_part_and_indicator">
 <span class="sig-name descname"><span class="pre">compliance_by_part_and_indicator</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.compliance_by_part_and_indicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The compliance status for each part specified in the original query.</p>
+<dd><p>Compliance status for each part specified in the original query.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
@@ -588,11 +620,11 @@ included in the query.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.messages">
 <span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult.messages" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] Messages generated by Granta MI when running the query. The presence of one or more messages means
-something unexpected happened when running the query, but the query could still be completed.</p>
-<p>Messages are sorted in order of decreasing severity. Messages are also available in the Service Layer log file.</p>
-<p>Messages are also logged using the Python <cite>logging</cite> module to the “ansys.grantami.bomanalytics” logger. By
-default, messages with a severity of “warning” or higher are printed on stderr.</p>
+<dd><p>Messages generated by Granta MI when running the query. The presence of one or more messages means
+that something unexpected happened when running the query but that the query could still be completed.</p>
+<p>Messages are sorted in order of decreasing severity and are available in the Service Layer log file.</p>
+<p>Messages are also logged using the Python <code class="docutils literal notranslate"><span class="pre">logging</span></code> module to the <code class="docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics</span></code> logger. By
+default, messages with a severity of <code class="docutils literal notranslate"><span class="pre">warning</span></code> or higher are printed on stderr.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
@@ -617,8 +649,8 @@ default, messages with a severity of “warning” or higher are printed on stde
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._item_results.PartWithComplianceResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PartWithComplianceResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._item_results.PartWithComplianceResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>An individual part included as part of a compliance query result. This object includes three
-categories of attribute:</p>
+<dd><p>Retrieves an individual part included as part of a compliance query result.
+This object includes three categories of attributes:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>The reference to the part in Granta MI (if the part references a record)</p></li>
@@ -630,24 +662,24 @@ categories of attribute:</p>
 <p>With the exception of the <em>record_history_identity</em>, the record reference attributes below are only populated if
 they were specified in the original query. As a result, if this object is included as the child of another
 compliance result object, only the <em>record_history_identity</em> will be populated.</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
-<dt><strong>record_history_identity</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>]</span></dt><dd></dd>
-<dt><strong>part_number</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><strong>record_history_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><strong>record_guid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd></dd>
-<dt><strong>indicators</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> | <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a>]</span></dt><dd><p>The compliance status of this item for each indicator included in the original query.</p>
+<dt><strong>record_history_identity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>part_number</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>record_history_guid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>record_guid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+<dt><strong>indicators</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="ansys.grantami.bomanalytics.indicators.WatchListIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchListIndicator</span></code></a> | <a class="reference internal" href="indicators.html#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="ansys.grantami.bomanalytics.indicators.RoHSIndicator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoHSIndicator</span></code></a>]</span></dt><dd><p>Compliance status of this item for each indicator included in the original query.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">parts</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#ansys.grantami.bomanalytics._item_results.PartWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.PartWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartWithComplianceResult</span></code></a>]</span></dt><dd><p>The part compliance result objects that are direct children of this part in the BoM.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">parts</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#ansys.grantami.bomanalytics._item_results.PartWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.PartWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartWithComplianceResult</span></code></a>]</span></dt><dd><p>Part compliance result objects that are direct children of this part in the BoM.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">specifications</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="specifications.html#ansys.grantami.bomanalytics._item_results.SpecificationWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.SpecificationWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecificationWithComplianceResult</span></code></a>]</span></dt><dd><p>The specification compliance result objects that are direct children of this item in the BoM.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">specifications</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="specifications.html#ansys.grantami.bomanalytics._item_results.SpecificationWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.SpecificationWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecificationWithComplianceResult</span></code></a>]</span></dt><dd><p>Specification compliance result objects that are direct children of this item in the BoM.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">materials</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="materials.html#ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaterialWithComplianceResult</span></code></a>]</span></dt><dd><p>The material compliance result objects that are direct children of this part or specification in the BoM.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">materials</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="materials.html#ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaterialWithComplianceResult</span></code></a>]</span></dt><dd><p>Material compliance result objects that are direct children of this part or specification in the BoM.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">substances</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="substances.html#ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubstanceWithComplianceResult</span></code></a>]</span></dt><dd><p>The substance compliance result objects that are direct children of this item in the BoM.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">substances</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="substances.html#ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult" title="ansys.grantami.bomanalytics._item_results.SubstanceWithComplianceResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubstanceWithComplianceResult</span></code></a>]</span></dt><dd><p>Substance compliance result objects that are direct children of this item in the BoM.</p>
 </dd>
 </dl>
 </dd>

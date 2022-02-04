@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BoM Impacted Substances Query &#8212; ansys.grantami.bomanalytics 0.1.0.dev0 documentation</title>
+    <title>BoM Impacted Substances Query &#8212; Granta MI BoM Analytics 1.0.0c0</title>
+    
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -25,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/example-block.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -36,6 +40,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Impacted Substances" href="impacted_substances.html" />
@@ -51,6 +56,7 @@
     
     <div class="container-fluid" id="banner"></div>
 
+    
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
     .navbar-light {
@@ -126,6 +132,32 @@
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0c0</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Impacted Substances API</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">BoM Impacted Substances Query</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
 
     <div class="container-xl">
       <div class="row">
@@ -222,6 +254,11 @@
    Query Result
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bom-result">
+   BoM Result
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -246,16 +283,14 @@
   <div class="section" id="bom-impacted-substances-query">
 <span id="ref-grantami-bomanalytics-api-impactedsubstances-bom"></span><h1>BoM Impacted Substances Query<a class="headerlink" href="#bom-impacted-substances-query" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="query-definition">
-<h2>Query Definition<a class="headerlink" href="#query-definition" title="Permalink to this headline">¶</a></h2>
+<span id="ref-grantami-bomanalytics-api-impactedsubstances-bom-query"></span><h2>Query Definition<a class="headerlink" href="#query-definition" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomImpactedSubstancesQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the substances impacted by a list of legislations for a Bill of Materials in the Ansys Granta
+<dd><p>Gets the substances impacted by a list of legislations for a BoM in the Ansys Granta
 1711 XML BoM format.</p>
-<p>All BoM-based queries only operate on a single BoM. As a result, the <cite>.with_batch_size()</cite> method is not
+<p>All BoM-based queries only operate on a single BoM. As a result, the <code class="docutils literal notranslate"><span class="pre">.with_batch_size()</span></code> method is not
 implemented for BoM-based queries.</p>
-<p>All methods used to add the BoM and legislations to this query return the query itself, so they can be
-chained together as required. Use the <cite>.execute()</cite> method once the query is fully constructed to return the result.</p>
 <p>Once the query is fully constructed, use the <cite>cxn.</cite>
 <a class="reference internal" href="../common.html#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method to return a result of type
 <a class="reference internal" href="#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult" title="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomImpactedSubstancesQueryResult</span></code></a>. See the example scripts for
@@ -285,7 +320,7 @@ referenced by legislation name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -308,17 +343,18 @@ referenced by legislation name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery.with_bom">
 <span class="sig-name descname"><span class="pre">with_bom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bom</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery.with_bom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the BoM to be used for the query.</p>
+<dd><p>Set the BoM to use for the query.</p>
 <p>The BoM must be in the Ansys Granta 1711 XML BoM format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>bom</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd></dd>
+<dt><strong>bom</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>BoM to use for the query.</p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>The current query object.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></dt><dd><p>Current query object.</p>
 </dd>
 </dl>
 </dd>
@@ -345,19 +381,19 @@ used to validate that the BoM is both valid XML and adheres to the Ansys Granta 
 
 </div>
 <div class="section" id="query-result">
-<h2>Query Result<a class="headerlink" href="#query-result" title="Permalink to this headline">¶</a></h2>
+<span id="ref-grantami-bomanalytics-api-impactedsubstances-bom-queryresult"></span><h2>Query Result<a class="headerlink" href="#query-result" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomImpactedSubstancesQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>The result of running a <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomImpactedSubstancesQuery</span></code></a>.
-Describes the substances in the specified BoM impacted by one or more legislations.</p>
+<dd><p>Retrieves the result of running the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomImpactedSubstancesQuery</span></code></a>
+class. This class describes the substances in the specified BoM impacted by one or more legislations.</p>
 <p class="rubric">Notes</p>
-<p>Objects of this class are only returned as the result of a query; the class is not intended to be instantiated
+<p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.impacted_substances_by_legislation">
 <span class="sig-name descname"><span class="pre">impacted_substances_by_legislation</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.impacted_substances_by_legislation" title="Permalink to this definition">¶</a></dt>
-<dd><p>A view of the results for an Impacted Substances query, grouped by legislation only.</p>
+<dd><p>View of the results for a query for impacted substances, grouped by legislation only.</p>
 <p>The substances from all items specified in the query are merged for each legislation, providing a single
 list of impacted substances grouped by legislation only. Substances are duplicated where they appear in
 multiple items for the same legislation.</p>
@@ -381,7 +417,7 @@ multiple items for the same legislation.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.impacted_substances">
 <span class="sig-name descname"><span class="pre">impacted_substances</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.impacted_substances" title="Permalink to this definition">¶</a></dt>
-<dd><p>A view of the results for an Impacted Substances query, flattened into a single list.</p>
+<dd><p>View of the results for a query for impacted substances, flattened into a single list.</p>
 <p>The substances from all items specified in the query are merged across item and legislation, providing a
 single flat list. Substances are duplicated where they appear in multiple items or legislations.</p>
 <dl class="field-list">
@@ -402,11 +438,11 @@ single flat list. Substances are duplicated where they appear in multiple items 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.messages">
 <span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult.messages" title="Permalink to this definition">¶</a></dt>
-<dd><p>[TECHDOCS] Messages generated by Granta MI when running the query. The presence of one or more messages means
-something unexpected happened when running the query, but the query could still be completed.</p>
-<p>Messages are sorted in order of decreasing severity. Messages are also available in the Service Layer log file.</p>
-<p>Messages are also logged using the Python <cite>logging</cite> module to the “ansys.grantami.bomanalytics” logger. By
-default, messages with a severity of “warning” or higher are printed on stderr.</p>
+<dd><p>Messages generated by Granta MI when running the query. The presence of one or more messages means
+that something unexpected happened when running the query but that the query could still be completed.</p>
+<p>Messages are sorted in order of decreasing severity and are available in the Service Layer log file.</p>
+<p>Messages are also logged using the Python <code class="docutils literal notranslate"><span class="pre">logging</span></code> module to the <code class="docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics</span></code> logger. By
+default, messages with a severity of <code class="docutils literal notranslate"><span class="pre">warning</span></code> or higher are printed on stderr.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
@@ -425,6 +461,16 @@ default, messages with a severity of “warning” or higher are printed on stde
 
 </dd></dl>
 
+</div>
+<div class="section" id="bom-result">
+<h2>BoM Result<a class="headerlink" href="#bom-result" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">BoMWithImpactedSubstancesResult</span></code> object does exist, but it is not documented since it is not exposed by any
+public methods. The rationale is as follows:</p>
+<p>A single <a class="reference internal" href="#ref-grantami-bomanalytics-api-impactedsubstances-bom-query"><span class="std std-ref">Query Definition</span></a> query can only operate on a single BoM.
+Therefore, there is no grouping of impacted substances by BoM, which is what the <code class="docutils literal notranslate"><span class="pre">BoMWithImpactedSubstancesResult</span></code>
+would be used for. <a class="reference internal" href="impacted_substances.html#ref-grantami-bomanalytics-api-impactedsubstances-substances"><span class="std std-ref">Impacted Substances</span></a> objects are only available either
+as a flat list or grouped by legislation. Both of these views are available on the
+<a class="reference internal" href="#ref-grantami-bomanalytics-api-impactedsubstances-bom-queryresult"><span class="std std-ref">Query Result</span></a> object above.</p>
 </div>
 </div>
 
