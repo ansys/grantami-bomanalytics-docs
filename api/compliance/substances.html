@@ -301,7 +301,7 @@ together as required. Records can be added using a combination of any of the ava
 <p class="rubric">Notes</p>
 <p>The amount of a substance is a critical factor when determining if it is compliant or non-compliant with a
 legislation. For the other compliance queries in this API, the amount of substance is determined by the value set
-in the declaration stored in Granta MI. However, when performing a query for substance complianceQuery, there is no
+in the declaration stored in Granta MI. However, when performing a query for substance compliance, there is no
 declaration because the substances are being examined directly.</p>
 <p>As a result, a set of extra methods are defined that allow the amount of each substance to be defined along with the
 reference to the record in Granta MI. These methods have the name <code class="docutils literal notranslate"><span class="pre">_with_xxxxxx_and_amounts()</span></code> and take a list of
@@ -359,7 +359,7 @@ tuples as the argument.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers_and_amounts">
 <span class="sig-name descname"><span class="pre">with_cas_numbers_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cas_numbers_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_cas_numbers_and_amounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a list or set of CAS Numbers and amounts to a substance query. The CAS Numbers and quantity
+<dd><p>Add a list or set of CAS numbers and amounts to a substance query. The CAS numbers and quantity
 pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -391,7 +391,7 @@ pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers_and_amounts">
 <span class="sig-name descname"><span class="pre">with_ec_numbers_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec_numbers_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_ec_numbers_and_amounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a list or set of EC Numbers and amounts to a substance query. The EC Numbers and quantity
+<dd><p>Add a list or set of EC numbers and amounts to a substance query. The EC numbers and quantity
 pairs are expressed as a tuple, with the quantity in units of wt. %.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -550,7 +550,7 @@ will be set to 100%.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids_and_amounts">
 <span class="sig-name descname"><span class="pre">with_record_guids_and_amounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_guids_and_amounts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery.with_record_guids_and_amounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a list or set of record GUID and amounts to a substance query. The GUID and quantity pairs are
+<dd><p>Add a list or set of record GUIDs and amounts to a substance query. The GUID and quantity pairs are
 expressed as a tuple, with the quantity in units of wt. %.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>

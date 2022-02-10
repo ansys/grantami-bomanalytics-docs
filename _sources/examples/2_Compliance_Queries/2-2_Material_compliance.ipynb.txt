@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "d8ee67f6",
+   "id": "5125b2a6",
    "metadata": {},
    "source": [
     "# Performing a Material Compliance Query"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f70873d4",
+   "id": "8128c402",
    "metadata": {},
    "source": [
     "A Material Compliance Query determines whether one or more materials are compliant with the specified indicators. This\n",
@@ -20,7 +20,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ccd0a9a0",
+   "id": "689fb4b5",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -28,7 +28,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "abbc7875",
+   "id": "2c11b017",
    "metadata": {},
    "source": [
     "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
@@ -38,7 +38,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3d02e147",
+   "id": "9c6aa2ad",
    "metadata": {
     "tags": []
    },
@@ -52,7 +52,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "257339c9",
+   "id": "e4d8a522",
    "metadata": {},
    "source": [
     "## Defining an Indicator"
@@ -60,7 +60,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "066532c9",
+   "id": "2ff11705",
    "metadata": {},
    "source": [
     "A Compliance query determines compliance against 'Indicators', as opposed to an Impacted Substances query which\n",
@@ -77,7 +77,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a15ff385",
+   "id": "ee7dd812",
    "metadata": {},
    "source": [
     "First, create two ``WatchListIndicator`` objects."
@@ -86,7 +86,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "408f343e",
+   "id": "1643b437",
    "metadata": {
     "tags": []
    },
@@ -107,7 +107,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "55ab2a09",
+   "id": "5df5f046",
    "metadata": {
     "tags": []
    },
@@ -117,7 +117,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b8032641",
+   "id": "ab6bf1b2",
    "metadata": {},
    "source": [
     "Next define the query itself. Materials can be referenced by Granta MI record reference or Material ID.\n",
@@ -128,7 +128,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "ba3042a2",
+   "id": "1346c8d8",
    "metadata": {
     "tags": []
    },
@@ -144,7 +144,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5e724c60",
+   "id": "6af39f80",
    "metadata": {},
    "source": [
     "Finally, run the query. Passing a ``MaterialComplianceQuery`` object to the ``Connection.run()`` method returns a\n",
@@ -154,7 +154,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "7784973e",
+   "id": "100e0b8c",
    "metadata": {
     "tags": []
    },
@@ -166,7 +166,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "05d6a9cb",
+   "id": "026559a5",
    "metadata": {
     "tags": []
    },
@@ -176,7 +176,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2c45c567",
+   "id": "42fc134f",
    "metadata": {},
    "source": [
     "## Results Grouped by Material"
@@ -184,7 +184,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a0ffa4c2",
+   "id": "012c454d",
    "metadata": {
     "tags": []
    },
@@ -197,7 +197,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c3196746",
+   "id": "26ff5991",
    "metadata": {},
    "source": [
     "Initially, we can print just the results for the reinforced PA66 record."
@@ -206,7 +206,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3e8d403a",
+   "id": "41d12c9e",
    "metadata": {
     "tags": []
    },
@@ -218,7 +218,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9e51703e",
+   "id": "05b988ab",
    "metadata": {},
    "source": [
     "The reinforced PA66 record has a status of 'WatchListHasSubstanceAboveThreshold', which tells us the material is not\n",
@@ -227,7 +227,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "38f486b5",
+   "id": "9fab3202",
    "metadata": {},
    "source": [
     "To understand which substances have caused this status, we can print the substances that are not compliant with the\n",
@@ -240,7 +240,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "a80b7c0e",
+   "id": "f1ec3b91",
    "metadata": {
     "tags": []
    },
@@ -257,7 +257,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "44d5ed6a",
+   "id": "4e7742a2",
    "metadata": {},
    "source": [
     "Note that children of items passed into the compliance query are returned with record references based on record\n",
@@ -267,7 +267,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "adf4166e",
+   "id": "e2239a61",
    "metadata": {},
    "source": [
     "Next, look at the state of the zinc alloy record."
@@ -276,7 +276,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "89849de1",
+   "id": "f59b0c24",
    "metadata": {
     "tags": []
    },
@@ -288,7 +288,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d4bebeb6",
+   "id": "ea8f9453",
    "metadata": {},
    "source": [
     "The zinc alloy record has the status 'WatchListAllSubstancesBelowThreshold', which means there are substances present\n",
@@ -297,7 +297,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b44850f0",
+   "id": "0292e8c2",
    "metadata": {},
    "source": [
     "We can print these substances using the 'WatchListBelowThreshold' flag as the threshold."
@@ -306,7 +306,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "cea49f94",
+   "id": "3f67fff5",
    "metadata": {
     "tags": []
    },
@@ -324,7 +324,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fe3a8cef",
+   "id": "8dc71255",
    "metadata": {},
    "source": [
     "Finally, look at the stainless steel record."
@@ -333,7 +333,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6dd122ae",
+   "id": "728b8164",
    "metadata": {
     "tags": []
    },
@@ -345,7 +345,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ba0312f0",
+   "id": "4f807b83",
    "metadata": {},
    "source": [
     "The stainless steel record has the status 'WatchListCompliant', which means there are no impacted substances in the\n",
@@ -354,7 +354,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "47dbc17c",
+   "id": "078b87b4",
    "metadata": {},
    "source": [
     "We can print these substances using the 'WatchListNotImpacted' flag as the threshold."
@@ -363,7 +363,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "bb8080c6",
+   "id": "a2dafd53",
    "metadata": {
     "tags": []
    },
@@ -382,7 +382,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4e919147",
+   "id": "888bb597",
    "metadata": {},
    "source": [
     "## Results Grouped by Indicator"
@@ -390,7 +390,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8a9b1451",
+   "id": "88231d67",
    "metadata": {},
    "source": [
     "Alternatively, using the ``compliance_by_indicator`` property provides a single indicator result that summarizes the\n",
@@ -403,7 +403,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "dc1a189c",
+   "id": "b3d2793a",
    "metadata": {
     "tags": []
    },
@@ -417,7 +417,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ebfa5426",
+   "id": "63ad7b8d",
    "metadata": {},
    "source": [
     "Note that this cannot tell us which material is responsible for the non-compliance. This would require performing a\n",

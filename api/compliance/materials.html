@@ -353,7 +353,7 @@ together as required. Records can be added using a combination of any of the ava
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.MaterialComplianceQuery.with_material_ids">
 <span class="sig-name descname"><span class="pre">with_material_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.MaterialComplianceQuery.with_material_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a list or set of materials to a material query, referenced by the material ID attribute value.</p>
-<p>Material IDs are valid for both <em>MaterialUniverse</em> and <em>Materials - in house</em> records.</p>
+<p>Material IDs are valid for both <code class="docutils literal notranslate"><span class="pre">MaterialUniverse</span></code> and <code class="docutils literal notranslate"><span class="pre">Materials</span> <span class="pre">-</span> <span class="pre">in</span> <span class="pre">house</span></code> records.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -659,13 +659,13 @@ This object includes three categories of attributes:</p>
 <div><ul class="simple">
 <li><p>The reference to the material in Granta MI</p></li>
 <li><p>The compliance status of this material, stored in a dictionary of one or more indicator objects</p></li>
-<li><p>Any substance objects which are a child of this material object</p></li>
+<li><p>Any substance objects that are a child of this material object</p></li>
 </ul>
 </div></blockquote>
 <p class="rubric">Notes</p>
-<p>With the exception of the <em>record_history_identity</em>, the record reference attributes below are only populated if
+<p>With the exception of <code class="docutils literal notranslate"><span class="pre">record_history_identity</span></code>, the record reference attributes below are only populated if
 they were specified in the original query. As a result, if this object is included as the child of another
-compliance result object, only the <em>record_history_identity</em> will be populated.</p>
+compliance result object, only <code class="docutils literal notranslate"><span class="pre">record_history_identity</span></code> will be populated.</p>
 <p>Objects of this class are only returned as the result of a query. The class is not intended to be instantiated
 directly.</p>
 <dl class="field-list">

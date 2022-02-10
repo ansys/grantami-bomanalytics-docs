@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "bd7df928",
+   "id": "c39f4951",
    "metadata": {},
    "source": [
     "# Writing Compliance Results to a DataFrame"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7b9195c3",
+   "id": "47cb2bd2",
    "metadata": {},
    "source": [
     "## Introduction"
@@ -18,7 +18,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f55f6787",
+   "id": "99b7ffd3",
    "metadata": {},
    "source": [
     "The BoM Analytics package presents compliance results in a hierarchical data structure. Alternatively, you can\n",
@@ -29,7 +29,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3fa80d55",
+   "id": "e3960366",
    "metadata": {},
    "source": [
     "## Perform a Compliance Query"
@@ -37,7 +37,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "51d79c1d",
+   "id": "4cc9de40",
    "metadata": {},
    "source": [
     "The first step is to perform a compliance query on an assembly that will result in a deeply\n",
@@ -48,7 +48,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "23d1942b",
+   "id": "8f03fd81",
    "metadata": {
     "tags": []
    },
@@ -73,7 +73,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1018fa0a",
+   "id": "40f159f0",
    "metadata": {},
    "source": [
     "The ``part_result`` object contains the compliance result for every subitem. This is ideal for understanding\n",
@@ -84,7 +84,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "58a29e81",
+   "id": "4f9a74d3",
    "metadata": {
     "tags": []
    },
@@ -99,7 +99,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "19c2abcf",
+   "id": "474390b5",
    "metadata": {},
    "source": [
     "However, this structure makes it difficult to compare items at different levels. To do that, we want to flatten the\n",
@@ -108,7 +108,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5d14ff3b",
+   "id": "9520e743",
    "metadata": {},
    "source": [
     "## Flatten the Hierarchical Data Structure"
@@ -116,7 +116,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7c5fc7d3",
+   "id": "a98db4b4",
    "metadata": {},
    "source": [
     "We will flatten the data into a ``list`` of ``dict`` objects, where each ``dict`` represents an item in the\n",
@@ -126,7 +126,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6bf261dc",
+   "id": "02e9d3e6",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -139,7 +139,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "53ca4ff1",
+   "id": "6bd9656f",
    "metadata": {
     "tags": []
    },
@@ -161,7 +161,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "97505231",
+   "id": "26403d79",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -173,7 +173,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "40cab612",
+   "id": "958250ad",
    "metadata": {
     "lines_to_next_cell": 2,
     "tags": []
@@ -191,7 +191,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b2972163",
+   "id": "db16be2f",
    "metadata": {},
    "source": [
     "The function itself performs the flattening via a stack-based approach, where the children of the item currently\n",
@@ -201,7 +201,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "52ea4e04",
+   "id": "b2a402bd",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -213,7 +213,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f25e4519",
+   "id": "861ffe35",
    "metadata": {
     "tags": []
    },
@@ -265,7 +265,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1590bc48",
+   "id": "21950725",
    "metadata": {},
    "source": [
     "Finally, call the function above against the results from the compliance query and use the list to create a\n",
@@ -275,7 +275,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "592dd509",
+   "id": "4231bdc2",
    "metadata": {
     "tags": []
    },
@@ -291,7 +291,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9d00db2e",
+   "id": "6cbb5340",
    "metadata": {},
    "source": [
     "## Post-processing the DataFrame"
@@ -299,7 +299,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "aa5db7eb",
+   "id": "57db8817",
    "metadata": {},
    "source": [
     "Now that we have the data in a ``DataFrame``, we can perform operations across all levels of the structure more\n",
@@ -310,7 +310,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "bae5484f",
+   "id": "1742d507",
    "metadata": {
     "tags": []
    },

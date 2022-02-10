@@ -303,7 +303,7 @@ legislations.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the indicator that is used to identify the indicator in the query result.</p>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the indicator that is to identify the indicator in the query result.</p>
 </dd>
 <dt><strong>legislation_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>Legislations against which compliance will be determined.</p>
 </dd>
@@ -317,9 +317,9 @@ The default is <code class="docutils literal notranslate"><span class="pre">True
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two differently-typed indicators are compared.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two indicators of different types are compared.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared which both don’t have a result flag.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared and both don’t have a result flag.</p>
 </dd>
 </dl>
 </dd>
@@ -327,7 +327,7 @@ The default is <code class="docutils literal notranslate"><span class="pre">True
 <p class="rubric">Notes</p>
 <p>The RoHS indicator is designed to be used with RoHS-type legislations such as RoHS and RoHS China. However,
 usage is not enforced. Substances marked as ‘Process Chemicals’<a class="footnote-reference brackets" href="#id3" id="id1">1</a> are always ignored, and exceptions
-are supported (unless explicitly ignored by specifying <code class="docutils literal notranslate"><span class="pre">ignore_exemptions=True</span></code> when creating the indicator.
+are supported (unless explicitly ignored by specifying <code class="docutils literal notranslate"><span class="pre">ignore_exemptions=True</span></code> when creating the indicator).
 The possible result flags for the indicator distinguish between an item being compliant, compliant with
 exemptions, or non-compliant.</p>
 <p class="rubric">Examples</p>
@@ -425,7 +425,7 @@ down the list the compliance result appears, the worse it is.</p>
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown">
 <span class="sig-name descname"><span class="pre">RohsUnknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsUnknown</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
-<div><p>One or more declarations are missing., and so there is not enough information to determine
+<div><p>One or more declarations are missing, so there is not enough information to determine
     compliance. <em>Compliance is unknown.</em></p>
 </div></blockquote>
 </dd></dl>
@@ -459,9 +459,9 @@ The default is <code class="docutils literal notranslate"><span class="pre">Fals
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two differently-typed indicators are compared.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If two indicators of different types are compared.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared which both don’t have a result flag.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If two indicators are compared and both don’t have a result flag.</p>
 </dd>
 </dl>
 </dd>
@@ -506,7 +506,7 @@ but with substances below the threshold, or non-compliant.</p>
 <dl class="py enum">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag">
 <em class="property"><span class="pre">enum</span> </em><span class="sig-name descname"><span class="pre">WatchListFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides permitted watch list flag states. Increasing value means less compliance. The further
+<dd><p>Provides permitted watch list flag states. An increasing value means less compliance. The further
 down the list the compliance result appears, the worse it is.</p>
 <p>For more information, see the Restricted Substances Reports User Guide.</p>
 <p>Valid values are as follows:</p>
