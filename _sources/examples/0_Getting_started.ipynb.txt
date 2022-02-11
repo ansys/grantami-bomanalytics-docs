@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "7c6de093",
+   "id": "bdbfc99c",
    "metadata": {},
    "source": [
     "# Getting Started"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f7ec4499",
+   "id": "f52513e0",
    "metadata": {},
    "source": [
     "## Introduction"
@@ -18,7 +18,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a4302633",
+   "id": "65bd2821",
    "metadata": {},
    "source": [
     "This example describes how to connect to Granta MI and perform a basic query for impacted substances. It also\n",
@@ -29,7 +29,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6ce54935",
+   "id": "78229397",
    "metadata": {},
    "source": [
     "## Connect to Granta MI"
@@ -37,7 +37,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7746964a",
+   "id": "040a6409",
    "metadata": {},
    "source": [
     "First, use the ``ansys.grantami.bomanalytics.Connection`` class to connect to the Granta MI server. The ``Connection``\n",
@@ -52,7 +52,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "fbe31d2a",
+   "id": "00174801",
    "metadata": {
     "tags": []
    },
@@ -65,7 +65,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2c886909",
+   "id": "427f3ff5",
    "metadata": {},
    "source": [
     "If you are running your Python script on Windows, you are generally able to use ``.with_autologon()``."
@@ -74,7 +74,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "62e9616a",
+   "id": "4215ca2c",
    "metadata": {
     "tags": []
    },
@@ -86,7 +86,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "542e764f",
+   "id": "5a4f0afa",
    "metadata": {},
    "source": [
     "If the Python script is running on Linux without Kerberos enabled, or you wish to use an account other than your\n",
@@ -96,7 +96,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "d4cfb7f8",
+   "id": "03cdccc2",
    "metadata": {
     "tags": []
    },
@@ -108,7 +108,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cd9816f6",
+   "id": "b95762c6",
    "metadata": {},
    "source": [
     "OIDC and anonymous authentication methods are also available, but are beyond the scope of this example. See\n",
@@ -117,7 +117,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9ec74a2d",
+   "id": "e6faf10a",
    "metadata": {},
    "source": [
     "## Construct a Query"
@@ -125,7 +125,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2e5c34c4",
+   "id": "99418f29",
    "metadata": {},
    "source": [
     "Queries are also constructed using a fluent interface. However, the ``Query`` constructor takes no arguments. All\n",
@@ -135,7 +135,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c92d5480",
+   "id": "ec755f3f",
    "metadata": {},
    "source": [
     "First import the ``queries`` module and create a ``MaterialImpactedSubstancesQuery`` object."
@@ -144,7 +144,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0c532e65",
+   "id": "2b342b63",
    "metadata": {
     "tags": []
    },
@@ -158,7 +158,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2d5a48cd",
+   "id": "360b05c5",
    "metadata": {},
    "source": [
     "Now add the material you want to query, by specifying its Material ID. (Alternate methods of specifying records\n",
@@ -168,7 +168,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "5ca20d16",
+   "id": "e19ba179",
    "metadata": {
     "tags": []
    },
@@ -180,7 +180,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2504eee2",
+   "id": "372c39e9",
    "metadata": {},
    "source": [
     "Note that because the ``MaterialImpactedSubstancesQuery`` object has a fluent interface, we receive the same object\n",
@@ -192,7 +192,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3cd7e32c",
+   "id": "039d5cfb",
    "metadata": {
     "tags": []
    },
@@ -204,7 +204,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "eccf7a86",
+   "id": "564c16d1",
    "metadata": {},
    "source": [
     "Fluent interfaces are designed to allow a complex object to be constructed in a single line of code. As such, we can\n",
@@ -214,7 +214,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4f9dc976",
+   "id": "2f0c5ed1",
    "metadata": {
     "tags": []
    },
@@ -226,7 +226,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "efb9632f",
+   "id": "87ac543c",
    "metadata": {},
    "source": [
     "Since the fluent interface can produce very long lines of code, it's necessary to break your query creation code into\n",
@@ -237,7 +237,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f50d1ff1",
+   "id": "4243c93a",
    "metadata": {
     "tags": []
    },
@@ -253,7 +253,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a50a1e68",
+   "id": "279dbc50",
    "metadata": {},
    "source": [
     "The multi-line format is the recommended way of creating queries using this API."
@@ -261,7 +261,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e86f914d",
+   "id": "deb31a40",
    "metadata": {},
    "source": [
     "## Run a Query"
@@ -269,7 +269,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6cc08f30",
+   "id": "dd558a70",
    "metadata": {},
    "source": [
     "Now that we have our ``cxn`` and ``query`` objects, we can use the ``cxn.run()`` method to run the query. This returns\n",
@@ -279,7 +279,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "57fcebd9",
+   "id": "c011067e",
    "metadata": {
     "tags": []
    },
@@ -291,7 +291,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6972bc69",
+   "id": "e52aaf2e",
    "metadata": {},
    "source": [
     "## Query Results"
@@ -299,7 +299,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6fd265a1",
+   "id": "eb866d57",
    "metadata": {},
    "source": [
     "In the case of ``MaterialsImpactedSubstancesQuery``, the results object contains the list of substances present in\n",
@@ -309,7 +309,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "b15f31ed",
+   "id": "16c845b2",
    "metadata": {
     "tags": []
    },
@@ -320,7 +320,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8787ee7c",
+   "id": "a5017a46",
    "metadata": {},
    "source": [
     "## Logging"
@@ -328,7 +328,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "11dbbc1b",
+   "id": "282cb84f",
    "metadata": {},
    "source": [
     "All query results also contain a list of messages returned by the server whilst running the query. These are\n",
@@ -338,7 +338,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "12fc1c41",
+   "id": "dc75d88b",
    "metadata": {
     "tags": []
    },
@@ -349,7 +349,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8326d495",
+   "id": "11590dd4",
    "metadata": {},
    "source": [
     "These messages are also available via the standard ``logging`` module using the ``ansys.grantami.bomanalytics``\n",
@@ -363,7 +363,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f4458f13",
+   "id": "de9d91c6",
    "metadata": {
     "tags": []
    },

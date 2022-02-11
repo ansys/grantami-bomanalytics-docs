@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Material Compliance &#8212; Granta MI BoM Analytics 1.0.0b1</title>
+    <title>Material Compliance &#8212; Granta MI BoM Analytics 1.0.0b4</title>
     
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -145,7 +145,7 @@
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0b1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0b4</a> » </li>
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
@@ -291,7 +291,7 @@
 <h2>Query Definition<a class="headerlink" href="#query-definition" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.queries.MaterialComplianceQuery">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MaterialComplianceQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.MaterialComplianceQuery" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaterialComplianceQuery</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.queries.MaterialComplianceQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates compliance for Granta MI material records against a number of indicators. If the materials are
 associated with substances, these are also evaluated and returned.</p>
 <p>All methods used to add materials and indicators to this query return the query itself so that they can be chained
@@ -569,7 +569,7 @@ included in the same request assuming typical numbers of associated records.</p>
 <h2>Query Result<a class="headerlink" href="#query-result" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.MaterialComplianceQueryResult">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MaterialComplianceQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.MaterialComplianceQueryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaterialComplianceQueryResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator_definitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.MaterialComplianceQueryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the result of running the <a class="reference internal" href="#ansys.grantami.bomanalytics.queries.MaterialComplianceQuery" title="ansys.grantami.bomanalytics.queries.MaterialComplianceQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaterialComplianceQuery</span></code></a>
 class. This class describes the compliance status of materials against one or more indicators.</p>
 <p class="rubric">Notes</p>
@@ -652,7 +652,7 @@ default, messages with a severity of <code class="docutils literal notranslate">
 <h2>Material Result<a class="headerlink" href="#material-result" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MaterialWithComplianceResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaterialWithComplianceResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._item_results.MaterialWithComplianceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves an individual material included as part of a compliance query result.
 This object includes three categories of attributes:</p>
 <blockquote>
@@ -709,7 +709,7 @@ directly.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

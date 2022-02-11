@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Granta MI Connection &#8212; Granta MI BoM Analytics 1.0.0b1</title>
+    <title>Granta MI Connection &#8212; Granta MI BoM Analytics 1.0.0b4</title>
     
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -145,7 +145,7 @@
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0b1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0b4</a> » </li>
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API Reference</a> » </li>
@@ -265,11 +265,27 @@
 <h2>Connection Builder<a class="headerlink" href="#connection-builder" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connects to an instance of Granta MI.</p>
+<p>This is a subclass of <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.openapi.common.ApiClientFactory</span></code></a>. All methods within this class that are
+documented as returning <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> return instances of
+<a class="reference internal" href="#ansys.grantami.bomanalytics.Connection" title="ansys.grantami.bomanalytics.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics.Connection</span></code></a> instead.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>api_url</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Base URL of the API server.</p>
+</dd>
+<dt><strong>session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the
+class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a> with default parameters is used.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
-<p>For advanced usage, including configuring session-specific properties and timeouts, see the
-<code class="docutils literal notranslate"><span class="pre">ansys-openapi-common</span></code> package documentation.</p>
+<p>For advanced usage, including configuring session-specific properties and timeouts, see
+<a class="reference external" href="https://openapi.docs.pyansys.com/api/index.html" title="(in ansys.openapi.common v1.0.0b2)"><span class="xref std std-doc">ansys-openapi-common API Reference</span></a>. Specifically, the documentation on
+the base class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> and the class
+<a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>.</p>
 <p>To create the connection to Granta MI, you perform three steps:</p>
 <ol class="arabic simple">
 <li><p>Create the connection builder object and specify the server to connect to.</p></li>
@@ -293,18 +309,13 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.with_autologon">
 <span class="sig-name descname"><span class="pre">with_autologon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.with_autologon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set up client authentication for use with Kerberos (also known as integrated Windows authentication).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Current client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Current client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -338,7 +349,7 @@ configured for use.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Original client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -354,13 +365,13 @@ configured for use.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>idp_session_configuration</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionConfiguration</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session when connected to the OpenID identity provider.</p>
+<dt><strong>idp_session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session when connected to the OpenID identity provider.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">OIDCSessionBuilder</span></code></dt><dd><p>Builder object to authenticate via OIDC.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.OIDCSessionBuilder.html#ansys.openapi.common.OIDCSessionBuilder" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OIDCSessionBuilder</span></code></a></dt><dd><p>Builder object to authenticate via OIDC.</p>
 </dd>
 </dl>
 </dd>
@@ -379,7 +390,7 @@ method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></dt><dd><p>Original client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -389,12 +400,12 @@ method.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection.connect">
 <span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finalize the API client and return it for use.</p>
+<dd><p>Finalize the BoM Analytics client and return it for use.</p>
 <p>Authentication must be configured for this method to succeed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClient</span></code></dt><dd><p>Client object that can be used to connect to the server and perform API operations.</p>
+<dt><a class="reference internal" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient" title="ansys.grantami.bomanalytics._connection.BomAnalyticsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BomAnalyticsClient</span></code></a></dt><dd><p>Client object that can be used to connect to Granta MI and perform BoM Analytics operations.</p>
 </dd>
 </dl>
 </dd>
@@ -414,32 +425,32 @@ method.</p>
 <h2>BoM Analytics Client<a class="headerlink" href="#bom-analytics-client" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._connection.BomAnalyticsClient">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BomAnalyticsClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicelayer_url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BomAnalyticsClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicelayer_url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Communicates with Granta MI. This class is instantiated by the
 <a class="reference internal" href="#ansys.grantami.bomanalytics.Connection" title="ansys.grantami.bomanalytics.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a> class defined above and should not be instantiated directly.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">MaterialImpactedSubstancesQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MaterialImpactedSubstancesQueryResult</span></span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="impacted_substances/materials.html#ansys.grantami.bomanalytics.queries.MaterialImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.MaterialImpactedSubstancesQuery"><span class="pre">MaterialImpactedSubstancesQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="impacted_substances/materials.html#ansys.grantami.bomanalytics._query_results.MaterialImpactedSubstancesQueryResult" title="ansys.grantami.bomanalytics._query_results.MaterialImpactedSubstancesQueryResult"><span class="pre">MaterialImpactedSubstancesQueryResult</span></a></span></span><a class="headerlink" href="#ansys.grantami.bomanalytics._connection.BomAnalyticsClient.run" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">MaterialComplianceQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MaterialComplianceQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="compliance/materials.html#ansys.grantami.bomanalytics.queries.MaterialComplianceQuery" title="ansys.grantami.bomanalytics.queries.MaterialComplianceQuery"><span class="pre">MaterialComplianceQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="compliance/materials.html#ansys.grantami.bomanalytics._query_results.MaterialComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.MaterialComplianceQueryResult"><span class="pre">MaterialComplianceQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PartImpactedSubstancesQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PartImpactedSubstancesQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="impacted_substances/parts.html#ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.PartImpactedSubstancesQuery"><span class="pre">PartImpactedSubstancesQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="impacted_substances/parts.html#ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult" title="ansys.grantami.bomanalytics._query_results.PartImpactedSubstancesQueryResult"><span class="pre">PartImpactedSubstancesQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PartComplianceQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PartComplianceQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="compliance/parts.html#ansys.grantami.bomanalytics.queries.PartComplianceQuery" title="ansys.grantami.bomanalytics.queries.PartComplianceQuery"><span class="pre">PartComplianceQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="compliance/parts.html#ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.PartComplianceQueryResult"><span class="pre">PartComplianceQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">SpecificationImpactedSubstancesQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SpecificationImpactedSubstancesQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="impacted_substances/specifications.html#ansys.grantami.bomanalytics.queries.SpecificationImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.SpecificationImpactedSubstancesQuery"><span class="pre">SpecificationImpactedSubstancesQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="impacted_substances/specifications.html#ansys.grantami.bomanalytics._query_results.SpecificationImpactedSubstancesQueryResult" title="ansys.grantami.bomanalytics._query_results.SpecificationImpactedSubstancesQueryResult"><span class="pre">SpecificationImpactedSubstancesQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">SpecificationComplianceQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SpecificationComplianceQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="compliance/specifications.html#ansys.grantami.bomanalytics.queries.SpecificationComplianceQuery" title="ansys.grantami.bomanalytics.queries.SpecificationComplianceQuery"><span class="pre">SpecificationComplianceQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="compliance/specifications.html#ansys.grantami.bomanalytics._query_results.SpecificationComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.SpecificationComplianceQueryResult"><span class="pre">SpecificationComplianceQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">SubstanceComplianceQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SubstanceComplianceQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="compliance/substances.html#ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery" title="ansys.grantami.bomanalytics.queries.SubstanceComplianceQuery"><span class="pre">SubstanceComplianceQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="compliance/substances.html#ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.SubstanceComplianceQueryResult"><span class="pre">SubstanceComplianceQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">BomImpactedSubstancesQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BomImpactedSubstancesQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="impacted_substances/bom.html#ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery" title="ansys.grantami.bomanalytics.queries.BomImpactedSubstancesQuery"><span class="pre">BomImpactedSubstancesQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="impacted_substances/bom.html#ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult" title="ansys.grantami.bomanalytics._query_results.BomImpactedSubstancesQueryResult"><span class="pre">BomImpactedSubstancesQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">BomComplianceQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BomComplianceQueryResult</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="compliance/bom.html#ansys.grantami.bomanalytics.queries.BomComplianceQuery" title="ansys.grantami.bomanalytics.queries.BomComplianceQuery"><span class="pre">BomComplianceQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="compliance/bom.html#ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult" title="ansys.grantami.bomanalytics._query_results.BomComplianceQueryResult"><span class="pre">BomComplianceQueryResult</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Yaml</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Yaml</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">'Yaml'</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Yaml'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span></dt>
 <dd><p>Run a query against the Granta MI database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -461,7 +472,7 @@ impacted substances results. In the case of a yaml query, a string is returned.<
 that Granta MI is running and the BoM Analytics Service is available, but the query could not be run,
 probably because of a missing database or table.</p>
 </dd>
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></dt><dd><p>If this exception is raised, the Granta MI server was not able to return a response, probably
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiException.html#ansys.openapi.common.ApiException" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></a></dt><dd><p>If this exception is raised, the Granta MI server was not able to return a response, probably
 because of an internal configuration error or the BoM Analytics Service not being installed.</p>
 </dd>
 </dl>
@@ -534,7 +545,7 @@ from the defaults. Here is a summary of the default names:</p>
 <span id="ref-grantami-bomanalytics-common-messages"></span><h1>Log Messages<a class="headerlink" href="#log-messages" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics._query_results.LogMessage">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">LogMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">severity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.LogMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">severity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics._query_results.LogMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message returned by Granta MI when running the query.</p>
 <p>Messages marked with the <code class="docutils literal notranslate"><span class="pre">error</span></code> severity are more likely to produce incorrect results and should be treated with
 increased caution.</p>
@@ -555,7 +566,7 @@ increased caution.</p>
 <span id="ref-grantami-bomanalytics-common-exceptions"></span><h1>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.GrantaMIException">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">GrantaMIException</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.GrantaMIException" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GrantaMIException</span></span><a class="headerlink" href="#ansys.grantami.bomanalytics.GrantaMIException" title="Permalink to this definition">¶</a></dt>
 <dd><p>A critical error occurred when processing a BoM Analytics query.</p>
 </dd></dl>
 
@@ -583,7 +594,7 @@ increased caution.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

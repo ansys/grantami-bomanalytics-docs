@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indicators &#8212; Granta MI BoM Analytics 1.0.0b1</title>
+    <title>Indicators &#8212; Granta MI BoM Analytics 1.0.0b4</title>
     
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -145,7 +145,7 @@
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0b1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.0b4</a> » </li>
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
@@ -295,7 +295,7 @@ Reports User Guide</em> supplied with Granta MI Restricted Substances Reports.</
 <h2>RoHS Indicator<a class="headerlink" href="#rohs-indicator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSIndicator">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">RoHSIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_exemptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RoHSIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_exemptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSIndicator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the indicator object that represents RoHS-type compliance of a BoM object against one or more
 legislations.</p>
 <p>Other <code class="docutils literal notranslate"><span class="pre">RoHSIndicator</span></code> objects with results can be compared, with ‘less compliant’ indicators being greater than
@@ -360,74 +360,53 @@ exemptions, or non-compliant.</p>
 </dl>
 </dd></dl>
 
-<dl class="py enum">
+<dl class="py class enum">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag">
-<em class="property"><span class="pre">enum</span> </em><span class="sig-name descname"><span class="pre">RoHSFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">enum</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RoHSFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides permitted RoHS flag states. A larger value means that the item is less compliant. The further
 down the list the compliance result appears, the worse it is.</p>
 <p>For more information, see the Restricted Substances Reports User Guide.</p>
 <p>Valid values are as follows:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNotImpacted">
-<span class="sig-name descname"><span class="pre">RohsNotImpacted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsNotImpacted</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNotImpacted" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is not impacted by the specified legislations.
-    <em>Substance is not impacted.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsNotImpacted</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsNotImpacted:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNotImpacted" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is not impacted by the specified legislations. <em>Substance is not impacted.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsBelowThreshold">
-<span class="sig-name descname"><span class="pre">RohsBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsBelowThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is impacted by the specified legislations, but it appears in the parent item
-    in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsBelowThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsBelowThreshold:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is impacted by the specified legislations, but it appears in the parent item in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliant">
-<span class="sig-name descname"><span class="pre">RohsCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliant" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item either does not contain any substances impacted by the specified legislations or
-    contains no substances above the specified threshold. <em>Item is compliant.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsCompliant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsCompliant:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item either does not contain any substances impacted by the specified legislations or contains no substances above the specified threshold. <em>Item is compliant.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliantWithExemptions">
-<span class="sig-name descname"><span class="pre">RohsCompliantWithExemptions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsCompliantWithExemptions</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliantWithExemptions" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item contains substances impacted by the specified legislations, but an
-    exemption has been declared either on itself or a child item. <em>Item is compliant with exemptions.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsCompliantWithExemptions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsCompliantWithExemptions:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsCompliantWithExemptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item contains substances impacted by the specified legislations, but an exemption has been declared either on itself or a child item. <em>Item is compliant with exemptions.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsAboveThreshold">
-<span class="sig-name descname"><span class="pre">RohsAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsAboveThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is impacted by the specified legislations and is present in a quantity
-    above that specified by the indicator. <em>Exemption for use required.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsAboveThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsAboveThreshold:</span> <span class="pre">5&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is impacted by the specified legislations and is present in a quantity above that specified by the indicator. <em>Exemption for use required.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNonCompliant">
-<span class="sig-name descname"><span class="pre">RohsNonCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsNonCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNonCompliant" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item contains one or more substances impacted by the specified legislations.
-    <em>Item is non-compliant.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsNonCompliant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsNonCompliant:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsNonCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item contains one or more substances impacted by the specified legislations. <em>Item is non-compliant.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown">
-<span class="sig-name descname"><span class="pre">RohsUnknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">RoHSFlag.RohsUnknown</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>One or more declarations are missing, so there is not enough information to determine
-    compliance. <em>Compliance is unknown.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">RohsUnknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RoHSFlag.RohsUnknown:</span> <span class="pre">7&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.RoHSFlag.RohsUnknown" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more declarations are missing, so there is not enough information to determine compliance. <em>Compliance is unknown.</em></p>
 </dd></dl>
 
 </dd></dl>
@@ -437,7 +416,7 @@ down the list the compliance result appears, the worse it is.</p>
 <h2>Watch List Indicator<a class="headerlink" href="#watch-list-indicator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListIndicator">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">WatchListIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_process_chemicals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WatchListIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legislation_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_threshold_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_process_chemicals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListIndicator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the indicator object that represents watch list-type compliance of a BoM object against one or more
 legislations.</p>
 <p>Other <code class="docutils literal notranslate"><span class="pre">WatchListIndicator</span></code> objects with results can be compared, with ‘less compliant’ indicator flags being
@@ -503,73 +482,53 @@ but with substances below the threshold, or non-compliant.</p>
 </dl>
 </dd></dl>
 
-<dl class="py enum">
+<dl class="py class enum">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag">
-<em class="property"><span class="pre">enum</span> </em><span class="sig-name descname"><span class="pre">WatchListFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">enum</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WatchListFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides permitted watch list flag states. An increasing value means less compliance. The further
 down the list the compliance result appears, the worse it is.</p>
 <p>For more information, see the Restricted Substances Reports User Guide.</p>
 <p>Valid values are as follows:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListNotImpacted">
-<span class="sig-name descname"><span class="pre">WatchListNotImpacted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListNotImpacted</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListNotImpacted" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is not impacted by the specified legislations.
-    <em>Substance is not impacted.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListNotImpacted</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListNotImpacted:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListNotImpacted" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is not impacted by the specified legislations. <em>Substance is not impacted.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListCompliant">
-<span class="sig-name descname"><span class="pre">WatchListCompliant</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListCompliant</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListCompliant" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item does not contain any substances impacted by the specified legislations.
-    <em>Item is compliant.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListCompliant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListCompliant:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item does not contain any substances impacted by the specified legislations. <em>Item is compliant.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListBelowThreshold">
-<span class="sig-name descname"><span class="pre">WatchListBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListBelowThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is impacted by the specified legislations, but appears in the parent
-    item in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListBelowThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListBelowThreshold:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is impacted by the specified legislations, but appears in the parent item in a quantity below that specified by the indicator. <em>Substance is below threshold.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAllSubstancesBelowThreshold">
-<span class="sig-name descname"><span class="pre">WatchListAllSubstancesBelowThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListAllSubstancesBelowThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAllSubstancesBelowThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item contains no substances above the specified threshold.
-    <em>Item is compliant.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListAllSubstancesBelowThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListAllSubstancesBelowThreshold:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAllSubstancesBelowThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item contains no substances above the specified threshold. <em>Item is compliant.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAboveThreshold">
-<span class="sig-name descname"><span class="pre">WatchListAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAboveThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This substance is impacted by the specified legislations and appears in the parent
-    item in a quantity above that specified by the indicator. <em>Substance is impacted.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListAboveThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListAboveThreshold:</span> <span class="pre">5&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This substance is impacted by the specified legislations and appears in the parent item in a quantity above that specified by the indicator. <em>Substance is impacted.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListHasSubstanceAboveThreshold">
-<span class="sig-name descname"><span class="pre">WatchListHasSubstanceAboveThreshold</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListHasSubstanceAboveThreshold</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListHasSubstanceAboveThreshold" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>This item contains one or more substances impacted by the specified
-    legislations. <em>Item is non-compliant.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListHasSubstanceAboveThreshold</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListHasSubstanceAboveThreshold:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListHasSubstanceAboveThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This item contains one or more substances impacted by the specified legislations. <em>Item is non-compliant.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListUnknown">
-<span class="sig-name descname"><span class="pre">WatchListUnknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">WatchListFlag.WatchListUnknown</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListUnknown" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>There is not enough information to determine compliance. <em>Compliance is unknown.</em></p>
-</div></blockquote>
+<span class="sig-name descname"><span class="pre">WatchListUnknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;WatchListFlag.WatchListUnknown:</span> <span class="pre">7&gt;</span></em><a class="headerlink" href="#ansys.grantami.bomanalytics.indicators.WatchListFlag.WatchListUnknown" title="Permalink to this definition">¶</a></dt>
+<dd><p>There is not enough information to determine compliance. <em>Compliance is unknown.</em></p>
 </dd></dl>
 
 </dd></dl>
@@ -607,7 +566,7 @@ specification.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     
