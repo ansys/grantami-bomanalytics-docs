@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "cb5f5591",
+   "id": "ff55446f",
    "metadata": {},
    "source": [
     "# Performing a Part Compliance Query"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4277b449",
+   "id": "f7e364fe",
    "metadata": {},
    "source": [
     "A Part Compliance Query determines whether one or more parts are compliant with the specified indicators. This is\n",
@@ -20,7 +20,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e9f55283",
+   "id": "9c731501",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -28,7 +28,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7c6499fb",
+   "id": "3bcb8779",
    "metadata": {},
    "source": [
     "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
@@ -38,7 +38,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4f839f85",
+   "id": "9235dcb4",
    "metadata": {
     "tags": []
    },
@@ -52,7 +52,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c09289a4",
+   "id": "d5cd787a",
    "metadata": {},
    "source": [
     "## Defining an Indicator"
@@ -60,7 +60,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9efabd8c",
+   "id": "7f1e9fb5",
    "metadata": {},
    "source": [
     "A Compliance query determines compliance against 'Indicators', as opposed to an Impacted Substances query which\n",
@@ -77,7 +77,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "83ebb53a",
+   "id": "1c710080",
    "metadata": {},
    "source": [
     "First, create two ``WatchListIndicator`` objects."
@@ -86,7 +86,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3b4d8f6d",
+   "id": "2a605e6c",
    "metadata": {
     "tags": []
    },
@@ -107,7 +107,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f934cde9",
+   "id": "9be4a3f2",
    "metadata": {
     "tags": []
    },
@@ -117,7 +117,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a9663173",
+   "id": "161d2d77",
    "metadata": {},
    "source": [
     "Next define the query itself. Parts can be referenced by Granta MI record reference or Part Number. The\n",
@@ -128,7 +128,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "69444def",
+   "id": "01cb766e",
    "metadata": {
     "tags": []
    },
@@ -145,7 +145,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "91f6eee3",
+   "id": "0f759f8a",
    "metadata": {},
    "source": [
     "Finally, run the query. Passing a ``PartComplianceQuery`` object to the ``Connection.run()`` method returns a\n",
@@ -155,7 +155,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4ee286cc",
+   "id": "7b95ce62",
    "metadata": {
     "tags": []
    },
@@ -167,7 +167,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "149fd5b9",
+   "id": "adec9d54",
    "metadata": {
     "tags": []
    },
@@ -177,7 +177,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0b8e3d16",
+   "id": "491f1124",
    "metadata": {},
    "source": [
     "## Results Grouped by Part"
@@ -185,7 +185,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c37bc9ed",
+   "id": "cfcd854f",
    "metadata": {
     "tags": []
    },
@@ -207,7 +207,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "74e2f172",
+   "id": "b251ce99",
    "metadata": {},
    "source": [
     "Since we specified two part records, we have received two result objects back. In this example, we will only look in\n",
@@ -217,7 +217,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f0c145db",
+   "id": "650ffe7a",
    "metadata": {
     "tags": []
    },
@@ -229,7 +229,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "388b3486",
+   "id": "023d7451",
    "metadata": {},
    "source": [
     "This tells us that the wing flap assembly contains an SVHC above the 0.1% threshold."
@@ -237,7 +237,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e1c174fc",
+   "id": "b479bb7e",
    "metadata": {},
    "source": [
     "We can print the parts below this part that also contain an SVHC above the threshold. The parts referenced by the\n",
@@ -247,7 +247,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "135716f0",
+   "id": "7cc22575",
    "metadata": {
     "tags": []
    },
@@ -263,7 +263,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "25661d73",
+   "id": "0c485054",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -276,7 +276,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "7988326f",
+   "id": "4b732c37",
    "metadata": {
     "tags": []
    },
@@ -293,7 +293,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0cbcad0b",
+   "id": "e4db2b12",
    "metadata": {
     "tags": []
    },
@@ -304,7 +304,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5cf8830f",
+   "id": "34dd7be9",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -316,7 +316,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4c12f9a7",
+   "id": "8f4b9ad0",
    "metadata": {
     "tags": []
    },
@@ -336,7 +336,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "d2df40e0",
+   "id": "7aee5e02",
    "metadata": {
     "tags": []
    },
@@ -353,7 +353,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "00c092b5",
+   "id": "aed40a2a",
    "metadata": {
     "tags": []
    },
@@ -371,7 +371,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0d220c0f",
+   "id": "f25488a5",
    "metadata": {
     "tags": []
    },
@@ -388,7 +388,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "77f1d94c",
+   "id": "fda90675",
    "metadata": {
     "tags": []
    },
@@ -404,7 +404,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "839d05c1",
+   "id": "9c2710a3",
    "metadata": {
     "tags": []
    },
@@ -415,7 +415,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7b35468e",
+   "id": "37c5cc50",
    "metadata": {},
    "source": [
     "We have now identified a coating that is causing non-compliance. There is a single coating in the assembly that is\n",
@@ -425,7 +425,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "76618cb0",
+   "id": "1a390a21",
    "metadata": {},
    "source": [
     "## Results Grouped by Indicator"
@@ -433,7 +433,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "12e9bc7e",
+   "id": "3faf7682",
    "metadata": {},
    "source": [
     "Alternatively, using the ``compliance_by_indicator`` property will give us a single indicator result that rolls up the\n",
@@ -446,7 +446,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "072d3ee2",
+   "id": "9a4aef2f",
    "metadata": {
     "tags": []
    },
