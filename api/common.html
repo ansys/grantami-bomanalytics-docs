@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Granta MI Connection &#8212; Granta MI BoM Analytics 1.0.0b5</title>
+    <title>Granta MI Connection &#8212; Granta MI BoM Analytics 1.0.0</title>
     
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -145,7 +145,7 @@
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0b5</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.0</a> » </li>
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API Reference</a> » </li>
@@ -267,25 +267,25 @@
 <dt class="sig sig-object py" id="ansys.grantami.bomanalytics.Connection">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.grantami.bomanalytics.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connects to an instance of Granta MI.</p>
-<p>This is a subclass of <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.openapi.common.ApiClientFactory</span></code></a>. All methods within this class that are
-documented as returning <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> return instances of
+<p>This is a subclass of <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.openapi.common.ApiClientFactory</span></code></a>. All methods within this class that are
+documented as returning <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> return instances of
 <a class="reference internal" href="#ansys.grantami.bomanalytics.Connection" title="ansys.grantami.bomanalytics.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.grantami.bomanalytics.Connection</span></code></a> instead.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>api_url</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Base URL of the API server.</p>
 </dd>
-<dt><strong>session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the
-class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a> with default parameters is used.</p>
+<dt><strong>session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the
+class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a> with default parameters is used.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>For advanced usage, including configuring session-specific properties and timeouts, see
-<a class="reference external" href="https://openapi.docs.pyansys.com/api/index.html" title="(in ansys.openapi.common v1.0.0b2)"><span class="xref std std-doc">ansys-openapi-common API Reference</span></a>. Specifically, the documentation on
-the base class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> and the class
-<a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>.</p>
+<a class="reference external" href="https://openapi.docs.pyansys.com/api/index.html" title="(in ansys.openapi.common v1.0.0)"><span class="xref std std-doc">ansys-openapi-common API Reference</span></a>. Specifically, the documentation on
+the base class <a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a> and the class
+<a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>.</p>
 <p>To create the connection to Granta MI, you perform three steps:</p>
 <ol class="arabic simple">
 <li><p>Create the connection builder object and specify the server to connect to.</p></li>
@@ -315,7 +315,7 @@ the base class <a class="reference external" href="https://openapi.docs.pyansys.
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Current client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Current client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -349,7 +349,7 @@ configured for use.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -365,13 +365,13 @@ configured for use.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>idp_session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session when connected to the OpenID identity provider.</p>
+<dt><strong>idp_session_configuration</strong><span class="classifier"><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.SessionConfiguration.html#ansys.openapi.common.SessionConfiguration" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SessionConfiguration</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional configuration settings for the requests session when connected to the OpenID identity provider.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.OIDCSessionBuilder.html#ansys.openapi.common.OIDCSessionBuilder" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OIDCSessionBuilder</span></code></a></dt><dd><p>Builder object to authenticate via OIDC.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.OIDCSessionBuilder.html#ansys.openapi.common.OIDCSessionBuilder" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OIDCSessionBuilder</span></code></a></dt><dd><p>Builder object to authenticate via OIDC.</p>
 </dd>
 </dl>
 </dd>
@@ -390,7 +390,7 @@ method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiClientFactory.html#ansys.openapi.common.ApiClientFactory" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiClientFactory</span></code></a></dt><dd><p>Original client factory object.</p>
 </dd>
 </dl>
 </dd>
@@ -472,7 +472,7 @@ impacted substances results. In the case of a yaml query, a string is returned.<
 that Granta MI is running and the BoM Analytics Service is available, but the query could not be run,
 probably because of a missing database or table.</p>
 </dd>
-<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiException.html#ansys.openapi.common.ApiException" title="(in ansys.openapi.common v1.0.0b2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></a></dt><dd><p>If this exception is raised, the Granta MI server was not able to return a response, probably
+<dt><a class="reference external" href="https://openapi.docs.pyansys.com/api/_autosummary/ansys.openapi.common.ApiException.html#ansys.openapi.common.ApiException" title="(in ansys.openapi.common v1.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiException</span></code></a></dt><dd><p>If this exception is raised, the Granta MI server was not able to return a response, probably
 because of an internal configuration error or the BoM Analytics Service not being installed.</p>
 </dd>
 </dl>

@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "d6f9db95",
+   "id": "f191c63f",
    "metadata": {
     "tags": []
    },
@@ -12,7 +12,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f0510fa7",
+   "id": "7159fbd9",
    "metadata": {},
    "source": [
     "A Part Impacted Substances Query is used to determine the substances associated with a part that are impacted by one\n",
@@ -23,7 +23,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cb5365a6",
+   "id": "38d0e56e",
    "metadata": {},
    "source": [
     "This example shows how to perform an Impacted Substance query on part records, and how to process the results."
@@ -31,7 +31,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e7ac60f8",
+   "id": "a3b79505",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -39,7 +39,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "60dbdace",
+   "id": "39632841",
    "metadata": {},
    "source": [
     "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
@@ -49,7 +49,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "64619be4",
+   "id": "f3f16a68",
    "metadata": {
     "tags": []
    },
@@ -63,7 +63,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "973efb3d",
+   "id": "c2ae232e",
    "metadata": {
     "tags": []
    },
@@ -73,7 +73,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6bfffbe5",
+   "id": "bc788c67",
    "metadata": {},
    "source": [
     "The query is assembled by providing lists of part references and legislations of interest. The query will return\n",
@@ -87,7 +87,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e94b8995",
+   "id": "8084ede5",
    "metadata": {},
    "source": [
     "First specify some constants that contain the part and legislation references we will use."
@@ -96,7 +96,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "e2958c97",
+   "id": "20f6b15c",
    "metadata": {
     "tags": []
    },
@@ -110,7 +110,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "81fcdf41",
+   "id": "fbf11dae",
    "metadata": {},
    "source": [
     "Next, import the ``queries`` module and build the query with the references in the previous cell."
@@ -119,7 +119,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "58cb1415",
+   "id": "e11e5877",
    "metadata": {
     "tags": []
    },
@@ -136,7 +136,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "35c30c5e",
+   "id": "d455573a",
    "metadata": {},
    "source": [
     "Finally, run the query. Passing a ``PartImpactedSubstancesQuery`` object to the ``Connection.run()`` method returns a\n",
@@ -146,7 +146,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "2b130435",
+   "id": "b5c3c2b5",
    "metadata": {
     "tags": []
    },
@@ -158,7 +158,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dcb6a5fb",
+   "id": "50db648a",
    "metadata": {},
    "source": [
     "A ``PartImpactedSubstancesQueryResult`` object contains three properties:\n",
@@ -168,7 +168,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "15f3fb35",
+   "id": "0c3481ef",
    "metadata": {},
    "source": [
     "## Results Grouped by Part"
@@ -176,7 +176,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d7cab45f",
+   "id": "0fcb635f",
    "metadata": {},
    "source": [
     "This property is structured first as a list of ``PartWithImpactedSubstancesResult`` objects, each of which contains\n",
@@ -186,7 +186,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8db7b44c",
+   "id": "0b084a7c",
    "metadata": {},
    "source": [
     "We can simplify the structure because we are only using Part Numbers. First, create a\n",
@@ -196,7 +196,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "be15aaa2",
+   "id": "92ef23f1",
    "metadata": {
     "tags": []
    },
@@ -210,7 +210,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2faec1ec",
+   "id": "224d97c0",
    "metadata": {},
    "source": [
     "Then use the ``tabulate`` package to print a table of the substances and their quantities for the wing assembly only."
@@ -219,7 +219,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "33a5acd7",
+   "id": "286a6d01",
    "metadata": {
     "tags": []
    },
@@ -236,7 +236,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b7bc6aa2",
+   "id": "657b61a5",
    "metadata": {},
    "source": [
     "## Results Grouped by Legislation"
@@ -244,7 +244,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2f0f6e63",
+   "id": "d7d663cb",
    "metadata": {},
    "source": [
     "This property merges the results across all parts, returning a single dictionary of legislations that contain\n",
@@ -253,7 +253,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "28f3bb3a",
+   "id": "ebab9023",
    "metadata": {},
    "source": [
     "As before, use the ``tabulate`` package to print a table of substances. This time we are including substances in\n",
@@ -263,7 +263,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0f99afd4",
+   "id": "2a38c223",
    "metadata": {
     "tags": []
    },
@@ -278,7 +278,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d7f6fa91",
+   "id": "a9ba1a87",
    "metadata": {},
    "source": [
     "## Results as a Flat List"
@@ -286,7 +286,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ae2f8863",
+   "id": "2848af19",
    "metadata": {},
    "source": [
     "This property reduces the granularity further, producing a single flattened list of substances across all legislations\n",
@@ -295,7 +295,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f060014d",
+   "id": "823ea3ee",
    "metadata": {},
    "source": [
     "Use the ``tabulate`` package to print a third table of substances. Because we are using the\n",
@@ -306,7 +306,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "f6f63eb2",
+   "id": "0380f1bb",
    "metadata": {
     "tags": []
    },

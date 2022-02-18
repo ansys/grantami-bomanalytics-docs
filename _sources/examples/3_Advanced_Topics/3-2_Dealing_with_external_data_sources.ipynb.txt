@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "fd9af091",
+   "id": "f7b61f00",
    "metadata": {},
    "source": [
     "# Determining Compliance for BoMs in External Data Sources"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "77920d83",
+   "id": "603ddf29",
    "metadata": {},
    "source": [
     "## Introduction"
@@ -18,7 +18,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a5a68442",
+   "id": "24be7203",
    "metadata": {},
    "source": [
     "You may have to deal with Bills of Materials or other data structures stored in third-party systems. This\n",
@@ -28,7 +28,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c2ed3c47",
+   "id": "f128d28e",
    "metadata": {},
    "source": [
     "Although it is unlikely that the data structures and processing presented here will be an exact match for your\n",
@@ -40,7 +40,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "18064829",
+   "id": "128e02f8",
    "metadata": {},
    "source": [
     "The external data source used in this example can be downloaded\n",
@@ -49,7 +49,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b82cd09b",
+   "id": "8557dbb1",
    "metadata": {},
    "source": [
     "## Load the External Data"
@@ -57,7 +57,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "65195a9b",
+   "id": "19aa907d",
    "metadata": {},
    "source": [
     "First load the JSON file and use the ``json`` module to convert the text into a hierarchical structure of ``dict`` and\n",
@@ -67,7 +67,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "d8bec154",
+   "id": "ae949b1a",
    "metadata": {
     "tags": []
    },
@@ -83,7 +83,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f3202f85",
+   "id": "bdc843b8",
    "metadata": {},
    "source": [
     "The list of components will be used frequently, so we store this in a variable for convenience."
@@ -92,7 +92,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "90df9fab",
+   "id": "7e266db3",
    "metadata": {
     "tags": []
    },
@@ -103,7 +103,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "91206c43",
+   "id": "500af492",
    "metadata": {},
    "source": [
     "It is clear from viewing this data that some parts include multiple materials, and some materials appear in the JSON\n",
@@ -115,7 +115,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8da874fd",
+   "id": "e366650f",
    "metadata": {},
    "source": [
     "Since the compliance status of a material does not depend on which component it is used in, and part compliance\n",
@@ -126,7 +126,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4d8a8913",
+   "id": "e88b5319",
    "metadata": {},
    "source": [
     "First, use a set comprehension to get the unique materials, which we can then cast into a list."
@@ -135,7 +135,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "869630b7",
+   "id": "2d191c27",
    "metadata": {
     "tags": []
    },
@@ -147,7 +147,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d1823325",
+   "id": "87388bc3",
    "metadata": {},
    "source": [
     "## Getting the Compliance Status"
@@ -155,7 +155,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "742616ff",
+   "id": "3e909cc3",
    "metadata": {},
    "source": [
     "Next, create and run a compliance query using the list of material IDs, as shown in previous exercises."
@@ -164,7 +164,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "eb08ccf1",
+   "id": "60b24c9f",
    "metadata": {
     "tags": []
    },
@@ -190,7 +190,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0a033ee1",
+   "id": "feceb870",
    "metadata": {},
    "source": [
     "## Post-Processing the Results"
@@ -198,7 +198,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dc66e86b",
+   "id": "90f376f7",
    "metadata": {},
    "source": [
     "The results above describe the compliance status for each material, but more work is needed to\n",
@@ -207,7 +207,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fc818836",
+   "id": "065fc184",
    "metadata": {},
    "source": [
     "When a component contains only one material, the result can simply be copied over.  In the general case, moving from\n",
@@ -217,7 +217,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "92426320",
+   "id": "0c2666d8",
    "metadata": {},
    "source": [
     "To do this, first create a dictionary that maps a material ID to the indicator result returned by the query."
@@ -226,7 +226,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4369fd18",
+   "id": "df1a9c67",
    "metadata": {
     "tags": []
    },
@@ -238,7 +238,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "34eda7c4",
+   "id": "3fd55cab",
    "metadata": {
     "lines_to_next_cell": 2
    },
@@ -253,7 +253,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "4b69d90c",
+   "id": "e05df0f0",
    "metadata": {
     "tags": []
    },
@@ -267,7 +267,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "99edc68c",
+   "id": "9be63730",
    "metadata": {},
    "source": [
     "Now call this function for each component in a ``dict`` comprehension to obtain a mapping between part number\n",
@@ -277,7 +277,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6935668a",
+   "id": "df19bd21",
    "metadata": {
     "tags": []
    },
@@ -290,7 +290,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "58c6a2d5",
+   "id": "980abb13",
    "metadata": {},
    "source": [
     "These results include text defined by the API for compliance status. However, we may want the compliance\n",
@@ -301,7 +301,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "c8b2a70d",
+   "id": "6c5884ab",
    "metadata": {
     "tags": []
    },
@@ -317,7 +317,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e05afe3b",
+   "id": "a97b6144",
    "metadata": {},
    "source": [
     "We can now use this dictionary to map from the Granta MI result to the approval requirements."
@@ -326,7 +326,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "5f160a03",
+   "id": "bdb90f07",
    "metadata": {
     "tags": []
    },
@@ -339,7 +339,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "43b71451",
+   "id": "beea2ec8",
    "metadata": {},
    "source": [
     "## Write the Output"
@@ -347,7 +347,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2a6ef008",
+   "id": "4ec4925c",
    "metadata": {},
    "source": [
     "Once we have our final result, we can take our result ``dict`` and use it to extend the original JSON data structure,\n",
@@ -357,7 +357,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "c99b0683",
+   "id": "a0d8287f",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -374,7 +374,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "424c2429",
+   "id": "0bf83755",
    "metadata": {},
    "source": [
     "Printing the results shows the new data structure with the results included."
@@ -383,7 +383,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "39429d84",
+   "id": "3344cf06",
    "metadata": {
     "tags": []
    },
