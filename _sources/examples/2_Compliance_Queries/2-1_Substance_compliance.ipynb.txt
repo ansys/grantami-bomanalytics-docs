@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "1baf920a",
+   "id": "5d93308a",
    "metadata": {},
    "source": [
     "# Performing a Substance Compliance Query"
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ebf89478",
+   "id": "b470d9a3",
    "metadata": {},
    "source": [
     "A Substance Compliance Query determines whether one or more substances are compliant with the specified indicators.\n",
@@ -20,7 +20,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5a9735a6",
+   "id": "0856e813",
    "metadata": {},
    "source": [
     "## Connecting to Granta MI"
@@ -28,7 +28,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "656fc5f0",
+   "id": "cefccc82",
    "metadata": {},
    "source": [
     "Import the ``Connection`` class and create the connection. See the [Getting Started](../0_Getting_started.ipynb)\n",
@@ -38,7 +38,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6407401f",
+   "id": "aa5cc799",
    "metadata": {
     "tags": []
    },
@@ -52,7 +52,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "78b73a2d",
+   "id": "aff6ea56",
    "metadata": {},
    "source": [
     "## Defining an Indicator"
@@ -60,7 +60,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "caaa3546",
+   "id": "9e7fbe4b",
    "metadata": {},
    "source": [
     "A Compliance query determines compliance against 'Indicators', as opposed to an Impacted Substances query which\n",
@@ -77,7 +77,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "39037395",
+   "id": "dd968f9d",
    "metadata": {},
    "source": [
     "First, create two ``WatchListIndicator`` objects."
@@ -86,7 +86,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "21e72172",
+   "id": "b8ef9805",
    "metadata": {
     "tags": []
    },
@@ -107,7 +107,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "72a56c05",
+   "id": "9f9ce6f3",
    "metadata": {
     "tags": []
    },
@@ -117,7 +117,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1db80a05",
+   "id": "7fd90f25",
    "metadata": {},
    "source": [
     "Next, define the query itself. Substances can be referenced by Granta MI record reference, CAS\n",
@@ -129,7 +129,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "02597566",
+   "id": "fb1b412e",
    "metadata": {
     "tags": []
    },
@@ -146,7 +146,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f9b9a218",
+   "id": "c1fd824a",
    "metadata": {},
    "source": [
     "Finally, run the query. Passing a ``SubstanceComplianceQuery`` object to the ``Connection.run()`` method returns a\n",
@@ -156,7 +156,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "78c4fdf3",
+   "id": "8f10d913",
    "metadata": {
     "tags": []
    },
@@ -168,7 +168,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6b47fbe6",
+   "id": "1f6866c5",
    "metadata": {
     "tags": []
    },
@@ -178,7 +178,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d80a2135",
+   "id": "0854d4a4",
    "metadata": {},
    "source": [
     "## Results Grouped by Substance"
@@ -186,7 +186,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b4e5056f",
+   "id": "3d927d6b",
    "metadata": {
     "tags": []
    },
@@ -199,7 +199,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "ff49d3ee",
+   "id": "7041e4d5",
    "metadata": {},
    "source": [
     "The possible states of the indicator are available on the ``Indicator.available_flags`` attribute and can be compared\n",
@@ -209,7 +209,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "b1a15772",
+   "id": "d0f9d982",
    "metadata": {
     "tags": []
    },
@@ -228,7 +228,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "47fb028e",
+   "id": "8b07d51c",
    "metadata": {},
    "source": [
     "Now print the SVHC and Non-SVHC substances."
@@ -237,7 +237,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "9af2a1ea",
+   "id": "b6db18b0",
    "metadata": {
     "tags": []
    },
@@ -252,7 +252,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c2afbfbb",
+   "id": "2ed7fb9d",
    "metadata": {},
    "source": [
     "## Results Grouped by Indicator"
@@ -260,7 +260,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "84aa1281",
+   "id": "a28d6d11",
    "metadata": {},
    "source": [
     "Alternatively, using the ``compliance_by_indicator`` property provides a single indicator result that summarizes the\n",
@@ -273,7 +273,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "1be6964d",
+   "id": "d4b49b43",
    "metadata": {
     "tags": []
    },
@@ -287,7 +287,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a0a83d34",
+   "id": "1212026f",
    "metadata": {},
    "source": [
     "Note that this property does not tell us which substance is responsible for the non-compliance. This would require\n",
