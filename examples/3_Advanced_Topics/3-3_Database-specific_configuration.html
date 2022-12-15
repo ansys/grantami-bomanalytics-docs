@@ -4,14 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Database-Specific Configuration Options &#8212; Granta MI BoM Analytics 1.0.1</title>
-    
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+    <title>Database-specific configuration options &#8212; Granta MI BoM Analytics 1.1.0</title>
     
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -19,16 +25,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/dataframe.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -45,45 +48,44 @@
     <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Writing Compliance Results to a DataFrame" href="3-4_Writing_compliance_results_to_a_dataframe.html" />
-    <link rel="prev" title="Determining Compliance for BoMs in External Data Sources" href="3-2_Dealing_with_external_data_sources.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="Write compliance results to a pandas.DataFrame object" href="3-4_Writing_compliance_results_to_a_dataframe.html" />
+    <link rel="prev" title="Determine compliance for BoMs in external data sources" href="3-2_Dealing_with_external_data_sources.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -93,20 +95,26 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../index.html">
-  Example Scripts
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -119,12 +127,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -143,16 +157,25 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="3-4_Writing_compliance_results_to_a_dataframe.html" title="Write compliance results to a pandas.DataFrame object"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="3-2_Dealing_with_external_data_sources.html" title="Determine compliance for BoMs in external data sources"
+             accesskey="P">previous</a> |</li>
     
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.1.0</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Example Scripts</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Database-Specific Configuration Options</a></li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Database-specific configuration options</a></li> 
       </ul>
     </div>
         </div>
@@ -161,12 +184,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -175,12 +199,12 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../0_Getting_started.html">
-   Getting Started
+   Basic usage example
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1_Impacted_Substances_Queries/index.html">
-   Impacted Substances Examples
+   Impacted substances examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -190,7 +214,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">
-     Performing a Material Impacted Substances Query
+     Perform a material impacted substances query
     </a>
    </li>
    <li class="toctree-l2">
@@ -229,7 +253,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Advanced Examples
+   Advanced examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -239,22 +263,28 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3-1_Working_with_XML_BoMs.html">
-     Performing a BoM Query
+     Perform a BoM query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-2_Dealing_with_external_data_sources.html">
-     Determining Compliance for BoMs in External Data Sources
+     Determine compliance for BoMs in external data sources
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Database-Specific Configuration Options
+     Database-specific configuration options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-4_Writing_compliance_results_to_a_dataframe.html">
-     Writing Compliance Results to a DataFrame
+     Write compliance results to a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas.DataFrame
+      </span>
+     </code>
+     object
     </a>
    </li>
   </ul>
@@ -264,52 +294,54 @@
     
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Specifying-a-Custom-Database-Key-or-Table-Name">
-   Specifying a Custom Database Key or Table Name
+  <a class="reference internal nav-link" href="#Specify-a-custom-database-key-or-table-name">
+   Specify a custom database key or table name
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Batch-Size">
-   Batch Size
+  <a class="reference internal nav-link" href="#Batch-size">
+   Batch size
   </a>
  </li>
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   
 <style>
@@ -421,10 +453,11 @@ div.nboutput.container div.prompt > div {
     }
 }
 
-/* disable scrollbars on prompts */
+/* disable scrollbars and line breaks on prompts */
 div.nbinput.container div.prompt pre,
 div.nboutput.container div.prompt pre {
     overflow: hidden;
+    white-space: pre;
 }
 
 /* input/output area */
@@ -521,11 +554,12 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
 /* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
 div.rendered_html table {
   border: none;
   border-collapse: collapse;
@@ -534,10 +568,14 @@ div.rendered_html table {
   font-size: 12px;
   table-layout: fixed;
 }
+.jp-RenderedHTMLCommon thead,
 div.rendered_html thead {
   border-bottom: 1px solid black;
   vertical-align: bottom;
 }
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
 div.rendered_html tr,
 div.rendered_html th,
 div.rendered_html td {
@@ -549,12 +587,15 @@ div.rendered_html td {
   max-width: none;
   border: none;
 }
+.jp-RenderedHTMLCommon th,
 div.rendered_html th {
   font-weight: bold;
 }
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
 div.rendered_html tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+.jp-RenderedHTMLCommon tbody tr:hover,
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
@@ -562,22 +603,21 @@ div.rendered_html tbody tr:hover {
 <p>Download this example as a <a class="reference download internal" download="" href="../../_downloads/74954805059e255b375873e86564423b/3-3_Database-specific_configuration.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
 <a class="reference download internal" download="" href="../../_downloads/2d8db9deace331e1fa8d4aee74ac5c9e/3-3_Database-specific_configuration.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">script</span></code></a>.</p>
 <hr class="docutils" />
-<div class="section" id="Database-Specific-Configuration-Options">
-<h1>Database-Specific Configuration Options<a class="headerlink" href="#Database-Specific-Configuration-Options" title="Permalink to this headline">¶</a></h1>
-<p>The BoM Analytics package will work with an off-the-shelf Granta MI Restricted Substances database. However, there are some situations in which additional run-time configuration changes are required:</p>
+<section id="Database-specific-configuration-options">
+<h1>Database-specific configuration options<a class="headerlink" href="#Database-specific-configuration-options" title="Permalink to this headline">#</a></h1>
+<p>Granta MI BoM Analytics work with an off-the-shelf Granta MI Restricted Substances database. However, there are some situations in which additional run-time configuration changes are required:</p>
 <ul class="simple">
-<li><p>If the database key or table names have been modified from their default values, these must be set on the <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object</p></li>
-<li><p>If the number of linked records is very large, the batch sizes should be changed for each query (see <a class="reference internal" href="../../api/batching.html"><span class="doc">Batching Requests</span></a> for more details)</p></li>
+<li><p>If the database key or table names have been modified from their default values, these must be set on the <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object.</p></li>
+<li><p>If the number of linked records is very large, the batch sizes should be changed for each query. For more informatioon, see <a class="reference internal" href="../../api/batching.html"><span class="doc">Batching requests</span></a>.</p></li>
 </ul>
-<div class="section" id="Specifying-a-Custom-Database-Key-or-Table-Name">
-<h2>Specifying a Custom Database Key or Table Name<a class="headerlink" href="#Specifying-a-Custom-Database-Key-or-Table-Name" title="Permalink to this headline">¶</a></h2>
-<p>The default database key, <code class="docutils literal notranslate"><span class="pre">MI_Restricted_Substances</span></code>, is used if no database key is specified. To specify an alternative, use the <code class="docutils literal notranslate"><span class="pre">Connection.set_database_details()</span></code> method. This database key will be used for all queries made with this <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object.</p>
+<section id="Specify-a-custom-database-key-or-table-name">
+<h2>Specify a custom database key or table name<a class="headerlink" href="#Specify-a-custom-database-key-or-table-name" title="Permalink to this headline">#</a></h2>
+<p>The default database key, <code class="docutils literal notranslate"><span class="pre">MI_Restricted_Substances</span></code>, is used if no database key is specified. To specify a key, use the <code class="docutils literal notranslate"><span class="pre">Connection.set_database_details()</span></code> method. The specified key is then used for all queries made with this <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
 
 <span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_server/mi_servicelayer&quot;</span>
 <span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server_url</span><span class="p">)</span><span class="o">.</span><span class="n">with_credentials</span><span class="p">(</span><span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
@@ -595,13 +635,12 @@ div.rendered_html tbody tr:hover {
 &lt;BomServicesClient: url=&#34;http://my_grantami_server/mi_servicelayer&#34;, dbkey=&#34;ACME_SUBSTANCES_DATABASE&#34;&gt;
 </pre></div></div>
 </div>
-<p>It is also possible to specify alternative names for the relevant Restricted Substances tables, if they have been modified from the defaults. These are provided to the <code class="docutils literal notranslate"><span class="pre">.set_database_details()</span></code> method in the same way.</p>
+<p>It is also possible to specify alternative names for the relevant restricted substances tables, if they have been modified from the defaults. You provide the names to the <code class="docutils literal notranslate"><span class="pre">.set_database_details()</span></code> method in the same way.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cxn</span><span class="o">.</span><span class="n">set_database_details</span><span class="p">(</span><span class="n">in_house_materials_table_name</span><span class="o">=</span><span class="s2">&quot;ACME Materials&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cxn</span><span class="o">.</span><span class="n">set_database_details</span><span class="p">(</span><span class="n">in_house_materials_table_name</span><span class="o">=</span><span class="s2">&quot;ACME Materials&quot;</span><span class="p">)</span>
 <span class="n">cxn</span>
 </pre></div>
 </div>
@@ -615,17 +654,16 @@ div.rendered_html tbody tr:hover {
 &lt;BomServicesClient: url=&#34;http://my_grantami_server/mi_servicelayer&#34;, dbkey=&#34;MI_Restricted_Substances&#34;&gt;
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Batch-Size">
-<h2>Batch Size<a class="headerlink" href="#Batch-Size" title="Permalink to this headline">¶</a></h2>
-<p>The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by splitting the list of parts, materials, etc. into smaller lists to reduce the overall time taken to perform the query. Default batch sizes have been chosen based on typical tabular attribute sizes, but these may need to be changed in some situations (see the relevant page in the API documentation for examples).</p>
-<p>The batch size is included in the query <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>. The cell below shows a <code class="docutils literal notranslate"><span class="pre">SpecificationComplianceQuery</span></code> object with the default batch size.</p>
+</section>
+<section id="Batch-size">
+<h2>Batch size<a class="headerlink" href="#Batch-size" title="Permalink to this headline">#</a></h2>
+<p>The queries that can be performed with this package are batched if they exceed a certain size. This is achieved by splitting the list of parts, materials, etc. into smaller lists to reduce the overall time taken to perform the query. Default batch sizes have been chosen based on typical tabular attribute sizes, but these might need to be changed in some situations. For examples, see the relevant page in the API documentation.</p>
+<p>The batch size is included in the query <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>. The following cell shows a <code class="docutils literal notranslate"><span class="pre">SpecificationComplianceQuery</span></code> object with the default batch size.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
 
 <span class="n">spec_query</span> <span class="o">=</span> <span class="n">queries</span><span class="o">.</span><span class="n">SpecificationComplianceQuery</span><span class="p">()</span>
 <span class="n">spec_query</span>
@@ -641,13 +679,12 @@ div.rendered_html tbody tr:hover {
 &lt;SpecificationComplianceQuery: 0 specifications, batch size = 10, 0 indicators&gt;
 </pre></div></div>
 </div>
-<p>You can manually set the batch size by doing the following:</p>
+<p>You can manually set the batch size like this:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spec_query</span> <span class="o">=</span> <span class="n">spec_query</span><span class="o">.</span><span class="n">with_batch_size</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spec_query</span> <span class="o">=</span> <span class="n">spec_query</span><span class="o">.</span><span class="n">with_batch_size</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">spec_query</span>
 </pre></div>
 </div>
@@ -661,36 +698,59 @@ div.rendered_html tbody tr:hover {
 &lt;SpecificationComplianceQuery: 0 specifications, batch size = 5, 0 indicators&gt;
 </pre></div></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+              </article>
               
+
               
-          </main>
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="3-2_Dealing_with_external_data_sources.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Determine compliance for BoMs in external data sources</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="3-4_Writing_compliance_results_to_a_dataframe.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Write compliance results to a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> object</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
           
-
       </div>
     </div>
+
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

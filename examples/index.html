@@ -4,14 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example Scripts &#8212; Granta MI BoM Analytics 1.0.1</title>
-    
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+    <title>Examples &#8212; Granta MI BoM Analytics 1.1.0</title>
     
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -19,16 +25,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/download_links.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/dataframe.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -43,45 +46,44 @@
     <script src="../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Getting Started" href="0_Getting_started.html" />
+    <link rel="next" title="Basic usage example" href="0_Getting_started.html" />
     <link rel="prev" title="Indicators" href="../api/compliance/indicators.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -91,20 +93,26 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  Example Scripts
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -117,12 +125,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -141,14 +155,23 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0_Getting_started.html" title="Basic usage example"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../api/compliance/indicators.html" title="Indicators"
+             accesskey="P">previous</a> |</li>
     
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.0.1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Granta MI BoM Analytics 1.1.0</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">Example Scripts</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Examples</a></li> 
       </ul>
     </div>
         </div>
@@ -157,12 +180,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -171,12 +195,12 @@
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="0_Getting_started.html">
-   Getting Started
+   Basic usage example
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="1_Impacted_Substances_Queries/index.html">
-   Impacted Substances Examples
+   Impacted substances examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -186,7 +210,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">
-     Performing a Material Impacted Substances Query
+     Perform a material impacted substances query
     </a>
    </li>
    <li class="toctree-l2">
@@ -225,7 +249,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="3_Advanced_Topics/index.html">
-   Advanced Examples
+   Advanced examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -235,22 +259,28 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Advanced_Topics/3-1_Working_with_XML_BoMs.html">
-     Performing a BoM Query
+     Perform a BoM query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Advanced_Topics/3-2_Dealing_with_external_data_sources.html">
-     Determining Compliance for BoMs in External Data Sources
+     Determine compliance for BoMs in external data sources
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Advanced_Topics/3-3_Database-specific_configuration.html">
-     Database-Specific Configuration Options
+     Database-specific configuration options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Advanced_Topics/3-4_Writing_compliance_results_to_a_dataframe.html">
-     Writing Compliance Results to a DataFrame
+     Write compliance results to a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas.DataFrame
+      </span>
+     </code>
+     object
     </a>
    </li>
   </ul>
@@ -260,61 +290,62 @@
     
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 
 <nav id="bd-toc-nav">
     
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
-  <div class="section" id="example-scripts">
-<span id="ref-grantami-bomanalytics-examples"></span><h1>Example Scripts<a class="headerlink" href="#example-scripts" title="Permalink to this headline">¶</a></h1>
-<p>The following example scripts demonstrate key aspects of the BoM Analytics package. The Getting Started example shows
+  <section id="examples">
+<span id="ref-grantami-bomanalytics-examples"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
+<p>The following examples demonstrate key aspects of Granta MI BoM Analytics. The basic example shows
 how to connect to Granta MI and view logging messages returned by the Granta MI server.
-The first and second sections cover the different types of queries. The third section covers more advanced functionality,
-including how to make use of other Python structures such as Pandas DataFrames.</p>
-<p>Install the dependencies required to run these examples with:</p>
+After demonstrating how to use the different types of queries, it describes more advanced functionality,
+including how to use other Python packages such as Pandas DataFrames.</p>
+<p>To run these examples, install dependencies with this code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">grantami</span><span class="o">-</span><span class="n">bomanalytics</span><span class="p">[</span><span class="n">examples</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="0_Getting_started.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_Getting_started.html">Basic usage example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Connect-to-Granta-MI">Connect to Granta MI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Construct-a-Query">Construct a Query</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Run-a-Query">Run a Query</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Query-Results">Query Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Construct-a-query">Construct a query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#Run-a-query">Run a query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#View-query-results">View query results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_Getting_started.html#View-logged-messages">View logged messages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="1_Impacted_Substances_Queries/index.html">Impacted Substances Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">Performing a Material Impacted Substances Query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_Impacted_Substances_Queries/index.html">Impacted substances examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">Perform a material impacted substances query</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_Impacted_Substances_Queries/1-2_Parts_impacted_substances.html">Performing a Part Impacted Substances Query</a></li>
 </ul>
 </li>
@@ -324,44 +355,67 @@ including how to make use of other Python structures such as Pandas DataFrames.<
 <li class="toctree-l2"><a class="reference internal" href="2_Compliance_Queries/2-3_Part_compliance.html">Performing a Part Compliance Query</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3_Advanced_Topics/index.html">Advanced Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-1_Working_with_XML_BoMs.html">Performing a BoM Query</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-2_Dealing_with_external_data_sources.html">Determining Compliance for BoMs in External Data Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-3_Database-specific_configuration.html">Database-Specific Configuration Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-4_Writing_compliance_results_to_a_dataframe.html">Writing Compliance Results to a DataFrame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Advanced_Topics/index.html">Advanced examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-1_Working_with_XML_BoMs.html">Perform a BoM query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-2_Dealing_with_external_data_sources.html">Determine compliance for BoMs in external data sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-3_Database-specific_configuration.html">Database-specific configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Advanced_Topics/3-4_Writing_compliance_results_to_a_dataframe.html">Write compliance results to a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> object</a></li>
 </ul>
 </li>
 </ul>
 </div>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../api/compliance/indicators.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Indicators</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="0_Getting_started.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Basic usage example</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
 </div>
-
-
-              </div>
+              </footer>
               
-              
-          </main>
+          </div>
           
-
       </div>
     </div>
+
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

@@ -4,14 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Performing a Material Impacted Substances Query &#8212; Granta MI BoM Analytics 1.0.1</title>
-    
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+    <title>Perform a material impacted substances query &#8212; Granta MI BoM Analytics 1.1.0</title>
     
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -19,16 +25,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/dataframe.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -46,44 +49,43 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Performing a Part Impacted Substances Query" href="1-2_Parts_impacted_substances.html" />
-    <link rel="prev" title="Impacted Substances Examples" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="prev" title="Impacted substances examples" href="index.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -93,20 +95,26 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../index.html">
-  Example Scripts
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -119,12 +127,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -143,16 +157,25 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="1-2_Parts_impacted_substances.html" title="Performing a Part Impacted Substances Query"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Impacted substances examples"
+             accesskey="P">previous</a> |</li>
     
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.1.0</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Example Scripts</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Impacted Substances Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Performing a Material Impacted Substances Query</a></li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Impacted substances examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Perform a material impacted substances query</a></li> 
       </ul>
     </div>
         </div>
@@ -161,12 +184,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -175,12 +199,12 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../0_Getting_started.html">
-   Getting Started
+   Basic usage example
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Impacted Substances Examples
+   Impacted substances examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -190,7 +214,7 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Performing a Material Impacted Substances Query
+     Perform a material impacted substances query
     </a>
    </li>
    <li class="toctree-l2">
@@ -229,7 +253,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../3_Advanced_Topics/index.html">
-   Advanced Examples
+   Advanced examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -239,22 +263,28 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../3_Advanced_Topics/3-1_Working_with_XML_BoMs.html">
-     Performing a BoM Query
+     Perform a BoM query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../3_Advanced_Topics/3-2_Dealing_with_external_data_sources.html">
-     Determining Compliance for BoMs in External Data Sources
+     Determine compliance for BoMs in external data sources
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../3_Advanced_Topics/3-3_Database-specific_configuration.html">
-     Database-Specific Configuration Options
+     Database-specific configuration options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../3_Advanced_Topics/3-4_Writing_compliance_results_to_a_dataframe.html">
-     Writing Compliance Results to a DataFrame
+     Write compliance results to a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas.DataFrame
+      </span>
+     </code>
+     object
     </a>
    </li>
   </ul>
@@ -264,17 +294,21 @@
     
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -286,45 +320,43 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Building-and-Running-the-Query">
-   Building and Running the Query
+  <a class="reference internal nav-link" href="#Building-and-running-the-query">
+   Building and running the query
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Results-Grouped-by-Material">
-   Results Grouped by Material
+  <a class="reference internal nav-link" href="#View-results-grouped-by-material">
+   View results grouped by material
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Results-Grouped-by-Legislation">
-   Results Grouped by Legislation
+  <a class="reference internal nav-link" href="#View-results-grouped-by-legislation">
+   View results grouped by legislation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Results-as-a-Flat-List">
-   Results as a Flat List
+  <a class="reference internal nav-link" href="#View-results-as-a-flat-list">
+   View results as a flat list
   </a>
  </li>
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   
 <style>
@@ -436,10 +468,11 @@ div.nboutput.container div.prompt > div {
     }
 }
 
-/* disable scrollbars on prompts */
+/* disable scrollbars and line breaks on prompts */
 div.nbinput.container div.prompt pre,
 div.nboutput.container div.prompt pre {
     overflow: hidden;
+    white-space: pre;
 }
 
 /* input/output area */
@@ -536,11 +569,12 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
 /* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
 div.rendered_html table {
   border: none;
   border-collapse: collapse;
@@ -549,10 +583,14 @@ div.rendered_html table {
   font-size: 12px;
   table-layout: fixed;
 }
+.jp-RenderedHTMLCommon thead,
 div.rendered_html thead {
   border-bottom: 1px solid black;
   vertical-align: bottom;
 }
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
 div.rendered_html tr,
 div.rendered_html th,
 div.rendered_html td {
@@ -564,12 +602,15 @@ div.rendered_html td {
   max-width: none;
   border: none;
 }
+.jp-RenderedHTMLCommon th,
 div.rendered_html th {
   font-weight: bold;
 }
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
 div.rendered_html tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+.jp-RenderedHTMLCommon tbody tr:hover,
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
@@ -577,36 +618,34 @@ div.rendered_html tbody tr:hover {
 <p>Download this example as a <a class="reference download internal" download="" href="../../_downloads/04c93fc4e34fc5adeef4c0be6a601da3/1-1_Materials_impacted_substances.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
 <a class="reference download internal" download="" href="../../_downloads/d5bb446cfa90d4a29cbfd2b29632a855/1-1_Materials_impacted_substances.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">script</span></code></a>.</p>
 <hr class="docutils" />
-<div class="section" id="Performing-a-Material-Impacted-Substances-Query">
-<h1>Performing a Material Impacted Substances Query<a class="headerlink" href="#Performing-a-Material-Impacted-Substances-Query" title="Permalink to this headline">¶</a></h1>
+<section id="Perform-a-material-impacted-substances-query">
+<h1>Perform a material impacted substances query<a class="headerlink" href="#Perform-a-material-impacted-substances-query" title="Permalink to this headline">#</a></h1>
 <p>A Material Impacted Substances Query is used to identify the substances associated with a material that are impacted by one or more defined legislations.</p>
 <p>This example shows how to perform an Impacted Substance query on material records, and how to process the results.</p>
-<div class="section" id="Connecting-to-Granta-MI">
-<h2>Connecting to Granta MI<a class="headerlink" href="#Connecting-to-Granta-MI" title="Permalink to this headline">¶</a></h2>
+<section id="Connecting-to-Granta-MI">
+<h2>Connecting to Granta MI<a class="headerlink" href="#Connecting-to-Granta-MI" title="Permalink to this headline">#</a></h2>
 <p>Import the <code class="docutils literal notranslate"><span class="pre">Connection</span></code> class and create the connection. See the <a class="reference internal" href="../0_Getting_started.html"><span class="doc">Getting Started</span></a> example for more detail.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
 
 <span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_server/mi_servicelayer&quot;</span>
 <span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server_url</span><span class="p">)</span><span class="o">.</span><span class="n">with_credentials</span><span class="p">(</span><span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Building-and-Running-the-Query">
-<h2>Building and Running the Query<a class="headerlink" href="#Building-and-Running-the-Query" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Building-and-running-the-query">
+<h2>Building and running the query<a class="headerlink" href="#Building-and-running-the-query" title="Permalink to this headline">#</a></h2>
 <p>The query is assembled by providing lists of material references and legislations of interest. The query will return the substances that are present in the specified materials and are impacted by the specified legislations.</p>
 <p>First specify some constants that contain the material and legislation references we will use.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">PPS_ID</span> <span class="o">=</span> <span class="s2">&quot;plastic-pps-generalpurpose&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PPS_ID</span> <span class="o">=</span> <span class="s2">&quot;plastic-pps-generalpurpose&quot;</span>
 <span class="n">PC_ID</span> <span class="o">=</span> <span class="s2">&quot;plastic-pc-20carbonfiber&quot;</span>
 <span class="n">SIN_LIST</span> <span class="o">=</span> <span class="s2">&quot;The SIN List 2.1 (Substitute It Now!)&quot;</span>
 <span class="n">REACH</span> <span class="o">=</span> <span class="s2">&quot;REACH - The Candidate List&quot;</span>
@@ -618,8 +657,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
 
 <span class="n">mat_query</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">queries</span><span class="o">.</span><span class="n">MaterialImpactedSubstancesQuery</span><span class="p">()</span>
@@ -634,8 +672,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">results</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">mat_query</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">mat_query</span><span class="p">)</span>
 <span class="n">results</span>
 </pre></div>
 </div>
@@ -650,17 +687,16 @@ div.rendered_html tbody tr:hover {
 </pre></div></div>
 </div>
 <p>A <code class="docutils literal notranslate"><span class="pre">MaterialImpactedSubstancesQueryResult</span></code> object contains three properties: <code class="docutils literal notranslate"><span class="pre">impacted_substances_by_material</span></code>, <code class="docutils literal notranslate"><span class="pre">impacted_substances_by_legislation</span></code>, and <code class="docutils literal notranslate"><span class="pre">impacted_substances</span></code>. They provide different views of the impacted substances at different levels of granularity.</p>
-</div>
-<div class="section" id="Results-Grouped-by-Material">
-<h2>Results Grouped by Material<a class="headerlink" href="#Results-Grouped-by-Material" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="View-results-grouped-by-material">
+<h2>View results grouped by material<a class="headerlink" href="#View-results-grouped-by-material" title="Permalink to this headline">#</a></h2>
 <p>This property is structured first as a list of <code class="docutils literal notranslate"><span class="pre">materialWithImpactedSubstancesResult</span></code> objects, each of which contains a dictionary of lists of <code class="docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code> objects keyed by legislation or a single flat list of all substances.</p>
 <p>First, we can simplify the structure somewhat because we are only using Material IDs. The cell below creates a dictionary that maps Material IDs to lists of substances impacted by the ‘SIN List’.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">substances_by_material</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">substances_by_material</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">material</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">impacted_substances_by_material</span><span class="p">:</span>
     <span class="n">substances</span> <span class="o">=</span> <span class="n">material</span><span class="o">.</span><span class="n">substances_by_legislation</span><span class="p">[</span><span class="n">SIN_LIST</span><span class="p">]</span>
     <span class="n">substances_by_material</span><span class="p">[</span><span class="n">material</span><span class="o">.</span><span class="n">material_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">substances</span>
@@ -672,8 +708,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
 <span class="n">rows</span> <span class="o">=</span> <span class="p">[(</span><span class="n">substance</span><span class="o">.</span><span class="n">cas_number</span><span class="p">,</span> <span class="n">substance</span><span class="o">.</span><span class="n">max_percentage_amount_in_material</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">substance</span> <span class="ow">in</span> <span class="n">substances_by_material</span><span class="p">[</span><span class="n">PC_ID</span><span class="p">]]</span>
@@ -703,17 +738,16 @@ CAS Number      Amount (wt. %)
 36861-47-9                 1.6
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Results-Grouped-by-Legislation">
-<h2>Results Grouped by Legislation<a class="headerlink" href="#Results-Grouped-by-Legislation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="View-results-grouped-by-legislation">
+<h2>View results grouped by legislation<a class="headerlink" href="#View-results-grouped-by-legislation" title="Permalink to this headline">#</a></h2>
 <p>This property merges the results across all materials, resulting in a single dictionary of legislations that contain all impacted substances for all materials.</p>
 <p>Again we use the <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> package to print a table of substances, but this time we are including the substances in all materials, but again limited to the SIN List only.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">material_substances_sin</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">impacted_substances_by_legislation</span><span class="p">[</span><span class="n">SIN_LIST</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">material_substances_sin</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">impacted_substances_by_legislation</span><span class="p">[</span><span class="n">SIN_LIST</span><span class="p">]</span>
 <span class="n">rows</span> <span class="o">=</span> <span class="p">[(</span><span class="n">substance</span><span class="o">.</span><span class="n">cas_number</span><span class="p">,</span> <span class="n">substance</span><span class="o">.</span><span class="n">max_percentage_amount_in_material</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">substance</span> <span class="ow">in</span> <span class="n">material_substances_sin</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Substances impacted by &quot;</span><span class="si">{</span><span class="n">SIN_LIST</span><span class="si">}</span><span class="s1">&quot; in all materials (10/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
@@ -741,17 +775,16 @@ CAS Number      Amount (wt. %)
 611-99-4                     2
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Results-as-a-Flat-List">
-<h2>Results as a Flat List<a class="headerlink" href="#Results-as-a-Flat-List" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="View-results-as-a-flat-list">
+<h2>View results as a flat list<a class="headerlink" href="#View-results-as-a-flat-list" title="Permalink to this headline">#</a></h2>
 <p>This property reduces the granularity further to produce a single flattened list of substances across all legislations for all materials.</p>
 <p>The cell below uses the <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> package to print a table of substances. Because we are using the <code class="docutils literal notranslate"><span class="pre">impacted_substances</span></code> property, we only have one list of <code class="docutils literal notranslate"><span class="pre">ImpactedSubstance</span></code> objects which covers both legislations and both materials.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">material_substances_all</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">impacted_substances</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">material_substances_all</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">impacted_substances</span>
 <span class="n">rows</span> <span class="o">=</span> <span class="p">[(</span><span class="n">substance</span><span class="o">.</span><span class="n">cas_number</span><span class="p">,</span> <span class="n">substance</span><span class="o">.</span><span class="n">max_percentage_amount_in_material</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">substance</span> <span class="ow">in</span> <span class="n">material_substances_all</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Impacted substances for all materials and legislations (10/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
@@ -779,36 +812,59 @@ CAS Number      Amount (wt. %)
 611-99-4                     2
 </pre></div></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+              </article>
               
+
               
-          </main>
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Impacted substances examples</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="1-2_Parts_impacted_substances.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Performing a Part Impacted Substances Query</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
           
-
       </div>
     </div>
+
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

@@ -4,14 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Performing a BoM Query &#8212; Granta MI BoM Analytics 1.0.1</title>
-    
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+    <title>Perform a BoM query &#8212; Granta MI BoM Analytics 1.1.0</title>
     
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -19,16 +25,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/download_links.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/dataframe.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -45,45 +48,44 @@
     <script src="../../_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Determining Compliance for BoMs in External Data Sources" href="3-2_Dealing_with_external_data_sources.html" />
-    <link rel="prev" title="Advanced Examples" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="Determine compliance for BoMs in external data sources" href="3-2_Dealing_with_external_data_sources.html" />
+    <link rel="prev" title="Advanced examples" href="index.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -93,20 +95,26 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../index.html">
-  Example Scripts
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -119,12 +127,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -143,16 +157,25 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="3-2_Dealing_with_external_data_sources.html" title="Determine compliance for BoMs in external data sources"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Advanced examples"
+             accesskey="P">previous</a> |</li>
     
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
-        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.0.1</a> » </li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Granta MI BoM Analytics 1.1.0</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Example Scripts</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Performing a BoM Query</a></li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Advanced examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Perform a BoM query</a></li> 
       </ul>
     </div>
         </div>
@@ -161,12 +184,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -175,12 +199,12 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../0_Getting_started.html">
-   Getting Started
+   Basic usage example
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1_Impacted_Substances_Queries/index.html">
-   Impacted Substances Examples
+   Impacted substances examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -190,7 +214,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../1_Impacted_Substances_Queries/1-1_Materials_impacted_substances.html">
-     Performing a Material Impacted Substances Query
+     Perform a material impacted substances query
     </a>
    </li>
    <li class="toctree-l2">
@@ -229,7 +253,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Advanced Examples
+   Advanced examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -239,22 +263,28 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Performing a BoM Query
+     Perform a BoM query
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-2_Dealing_with_external_data_sources.html">
-     Determining Compliance for BoMs in External Data Sources
+     Determine compliance for BoMs in external data sources
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-3_Database-specific_configuration.html">
-     Database-Specific Configuration Options
+     Database-specific configuration options
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-4_Writing_compliance_results_to_a_dataframe.html">
-     Writing Compliance Results to a DataFrame
+     Write compliance results to a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas.DataFrame
+      </span>
+     </code>
+     object
     </a>
    </li>
   </ul>
@@ -264,62 +294,64 @@
     
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Validating-an-XML-file-with-an-XSD-Schema">
-   Validating an XML file with an XSD Schema
+  <a class="reference internal nav-link" href="#Validating-an-XML-file-with-an-XSD-schema">
+   Validating an XML file with an XSD schema
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Running-an-Impacted-Substances-XML-based-Query">
-   Running an Impacted Substances XML-based Query
+  <a class="reference internal nav-link" href="#Run-an-impacted-substances-XML-based-query">
+   Run an impacted substances XML-based query
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Running-an-Compliance-XML-based-Query">
-   Running an Compliance XML-based Query
+  <a class="reference internal nav-link" href="#Running-a-compliance-XML-based-query">
+   Running a compliance XML-based query
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Invalid-BoM-Exception">
-   Invalid BoM Exception
+  <a class="reference internal nav-link" href="#Invalid-BoM-exception">
+   Invalid BoM exception
   </a>
  </li>
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   
 <style>
@@ -431,10 +463,11 @@ div.nboutput.container div.prompt > div {
     }
 }
 
-/* disable scrollbars on prompts */
+/* disable scrollbars and line breaks on prompts */
 div.nbinput.container div.prompt pre,
 div.nboutput.container div.prompt pre {
     overflow: hidden;
+    white-space: pre;
 }
 
 /* input/output area */
@@ -531,11 +564,12 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
 /* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
 div.rendered_html table {
   border: none;
   border-collapse: collapse;
@@ -544,10 +578,14 @@ div.rendered_html table {
   font-size: 12px;
   table-layout: fixed;
 }
+.jp-RenderedHTMLCommon thead,
 div.rendered_html thead {
   border-bottom: 1px solid black;
   vertical-align: bottom;
 }
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
 div.rendered_html tr,
 div.rendered_html th,
 div.rendered_html td {
@@ -559,12 +597,15 @@ div.rendered_html td {
   max-width: none;
   border: none;
 }
+.jp-RenderedHTMLCommon th,
 div.rendered_html th {
   font-weight: bold;
 }
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
 div.rendered_html tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+.jp-RenderedHTMLCommon tbody tr:hover,
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
@@ -572,11 +613,11 @@ div.rendered_html tbody tr:hover {
 <p>Download this example as a <a class="reference download internal" download="" href="../../_downloads/2c3eecba07248f0ec9dec22b91d0d107/3-1_Working_with_XML_BoMs.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a> or a
 <a class="reference download internal" download="" href="../../_downloads/7150fdad03986e5fe72742df4ce94f94/3-1_Working_with_XML_BoMs.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">script</span></code></a>.</p>
 <hr class="docutils" />
-<div class="section" id="Performing-a-BoM-Query">
-<h1>Performing a BoM Query<a class="headerlink" href="#Performing-a-BoM-Query" title="Permalink to this headline">¶</a></h1>
-<p>Both Impacted Substances queries and Compliance queries can be performed on an XML Bill of Materials instead of a list of Granta MI records. The Bill of Materials must be in the Granta 17/11 format, and this example shows how to use the lxml package with the XSD XML schema file to validate the XML format.</p>
-<p>If the XML file is generated by a Granta MI product and has not been modified, it is possible to skip this step before submitting the query. However, it is strongly advised to validate the XML BoM in all situations to avoid unexpected server-side failures. If an invalid XML file is used in a query, an exception will be raised by the <code class="docutils literal notranslate"><span class="pre">requests</span></code> HTTP package, but will not contain information about why the XML is non-compliant. A more detailed log will be reported on the server in the MI Service
-Layer log.</p>
+<section id="Perform-a-BoM-query">
+<h1>Perform a BoM query<a class="headerlink" href="#Perform-a-BoM-query" title="Permalink to this headline">#</a></h1>
+<p>Both impacted substances queries and compliance queries can be performed on an XML BoM instead of a list of Granta MI records. The BoM must be in the Granta 17/11 format. This example shows how to use the <code class="docutils literal notranslate"><span class="pre">lxml</span></code> package with the XSD XML schema file to validate the XML format.</p>
+<p>If the XML file is generated by a Granta MI product and has not been modified, it is possible to skip this step before submitting the query. However, it is strongly advised to validate the XML BoM in all situations to avoid unexpected server-side failures. If an invalid XML file is used in a query, an exception is raised by the <code class="docutils literal notranslate"><span class="pre">requests</span></code> HTTP package, but it does not contain information about why the XML is non-compliant. A more detailed log is reported on the server in the MI Service Layer
+log.</p>
 <p>The following supporting files are required for this example:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="supporting-files/BillOfMaterialsEco.xsd">BillOfMaterialsEco.xsd</a></p></li>
@@ -584,15 +625,14 @@ Layer log.</p>
 <li><p><a class="reference external" href="supporting-files/bom-complex.xml">bom-complex.xml</a></p></li>
 <li><p><a class="reference external" href="supporting-files/invalid-bom.xml">invalid-bom.xml</a></p></li>
 </ul>
-<div class="section" id="Validating-an-XML-file-with-an-XSD-Schema">
-<h2>Validating an XML file with an XSD Schema<a class="headerlink" href="#Validating-an-XML-file-with-an-XSD-Schema" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">lxml</span></code> package provides a similar API to the standard library xml module, but it includes some additional functionality, including schema validation. First import <code class="docutils literal notranslate"><span class="pre">lxml</span></code> and then build a simple validator function that takes both the xml file and schema file and returns the result.</p>
+<section id="Validating-an-XML-file-with-an-XSD-schema">
+<h2>Validating an XML file with an XSD schema<a class="headerlink" href="#Validating-an-XML-file-with-an-XSD-schema" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">lxml</span></code> package provides a similar API to the standard library xml module, but it includes some additional functionality, including schema validation. First import the <code class="docutils literal notranslate"><span class="pre">lxml</span></code> package and then build a simple validator function that takes both the XML file and schema file and returns the result.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
 
 
 <span class="k">def</span> <span class="nf">xml_validator</span><span class="p">(</span><span class="n">xml</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -602,13 +642,12 @@ Layer log.</p>
 </pre></div>
 </div>
 </div>
-<p>We can now use this function to test the validity of a BoM generated by BoM Analyzer.</p>
+<p>You can now use this function to test the validity of a BoM generated by BoM Analyzer.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">valid_xml_file</span> <span class="o">=</span> <span class="s2">&quot;supporting-files/bom-complex.xml&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">valid_xml_file</span> <span class="o">=</span> <span class="s2">&quot;supporting-files/bom-complex.xml&quot;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">valid_xml_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">valid_xml</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">xml_validator</span><span class="p">(</span><span class="n">valid_xml</span><span class="p">,</span> <span class="s2">&quot;supporting-files/BillOfMaterialsEco.xsd&quot;</span><span class="p">)</span>
@@ -625,13 +664,12 @@ Layer log.</p>
 True
 </pre></div></div>
 </div>
-<p>We can also test a BoM which is valid XML, but is not compliant with the schema.</p>
+<p>You can also test a BoM that is valid XML but is not compliant with the schema.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">invalid_xml_file</span> <span class="o">=</span> <span class="s2">&quot;supporting-files/invalid-bom.xml&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invalid_xml_file</span> <span class="o">=</span> <span class="s2">&quot;supporting-files/invalid-bom.xml&quot;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">invalid_xml_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">invalid_xml</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">xml_validator</span><span class="p">(</span>
@@ -650,29 +688,27 @@ True
 False
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Running-an-Impacted-Substances-XML-based-Query">
-<h2>Running an Impacted Substances XML-based Query<a class="headerlink" href="#Running-an-Impacted-Substances-XML-based-Query" title="Permalink to this headline">¶</a></h2>
-<p>Now we have validated the XML, we can build our XML BoM-based query. First, connect to Granta MI.</p>
+</section>
+<section id="Run-an-impacted-substances-XML-based-query">
+<h2>Run an impacted substances XML-based query<a class="headerlink" href="#Run-an-impacted-substances-XML-based-query" title="Permalink to this headline">#</a></h2>
+<p>Now that you have validated the XML, you can build your XML BoM-based query. First, connect to Granta MI.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span>
 
 <span class="n">server_url</span> <span class="o">=</span> <span class="s2">&quot;http://my_grantami_server/mi_servicelayer&quot;</span>
 <span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server_url</span><span class="p">)</span><span class="o">.</span><span class="n">with_credentials</span><span class="p">(</span><span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<p>The Impacted Substances BoM query behaves similar to other Impacted Substances queries. However, a BoM query can only accept a single BoM at a time, and so we only ever receive a single list of substances impacted by the specified legislations.</p>
+<p>The impacted substances BoM query behaves similar to other impacted substances queries. However, a BoM query can only accept a single BoM at a time, and so you only ever receive a single list of substances impacted by the specified legislations.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">queries</span>
 
 <span class="n">SIN_LIST</span> <span class="o">=</span> <span class="s2">&quot;The SIN List 2.1 (Substitute It Now!)&quot;</span>
 <span class="n">impacted_substances_query</span> <span class="o">=</span> <span class="p">(</span>
@@ -687,8 +723,7 @@ False
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">impacted_substances_result</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">impacted_substances_query</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">impacted_substances_result</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">impacted_substances_query</span><span class="p">)</span>
 <span class="n">impacted_substances_result</span>
 </pre></div>
 </div>
@@ -702,13 +737,12 @@ False
 &lt;BomImpactedSubstancesQueryResult: 1 BomWithImpactedSubstances results&gt;
 </pre></div></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">BomImpactedSubstancesQueryResult</span></code> object returned after running the query for impacted substances now behaves similarly to the result object for any other query for impacted substances. For example, we can print all substances impacted by the legislation using an approach from a previous example.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BomImpactedSubstancesQueryResult</span></code> object returned after running the query for impacted substances now behaves similarly to the result object for any other query for impacted substances. For example, you can print all substances impacted by the legislation using an approach from the previous example.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
 <span class="n">rows</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="n">substance</span><span class="o">.</span><span class="n">cas_number</span><span class="p">,</span> <span class="n">substance</span><span class="o">.</span><span class="n">max_percentage_amount_in_material</span><span class="p">]</span>
@@ -739,16 +773,15 @@ CAS Number      Amount (wt. %)
 117-84-0                    18
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Running-an-Compliance-XML-based-Query">
-<h2>Running an Compliance XML-based Query<a class="headerlink" href="#Running-an-Compliance-XML-based-Query" title="Permalink to this headline">¶</a></h2>
-<p>Running a BoM Compliance Query produces the same result as if we had stored the BoM structure as linked ‘Products and Parts’ records in Granta MI.</p>
+</section>
+<section id="Running-a-compliance-XML-based-query">
+<h2>Running a compliance XML-based query<a class="headerlink" href="#Running-a-compliance-XML-based-query" title="Permalink to this headline">#</a></h2>
+<p>Running a BoM compliance query produces the same result as if you had stored the BoM structure as linked <strong>Products and Parts</strong> records in Granta MI.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">indicators</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">indicators</span>
 
 <span class="n">svhc</span> <span class="o">=</span> <span class="n">indicators</span><span class="o">.</span><span class="n">WatchListIndicator</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;SVHC&quot;</span><span class="p">,</span>
@@ -767,8 +800,7 @@ CAS Number      Amount (wt. %)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">compliance_result</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">compliance_query</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compliance_result</span> <span class="o">=</span> <span class="n">cxn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">compliance_query</span><span class="p">)</span>
 <span class="n">compliance_result</span>
 </pre></div>
 </div>
@@ -782,13 +814,12 @@ CAS Number      Amount (wt. %)
 &lt;BomComplianceQueryResult: 2 PartWithCompliance results&gt;
 </pre></div></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">BomComplianceQueryResult</span></code> object returned after running the Compliance query contains a list of <code class="docutils literal notranslate"><span class="pre">PartWithComplianceResult</span></code> objects, the behavior of which has been covered in a previous example. The cell below prints the compliance status of the BoM.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BomComplianceQueryResult</span></code> object returned after running the compliance query contains a list of <code class="docutils literal notranslate"><span class="pre">PartWithComplianceResult</span></code> objects, the behavior of which has been covered in a previous example. The following cell prints the compliance status of the BoM.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">root_part</span> <span class="o">=</span> <span class="n">compliance_result</span><span class="o">.</span><span class="n">compliance_by_part_and_indicator</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">root_part</span> <span class="o">=</span> <span class="n">compliance_result</span><span class="o">.</span><span class="n">compliance_by_part_and_indicator</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BoM Compliance Status: </span><span class="si">{</span><span class="n">root_part</span><span class="o">.</span><span class="n">indicators</span><span class="p">[</span><span class="s1">&#39;SVHC&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">flag</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -801,16 +832,15 @@ CAS Number      Amount (wt. %)
 BoM Compliance Status: WatchListUnknown
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Invalid-BoM-Exception">
-<h2>Invalid BoM Exception<a class="headerlink" href="#Invalid-BoM-Exception" title="Permalink to this headline">¶</a></h2>
-<p>If we were to try the same query with the invalid BoM, we would see a stack trace informing us that the MI Service Layer responded with a 500 HTTP response code. Change the constant below to <code class="docutils literal notranslate"><span class="pre">True</span></code> to raise the exception.</p>
+</section>
+<section id="Invalid-BoM-exception">
+<h2>Invalid BoM exception<a class="headerlink" href="#Invalid-BoM-exception" title="Permalink to this headline">#</a></h2>
+<p>If you were to try the same query with an invalid BoM, yoy would see a stack trace informing you that the MI Service Layer responded with a 500 HTTP response code. To raise the exception, change the constant <code class="docutils literal notranslate"><span class="pre">RUN_QUERY</span></code>below to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">broken_query</span> <span class="o">=</span> <span class="p">(</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">broken_query</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">queries</span><span class="o">.</span><span class="n">BomImpactedSubstancesQuery</span><span class="p">()</span>
     <span class="o">.</span><span class="n">with_bom</span><span class="p">(</span><span class="n">invalid_xml</span><span class="p">)</span>
     <span class="o">.</span><span class="n">with_legislations</span><span class="p">([</span><span class="n">SIN_LIST</span><span class="p">])</span>
@@ -823,36 +853,59 @@ BoM Compliance Status: WatchListUnknown
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+              </article>
               
+
               
-          </main>
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Advanced examples</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="3-2_Dealing_with_external_data_sources.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Determine compliance for BoMs in external data sources</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
           
-
       </div>
     </div>
+
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

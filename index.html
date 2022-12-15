@@ -4,14 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Granta MI BoM Analytics 1.0.1 &#8212; Granta MI BoM Analytics 1.0.1</title>
-    
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+    <title>Granta MI BoM Analytics 1.1.0 &#8212; Granta MI BoM Analytics 1.1.0</title>
     
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -19,16 +25,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/download_links.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/dataframe.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="_static/css/breadcrumbs.css" rel="stylesheet">
@@ -43,44 +46,43 @@
     <script src="_static/js/add_blank.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="api/index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="Getting started" href="getting_started/index.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    <img src="_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -90,20 +92,26 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="examples/index.html">
-  Example Scripts
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -116,12 +124,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/grantami-bomanalytics" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -140,12 +154,18 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="getting_started/index.html" title="Getting started"
+             accesskey="N">next</a> |</li>
     
         <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys Documentation</a> » </li>
     
     
 
-        <li class="nav-item nav-item-this"><a href="">Granta MI BoM Analytics 1.0.1</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Granta MI BoM Analytics 1.1.0</a></li> 
       </ul>
     </div>
         </div>
@@ -154,12 +174,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -169,30 +190,29 @@
     
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-and-purpose">
-   Introduction and Purpose
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dependencies">
-   Dependencies
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -201,13 +221,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dependencies">
+   Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quick-code">
-   Quick Code
+   Quick code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#api-reference">
-   API Reference
+   API reference
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -217,36 +242,34 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-index">
-   Project Index
+   Project index
   </a>
  </li>
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
-  <div class="section" id="granta-mi-bom-analytics-version">
-<h1>Granta MI BoM Analytics 1.0.1<a class="headerlink" href="#granta-mi-bom-analytics-version" title="Permalink to this headline">¶</a></h1>
+  <section id="granta-mi-bom-analytics-version">
+<h1>Granta MI BoM Analytics 1.1.0<a class="headerlink" href="#granta-mi-bom-analytics-version" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="introduction-and-purpose">
-<h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this headline">¶</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This project is part of the larger PyAnsys effort to facilitate the use
 of Ansys technologies directly from within Python.</p>
 <p>Granta MI provides a mature and feature-rich method for managing
@@ -255,39 +278,44 @@ When combined with the Granta MI BoM Analyzer and Restricted Substances
 Reports, the data managed in Granta MI can be leveraged to
 determine compliance for complex specification hierarchies, assemblies,
 and even entire products.</p>
-<p>This package takes the functionality available interactively through
-the web browser and exposes it as an API. The expected use cases
-for this package are as follows:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">grantami-bomanalytics</span></code> package takes the functionality available
+interactively through the web Granta MI browser and exposes it as an API.
+The expected use cases for this package are as follows:</p>
 <ul class="simple">
-<li><p>Periodically rolling up compliance results and storing the results
-in Granta MI</p></li>
-<li><p>Scripting compliance calculations as part of a release process</p></li>
-<li><p>Allowing compliance to be determined for BoMs stored in third-party
-systems, such as PLM or ERP systems</p></li>
+<li><p>Rolling up compliance results periodically and storing these results
+in Granta MI.</p></li>
+<li><p>Scripting compliance calculations as part of a release process.</p></li>
+<li><p>Allowing compliance to be determined for BoMs (Bills of Materials) stored
+in third-party systems, such as PLM or ERP systems.</p></li>
 </ul>
-</div>
-<div class="section" id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<p>To use this package you will require access to a Granta MI server
-that includes MI Restricted Substances Reports 2022 R1
-or later. This package also has the following Python package
-dependencies, which are installed automatically by <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
-<ul class="simple">
-<li><p>ansys-grantami-bomanalytics-openapi</p></li>
-<li><p>ansys-openapi-common</p></li>
-</ul>
-</div>
-<div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>The Granta MI Restricted Substances solution includes a REST API for
 evaluating compliance of products, assemblies, specifications, and
-materials against legislations. This package abstracts automatically
+materials against legislations. This package automatically abstracts
 generated code into an easy-to-use client library.</p>
-</div>
-<div class="section" id="quick-code">
-<h2>Quick Code<a class="headerlink" href="#quick-code" title="Permalink to this headline">¶</a></h2>
-<p>Here’s a brief example of how the package works. This example finds the
-percentage content of all SVHCs in an ABS/PVC blend:</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<p>To use the <code class="docutils literal notranslate"><span class="pre">grantami-bomanalytics</span></code> package, you must have access
+to a Granta MI server that includes MI Restricted Substances Reports
+2022 R1 or later. This package also has the following Python package
+dependencies:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ansys-grantami-bomanalytics-openapi</span></code> package</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ansys-openapi-common</span></code> package</p></li>
+</ul>
+<p>These package dependencies are installed automatically by
+<a class="reference external" href="https://github.com/pypa/pip">pip</a>, the package installer for
+Python. For more information, see the installation information
+in <a class="reference internal" href="getting_started/index.html#ref-getting-started-grantami-bomanalytics"><span class="std std-ref">Getting started</span></a>.</p>
+</section>
+<section id="quick-code">
+<h2>Quick code<a class="headerlink" href="#quick-code" title="Permalink to this headline">#</a></h2>
+<p>To show how the <code class="docutils literal notranslate"><span class="pre">grantami-bomanalytics</span></code> package works, this brief example
+shows how to find the percentage content of all SVHCs (substances of very
+high concern) in an ABS/PVC blend:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.grantami.bomanalytics</span> <span class="kn">import</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">queries</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cxn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">servicelayer_url</span><span class="o">=</span><span class="s2">&quot;http://localhost/mi_servicelayer&quot;</span><span class="p">)</span> \
@@ -310,59 +338,75 @@ percentage content of all SVHCs in an ABS/PVC blend:</p>
 <li><p>Connect to Granta MI.</p></li>
 <li><p>Create the appropriate query, choosing between:</p>
 <ul class="simple">
-<li><p><em>Query type</em>: Compliance or impacted substances</p></li>
-<li><p><em>Reference type</em>: Materials, parts, specifications, substances, or an XML BoM</p></li>
+<li><p>Query type: Compliance or impacted substances</p></li>
+<li><p>Reference type: Materials, parts, specifications, substances, or an XML BoM</p></li>
 </ul>
 </li>
 <li><p>Specify the legislations and records of interest.</p></li>
 <li><p>Run the query.</p></li>
 <li><p>Process the results.</p></li>
 </ol>
-</div>
-<div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<p>For comprehensive API documentation, see <a class="reference internal" href="api/index.html#ref-grantami-bomanalytics-api-index"><span class="std std-ref">API Reference</span></a>.</p>
-</div>
-<div class="section" id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<p>Contributions to this library are welcomed. For more information, see
+</section>
+<section id="api-reference">
+<h2>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">#</a></h2>
+<p>For comprehensive API documentation, see <a class="reference internal" href="api/index.html#ref-grantami-bomanalytics-api-index"><span class="std std-ref">API reference</span></a>.</p>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h2>
+<p>Contributions to Granta MI BoM Analytics are welcomed. For more information, see
 <a class="reference internal" href="contributing.html"><span class="doc">Contributing</span></a>.</p>
-</div>
-<div class="section" id="project-index">
-<h2>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="project-index">
+<h2>Project index<a class="headerlink" href="#project-index" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+              </article>
               
+
               
-          </main>
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='right-next' id="next-link" href="getting_started/index.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Getting started</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
           
-
       </div>
     </div>
+
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>
